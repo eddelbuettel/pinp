@@ -1,2 +1,2 @@
-export(rcpp_vig)
+export(pinp)
 

@@ -1,13 +1,13 @@
-Package: rcppvig
+Package: pinp
 Type: Package
-Title: Two-Column Vignette Template
+Title: Pinp Is Not PNAS Two-Column PDF Vignette Template
 Version: 0.0.1
 Date: 2017-09-02
 Author: Dirk Eddelbuettel and James Balamuta
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: A 'PNAS'-alike style for 'rmarkdown'.
-URL: http://dirk.eddelbuettel.com/code/rcpp-vig.html
-BugReports: https://github.com/eddelbuettel/rcpp-vig/issues
+URL: http://dirk.eddelbuettel.com/code/pinp.html
+BugReports: https://github.com/eddelbuettel/pinp/issues
 Imports: rmarkdown
 License: GPL-3
 RoxygenNote: 6.0.1

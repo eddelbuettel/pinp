@@ -53,12 +53,12 @@ keywords:
 ## must be one of: pnasresearcharticle (usual two-column layout), pnasmathematics (one column layout), or pnasinvited (invited submissions only)
 #pnas_type: pnasresearcharticle
 
-bibliography: rcppvig-sample.bib
+bibliography: pinp.bib
 
 ## change to true to add optional line numbering
 lineno: false
 
-output: rcppvig::rcpp_vig
+output: pinp::pinp
 ---
 
 
