@@ -1,0 +1,13 @@
+Package: rcppvig
+Type: Package
+Title: Two-Column Vignette Template
+Version: 0.0.1
+Date: 2017-09-02
+Author: Dirk Eddelbuettel and James Balamuta
+Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Description: A 'PNAS'-alike style for 'rmarkdown'.
+URL: http://dirk.eddelbuettel.com/code/rcpp-vig.html
+BugReports: https://github.com/eddelbuettel/rcpp-vig/issues
+Imports: htmltools, knitr, rmarkdown
+License: GPL-3
+RoxygenNote: 5.0.1

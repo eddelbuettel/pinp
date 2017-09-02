@@ -1,0 +1,5 @@
+name: Rcpp-style Two-Column (PDF)
+description: >
+  A plesant-looking two-column pdf template derived
+  from the PNAS research article style
+create_dir: false
