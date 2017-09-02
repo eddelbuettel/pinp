@@ -1,10 +1,10 @@
 ---
 title: Template for preparing your research report submission to PNAS using RMarkdown
 
-# Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
+# Use letters for affiliations
 author:
   - name: Alice Anonymous
-    affiliation: a,1,2
+    affiliation: a
   - name: Bob Security
     affiliation: a,b
 address:
@@ -12,55 +12,21 @@ address:
     address: Some Institute of Technology, Department, Street, City, State, Zip
   - code: b
     address: Another University Department, Street, City, State, Zip
-
-corresponding_author:
-  - code: 2
-    text: "To whom correspondence should be addressed. E-mail: bob@email.com"
-
-# For footer text
+# For footer text  TODO(fold into template, allow free form two-authors)
 lead_author_surname: Anonymous
-
-## Remove this if not required    
-equal_authors:
-  - code: 1
-    text: "A.O.(Author One) and A.T. (Author Two) contributed equally to this work (remove if not applicable)."
-
-
-author_contributions: |
-  Please provide details of author contributions here.
-
-## Remove this if not required
-conflict_of_interest: |
-  Please declare any conflict of interest here.
-
 abstract: |
   Please provide an abstract of no more than 250 words in a single paragraph. Abstracts should explain to the general reader the major contributions of the article. References in the abstract must be cited in full within the abstract itself and cited in the text.
-
-
-significance: |
-  Authors must submit a 120-word maximum statement about the significance of their research paper written at a level understandable to an undergraduate educated scientist outside their field of speciality. The primary goal of the Significance Statement is to explain the relevance of the work in broad context to a broad readership. The Significance Statement appears in the paper itself and is required for all research papers.
-
 acknowledgements: |
   Please include your acknowledgments here, set in a single paragraph. Please do not include any acknowledgments in the Supporting Information, or anywhere else in the manuscript.
-
 keywords:
   - one
   - two
   - optional
   - optional
   - optional
-
-## must be one of: pnasresearcharticle (usual two-column layout), pnasmathematics (one column layout), or pnasinvited (invited submissions only)
-#pnas_type: pnasresearcharticle
-
 bibliography: pinp.bib
-
-## change to true to add optional line numbering
-lineno: false
-
 output: pinp::pinp
 ---
-
 
 This PNAS journal template is provided to help you write your work in the
 correct journal format. Instructions for use are provided below.
