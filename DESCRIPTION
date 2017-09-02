@@ -8,6 +8,6 @@ Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: A 'PNAS'-alike style for 'rmarkdown'.
 URL: http://dirk.eddelbuettel.com/code/rcpp-vig.html
 BugReports: https://github.com/eddelbuettel/rcpp-vig/issues
-Imports: htmltools, knitr, rmarkdown
+Imports: rmarkdown
 License: GPL-3
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
