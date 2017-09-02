@@ -146,6 +146,33 @@ service (see list at www.pnas.org/site/authors/language-editing.xhtml).
 PNAS does not take responsibility for or endorse these services, and
 their use has no bearing on acceptance of a manuscript for publication.
 
+Inline R Code
+-------------
+
+The PNAS sample code included a fixed PNG image here, but this prefers to
+show what R code do.
+
+```{r figex, fig.width=3, fig.height=3, cache=TRUE, echo=FALSE}
+library(ggplot2)
+ggplot(mtcars, aes(wt, mpg)) + geom_point(size=3, aes(colour=factor(cyl))) + theme(legend.position="none")
+```
+
+Pretty Print Source Code
+------------------------
+
+Because every R document needs some clustering.
+
+```{r kmeans, fig.width=3, fig.height=3, cache=TRUE, echo=TRUE}
+# a 2-dimensional example (cf ?kmeans)
+x <- rbind(matrix(rnorm(100, sd = 0.3), ncol = 2),
+           matrix(rnorm(100, mean = 1, sd = 0.3), 
+                  ncol = 2))
+colnames(x) <- c("x", "y")
+cl <- kmeans(x, 2)
+par(mar=c(3,3,1,1))
+plot(x, col = cl$cluster)
+points(cl$centers, col = 1:2, pch = 8, cex = 1)
+```
 
 Digital Figures {#sec:figures .unnumbered}
 ---------------
