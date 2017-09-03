@@ -28,6 +28,14 @@ bibliography: pinp.bib
 output: pinp::pinp
 ---
 
+This _pinp is not PNAS_ template started when the introduction to
+[Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html) by
+\cite{10.7287/peerj.preprints.3188v1} was converted into this updated
+[Rcpp Introduction](https://eddelbuettel.github.io/pinp/Rcpp-introduction.pdf)
+vignette.
+
+## Remainder 
+
 This PNAS journal template is provided to help you write your work in the
 correct journal format. Instructions for use are provided below.
 
@@ -263,7 +271,6 @@ PNAS prefers that authors submit individual source files to ensure
 readability. If this is not possible, supply a single PDF file that
 contains all of the SI associated with the paper. This file type will be
 published in raw format and will not be edited or composed.
-
 
 <!-- Leave these lines as they are at the end of your .Rmd file to ensure placement of methods & acknowledgements sections before the references-->
 \showmatmethods
