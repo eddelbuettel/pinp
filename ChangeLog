@@ -1,0 +1,15 @@
+2017-09-03  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Added
+	* ChangeLog: Idem
+	* .travis.yml (install): Idem
+
+	* docs/*: Added with example pdf and png files
+
+2017-09-02  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/pdf/*: First version
+	* R/pinp.R (pinp): Idem
+	* man/pinp.Rd: Idem
+	* DESCRIPTION: Idem
+	* NAMESPACE: Idem
