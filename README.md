@@ -20,11 +20,11 @@ itself based on our [PeerJ Prepint](https://peerj.com/preprints/3188/).
 
 A screenshot of the first two pages:
 
-![](docs/Rcpp-introduction-p1+2.png)
+![](https://eddelbuettel.github.io/pinp/Rcpp-introduction-p1+2.png)
 
 and the next two pages, showing a two-column figure.
 
-![](docs/Rcpp-introduction-p3+4.png)
+![](https://eddelbuettel.github.io/pinp/Rcpp-introduction-p3+4.png)
 
 We are cheating slighly here as we started the vignette based on the LaTeX sources from the PeerJ Prepint.
 The goal is, however, to produce vignettes and papers just likes this straight from Markdown.
