@@ -633,11 +633,19 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 % The blank line before the strip command ensures there is nothing placed
 % directly before the break (which can cause formatting issues).
 \newcommand{\pnasbreak}{
-
 \begin{strip}
 \vskip-11pt
 \end{strip}
 }
+
+\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{Soutput}{Verbatim}{}
+\DefineVerbatimEnvironment{Scode}{Verbatim}{fontshape=sl}
+\newenvironment{Schunk}{}{}
+\DefineVerbatimEnvironment{Code}{Verbatim}{}
+\DefineVerbatimEnvironment{CodeInput}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
+\newenvironment{CodeChunk}{}{}
 
 \endinput
 

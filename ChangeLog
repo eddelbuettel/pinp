@@ -1,3 +1,14 @@
+2017-09-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/pinp.R (pinp): Updated to support LaTeX citations
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd (Note): Added
+	reference to bibiography example
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Added one set of
+	Sweave-alike environments
+
+	* NAMESPACE: Added import statements for knitr and markdown
+	* DESCRIPTION: Ditto
+
 2017-09-03  Dirk Eddelbuettel  <edd@debian.org>
 
 	* README.md: Added
