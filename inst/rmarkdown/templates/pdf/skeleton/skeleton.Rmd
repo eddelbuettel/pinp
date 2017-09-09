@@ -14,8 +14,8 @@ address:
     address: Department of Neat Trick, Whereever State University, Springfield, ZZ, 99999
 # For footer text  TODO(fold into template, allow free form two-authors)
 lead_author_surname: Author and Author
-# For doi or cran url
-doiurl: Rcpp
+# Package name for footer in url and title
+package: SomeCRANPackage
 abstract: |
   Your abstract will be typset here, and used by default a visually distinctive font.
   An abstract should explain to the general reader the major contributions of the article. 
