@@ -39,18 +39,13 @@ template of the wonderful [rticles](https://github.com/rstudio/rticles)
 package. The underlying LaTeX macros are from
 [pnas.org](http://www.pnas.org/site/authors/latex.xhtml).
 
-The remainder of the document carries over from corresponding
+The remainder of the document carries over from the corresponding
 [pnas_article](https://github.com/rstudio/rticles/tree/master/inst/rmarkdown/templates/pnas_article)
 template document.
 
 # Guide to using this template {.unnumbered}
 
-
-Please note that whilst this template provides a preview of the typeset
-manuscript for submission, to help in this preparation, it will not
-necessarily be the final publication layout. For more detailed
-information please see the [PNAS Information for
-Authors](http://www.pnas.org/site/authors/format.xhtml).
+Some specific tips follow.  In general, for fine-tuning some knowledge of LaTeX is helpful.
 
 
 ## Author Affiliations {#author-affiliations .unnumbered}
@@ -164,7 +159,7 @@ $$\begin{aligned}
 <!-- Leave these lines as they are at the end of your .Rmd file to ensure placement of methods & acknowledgements sections before the references-->
 \showmatmethods
 \showacknow
-\pnasbreak
+\pnasbreak 
 
 
 \bibliography{pinp.bib}
