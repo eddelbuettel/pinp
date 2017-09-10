@@ -9,27 +9,47 @@ author:
     affiliation: a,b
 address:
   - code: a
-    address: Institute of Magic and Smoke, University of Somewhere, Sometown, XY, 12345
+    address: Institute of Smoke and Magic, University of Sometown, Sometown, XY, 12345
   - code: b
-    address: Department of Neat Trick, Whereever State University, Springfield, ZZ, 99999
+    address: Department of Neat Tricks, Whereever State University, Someplace, MC, 67890
+
 # For footer text  TODO(fold into template, allow free form two-authors)
 lead_author_surname: Author and Author
+
 # Package name for footer in url and title
 package: SomeCRANPackage
+
+# Abstract
 abstract: |
   Your abstract will be typset here, and used by default a visually distinctive font.
   An abstract should explain to the general reader the major contributions of the article. 
+
+# Acknowledgements
 acknowledgements: |
-  Please include your acknowledgments here, set in a single paragraph. Please do not include any acknowledgments in the Supporting Information, or anywhere else in the manuscript.
+  This template package builds upon, and extends, the work of the excellent 
+  [rticles](https://cran.r-project.org/package=rticles) package, and both rely on
+  the [PNAS LaTeX](http://www.pnas.org/site/authors/latex.xhtml) macros. Both sources
+  are gratefully acknowledged as this work would not have been possible without them.
+  Our extensions are under the same respective licensing term 
+  ([GPL-3](https://www.gnu.org/licenses/gpl-3.0.en.html) and
+  [LPPL (>= 1.3)](https://www.latex-project.org/lppl/)).
+
+# One or more keywords
 keywords:
   - one
   - two
   - optional
-  - optional
-  - optional
+  - keywords
+  - here
+
+# Bibliography TODO(also still needed in body)
 bibliography: pinp.bib
+
+# Our style
 output: pinp::pinp
 ---
+
+## Introduction {#intro .unnumbered}
 
 This *pinp is not PNAS* template started when the introduction to
 [Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html) by
@@ -44,8 +64,6 @@ package. The underlying LaTeX macros are from
 The remainder of the document carries over from the corresponding
 [pnas_article](https://github.com/rstudio/rticles/tree/master/inst/rmarkdown/templates/pnas_article)
 template document.
-
-# Guide to using this template {.unnumbered}
 
 Some specific tips follow.  In general, for fine-tuning some knowledge of LaTeX is helpful.
 
