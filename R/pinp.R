@@ -73,9 +73,9 @@ pinp <- function(..., keep_tex = TRUE, citation_package = 'natbib') {
 
 # Call rmarkdown::pdf_documet and mark the return value as inheriting pdf_document
 inherit_pdf_document <- function(...) {
-  fmt <- rmarkdown::pdf_document(...)
-  fmt$inherits <- "pdf_document"
-  fmt
+    fmt <- rmarkdown::pdf_document(...)
+    fmt$inherits <- "pdf_document"
+    fmt
 }
 
 knitr_fun <- function(name) utils::getFromNamespace(name, 'knitr')
