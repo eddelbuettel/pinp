@@ -77,6 +77,9 @@ explicitedly listed, but [PNAS](http://www.pnas.org) refers to [Overleaf](https:
 
 ### License
 
-GPL-3 for this package and the code from [rticles](https://cran.r-project.org/package=rticles),
-the [PNAS LaTeX](http://www.pnas.org/site/authors/latex.xhtml) material is under 
-LaTeX Project Public License >= version 1.3
+GPL-3 for this package, as well as the short code taking with grateful acknowledgements
+from the [rticles](https://cran.r-project.org/package=rticles) package.
+
+The [PNAS LaTeX](http://www.pnas.org/site/authors/latex.xhtml) mail
+style file as well as supporting files are under the
+[LPPL (LaTeX Project Public License) version 1.3 or later](https://www.latex-project.org/lppl/).
