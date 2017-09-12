@@ -541,9 +541,17 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
 
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+%\usepackage{framed}
+%\definecolor{shadecolor}{RGB}{248,248,248}
+%\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+%% using mdframed (loaded above) for shaded box around code
+\global\mdfdefinestyle{codebox}{%
+  linecolor=gray!70,
+  linewidth=0.5pt,
+  backgroundcolor=gray!05,
+  innerleftmargin=2pt,
+  innerrightmargin=2pt}
+\newenvironment{Shaded}{\begin{mdframed}[style=codebox]}{\end{mdframed}}
 \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
 \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
 \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}

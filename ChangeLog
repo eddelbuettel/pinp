@@ -1,3 +1,8 @@
+2017-09-12  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Use mdframed for
+	framed and shaded code boxen (following existing Rcpp vignettes)
+
 2017-09-11  Dirk Eddelbuettel  <edd@debian.org>
 
 	* R/pinp.R: Use basic knitr code typesetting with fewer overrides
