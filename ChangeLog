@@ -1,3 +1,22 @@
+2017-09-11  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/pinp.R: Use basic knitr code typesetting with fewer overrides
+
+2017-09-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Acknowledge sources (rticles, pnas)
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Idem
+
+2017-09-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/pdf/resoueces/template.tex: Updated
+	footer showing project URL
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Idem
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Idem
+
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Partially
+	rewritten  / simplified to better suit project
+
 2017-09-07  Dirk Eddelbuettel  <edd@debian.org>
 
 	* R/pinp.R (pinp): Updated to support LaTeX citations
