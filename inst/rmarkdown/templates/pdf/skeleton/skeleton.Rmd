@@ -59,12 +59,13 @@ output: pinp::pinp
 
 This *pinp is not PNAS* template started when the introduction to
 [Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html) by
-\cite{10.7287/peerj.preprints.3188v1} was converted into this updated
+\cite{PeerJ:Rcpp} was converted into this updated
 [Rcpp Introduction](https://eddelbuettel.github.io/pinp/Rcpp-introduction.pdf)
 vignette.  It is based on the
 [pnas_article](https://github.com/rstudio/rticles/tree/master/inst/rmarkdown/templates/pnas_article)
 template of the wonderful [rticles](https://github.com/rstudio/rticles)
-package. The underlying LaTeX macros are from
+package by \cite{CRAN:rticles}. The conversion from markdown to latex
+is facilitated by \cite[rmarkdown]{CRAN:rmarkdown} and \cite[knitr]{CRAN:knitr}. The underlying LaTeX macros are from
 [pnas.org](http://www.pnas.org/site/authors/latex.xhtml).
 
 The remainder of the document carries over from the corresponding
