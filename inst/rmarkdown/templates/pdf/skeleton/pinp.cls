@@ -188,11 +188,10 @@
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
 
 %% Watermark 
-\usepackage[printwatermark]{xwatermark}
-\newboolean{displaywatermark}
-\setboolean{displaywatermark}{false} % Set to false to remove the watermark
-\ifthenelse{\boolean{displaywatermark}}{%
-\newwatermark[allpages,color=gray!20,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}}{}
+% See: http://mirrors.ctan.org/macros/latex/contrib/xwatermark/doc/xwatermark-guide.pdf#page=3
+\RequirePackage[printwatermark,disablegeometry]{xwatermark}
+\usepackage[printwatermark,disablegeometry]{xwatermark}
+\newwatermark[allpages,color=gray!20,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
 
 %% Copyright statement (not used)
 \newboolean{displaycopyright}

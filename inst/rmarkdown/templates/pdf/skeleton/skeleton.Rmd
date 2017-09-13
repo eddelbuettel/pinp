@@ -45,6 +45,9 @@ keywords:
 # Bibliography TODO(also still needed in body)
 bibliography: pinp.bib
 
+# Enable a watermark on the document
+watermark: false
+
 # Our style
 output: pinp::pinp
 ---
