@@ -43,7 +43,7 @@ keywords:
   - here
 
 # Bibliography TODO(also still needed in body)
-bibliography: pinp.bib
+bibliography: pinp
 
 # Enable a watermark on the document
 watermark: true
@@ -228,7 +228,3 @@ commands `\footnotemark` and `\footnotetext`.
 \showmatmethods
 \showacknow
 \pnasbreak 
-
-
-\bibliography{pinp.bib}
-
