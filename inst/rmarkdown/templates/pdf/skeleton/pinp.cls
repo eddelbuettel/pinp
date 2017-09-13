@@ -31,7 +31,7 @@
 % to produce the PDF, not dvis -> ps -> pdf nor dvipdf
 % 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{rcpp-docs}[2017-Aug-31, based on pnas-new 28/02/2015, v1.2]
+\ProvidesClass{pinp}[2017-Sep-12, based on pnas-new 28/02/2015, v1.2]
 \AtEndOfClass{\RequirePackage{microtype}}
 % Option for line numbers
 \newif\if@pnaslineno
@@ -154,7 +154,10 @@
 %% END
 
 %% Hyperlinking
-\RequirePackage[colorlinks=true, allcolors=blue]{hyperref}
+% from below
+\definecolor{pnasbluetext}{RGB}{0,101,165} %
+\definecolor{pnasblueback}{RGB}{205,217,235} %
+\RequirePackage[colorlinks=true, allcolors=pnasbluetext]{hyperref}
 
 %% Set up main title page fonts 
 \newcommand{\headerfont}{\normalfont\sffamily\fontsize{7}{9} \selectfont}
@@ -167,7 +170,8 @@
 \newcommand{\copyrightfont}{\normalfont\rmfamily\fontsize{6}{8}\selectfont}
 
 %% Set URL link color & font
-\renewcommand\UrlFont{\color{black}\sffamily}
+%\renewcommand\UrlFont{\color{black}\sffamily}
+\renewcommand\UrlFont{\color{pnasbluetext}\sffamily}
 
 %% Author and affiliation
 \RequirePackage{authblk}
@@ -244,11 +248,11 @@
 %\renewcommand\bibfont{\normalfont\sffamily\fontsize{6}{8}\selectfont} % set font to be sans serif
 \renewcommand\bibfont{\normalfont\sffamily\fontsize{8}{10}\selectfont} % set font to be sans serif
 
-\makeatletter 
-\renewcommand\@biblabel[1]{ #1.} % Remove brackets from label
-\def\tagform@#1{\maketag@@@{\bfseries(\ignorespaces#1\unskip\@@italiccorr)}}
-\renewcommand{\eqref}[1]{\textup{{\normalfont Eq.~(\ref{#1}}\normalfont)}}
-\makeatother
+%\makeatletter 
+%\renewcommand\@biblabel[1]{ #1.} % Remove brackets from label
+%\def\tagform@#1{\maketag@@@{\bfseries(\ignorespaces#1\unskip\@@italiccorr)}}
+%\renewcommand{\eqref}[1]{\textup{{\normalfont Eq.~(\ref{#1}}\normalfont)}}
+%\makeatother
 
 %% Figure caption style
 \DeclareCaptionFormat{pnasformat}{\normalfont\sffamily\fontsize{7}{9}\selectfont#1#2#3}
@@ -268,10 +272,10 @@
 }
 \newcommand{\addtabletext}[1]{{\setlength{\leftskip}{9pt}\fontsize{7}{9}\selectfont#1}}
 
-%% Equation numbering - use square brackets
-\makeatletter
-\renewcommand\tagform@[1]{\maketag@@@ {[\ignorespaces #1\unskip \@@italiccorr ]}}
-\makeatother
+%% Equation numbering - use square brackets [commented-out]
+%\makeatletter
+%\renewcommand\tagform@[1]{\maketag@@@ {[\ignorespaces #1\unskip \@@italiccorr ]}}
+%\makeatother
 
 %% Headers and footers
 \RequirePackage{fancyhdr}  % custom headers/footers
@@ -299,7 +303,7 @@
 \makeatletter
 \fancypagestyle{firststyle}{
    %\fancyfoot[R]{\footerfont PNAS\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}vol. XXX\hspace{7pt}|\hspace{7pt}no. XX\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
-   \fancyfoot[R]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
+   \fancyfoot[R]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
    \fancyfoot[L]{\footerfont\@ifundefined{@doi}{}{\@doi}}
 }
 \makeatother
@@ -490,7 +494,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 	{3.25ex plus 1ex minus .2ex}
 	{1.5ex plus .2ex}
 \newcommand{\showacknow}{% Display acknowledgments section
-\@ifundefined{@acknow}{}{\acknow@section{ACKNOWLEDGMENTS}\small\@acknow}
+\@ifundefined{@acknow}{}{\acknow@section{Acknowledgments}\small\@acknow}
 }
 
 %% Set up the materials&methods field
@@ -660,6 +664,48 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
 \newenvironment{CodeChunk}{}{}
 
+
+%% Set sans as default font (as in pnasinvited)
+%\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\keywordsfont}{\sffamily}
+
+%% Set colors
+%\definecolor{color2}{RGB}{200,89,45} % color
+\definecolor{color2}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
+
+% Add line after abstract
+%\appto{\abscontent}{\par\textcolor{color2}{\hrulefill}}
+
+% Add colour to the title
+\appto{\titlefont}{\color{color2}}
+
+% ...and section headings
+\titleformat{\section}
+  {\large\sffamily\bfseries\color{color2}}
+  {\thesection.}
+  {0.5em}
+  {#1}
+  []
+\titleformat{name=\section,numberless}
+  {\large\sffamily\bfseries\color{color2}}
+  {}
+  {0em}
+  {#1}
+  []  
+\titleformat{\subsection}[runin]
+  {\sffamily\bfseries\color{color2}} %\itshape}%
+  {\thesubsection.}
+  {0.5em}
+  {#1. }
+  []
+% Other section headings left unchanged.
+
+%% microtype with mathdesign, microtype already loaded
+%\usepackage{microtype}                    %% cf http://www.khirevich.com/latex/microtype/
+%\usepackage[T1]{fontenc}		   %% cf http://www.khirevich.com/latex/font/
+\usepackage[bitstream-charter]{mathdesign} %% cf http://www.khirevich.com/latex/font/
+
+  
 \endinput
 
 %%% END pnasresearcharticle
