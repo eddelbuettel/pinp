@@ -1,4 +1,4 @@
-\documentclass[9pt,twocolumn,twoside,$if(lineno)$lineno$endif$]{pinp}
+\documentclass[9pt,twocolumn,twoside,$if(lineno)$$lineno$$endif$,printwatermark=$if(watermark)$$watermark$$else$false$endif$]{pinp}
 
 %% Some pieces required from the pandoc template
 \providecommand{\tightlist}{%
@@ -63,7 +63,13 @@ $abstract$
 \end{abstract}
 
 \dates{This manuscript was compiled on \today}
-\doi{\url{http://cran.r-project.org/package=$package$}}
+$if(doi)$
+\doi{$doi$}
+$endif$
+
+$if(footer_contents)$
+\pinpfootercontents{$footer_contents$}
+$endif$
 
 \begin{document}
 
