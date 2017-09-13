@@ -4,12 +4,16 @@
 \alias{pinp}
 \title{PNAS-alike two-column journal format.}
 \usage{
-pinp(..., keep_tex = TRUE)
+pinp(..., keep_tex = TRUE, citation_package = "natbib")
 }
 \arguments{
 \item{...}{Additional arguments to \code{rmarkdown::pdf_document}}
 
-\item{keep_tex}{Keep the intermediate tex file used in the conversion to PDF}
+\item{keep_tex}{A boolean toggle to select whether intermediate
+LaTeX files are to be kept, defaults to \code{TRUE}}
+
+\item{citation_package}{A character variable selecting the LaTeX
+citation package; defaults to \code{natbib}.}
 }
 \value{
 R Markdown output format to pass to
