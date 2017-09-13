@@ -1,5 +1,12 @@
 2017-09-12  James Joseph Balamuta  <balamut2@illinois.edu>
 
+
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls:  Added footer content
+	hook with a default value of Package Vignette.
+	* inst/rmarkdown/templates/pdf/resoueces/template.tex: Setup pandoc
+	hook for footer_content variable
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: idem
+
 	* inst/rmarkdown/templates/pdf/resoueces/template.tex: Allowed doi 
 	field to receive URLs.
 	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: idem
@@ -12,7 +19,6 @@
 	
 	* inst/rmarkdown/templates/pdf/resoueces/template.tex: Fix lineno 
 	pandoc variable usage
-	
 	
 2017-09-12  Dirk Eddelbuettel  <edd@debian.org>
 

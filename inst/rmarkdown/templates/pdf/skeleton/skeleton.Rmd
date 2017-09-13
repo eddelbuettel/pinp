@@ -48,6 +48,9 @@ bibliography: pinp.bib
 # Enable a watermark on the document
 watermark: false
 
+# Customize footer
+footer_contents: "Pinp Vignette"
+
 # Our style
 output: pinp::pinp
 ---

@@ -67,6 +67,10 @@ $if(doi)$
 \doi{$doi$}
 $endif$
 
+$if(footer_contents)$
+\pinpfootercontents{$footer_contents$}
+$endif$
+
 \begin{document}
 
 % Optional adjustment to line up main text (after abstract) of first page with line numbers, when using both lineno and twocolumn options.
