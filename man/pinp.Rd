@@ -27,4 +27,22 @@ Format suitable for attractive two-column pdf vignettes
 library(rmarkdown)
 draft("MyArticle.Rmd", template = "pinp", package = "pinp")
 }
+
+}
+\references{
+JJ Allaire, R Foundation, Hadley Wickham, Journal of Statistical Software, Yihui Xie, Ramnath
+Vaidyanathan, Association for Computing Machinery, Carl Boettiger, Elsevier, Karl Broman,
+Kirill Mueller, Bastiaan Quast, Randall Pruim, Ben Marwick, Charlotte Wickham, Oliver Keyes
+and Miao Yu (2017). rticles: Article Formats for R Markdown. R package version 0.4.1.
+\url{https://CRAN.R-project.org/package=rticles}
+
+JJ Allaire, Joe Cheng, Yihui Xie, Jonathan McPherson, Winston Chang, Jeff Allen, Hadley
+Wickham, Aron Atkins, Rob Hyndman and Ruben Arslan (2017). rmarkdown: Dynamic Documents for R.
+R package version 1.6. \url{https://CRAN.R-project.org/package=rmarkdown}
+
+Yihui Xie (2017). knitr: A General-Purpose Package for Dynamic Report Generation in R. R
+package version 1.17.
+}
+\seealso{
+\code{\link[rticles]{pnas_article}}
 }
