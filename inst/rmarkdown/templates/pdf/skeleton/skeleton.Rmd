@@ -107,18 +107,19 @@ methods, Acknowledgments, and References. Other orders and headings are
 permitted. -->
 
 
-
 ## References {#references .unnumbered}
 
 Here we differ from PNAS and suggest natbib. References will appear in
 author-year form. Use `\citet{}`, `\citep{}`, etc as usual.
 
-We default to the `Chicago.bst` style.
+We default to the `Chicago.bst` style. To switch to a different bibliography
+style, please use `biblio-style: style` in the YAML header.
+
 
 ## Inline R Code {#inliner .unnumbered}
 
 The PNAS sample included a fixed PNG image here, but this document prefers
-to show what R code do. 
+to show the results and embedding of _R_ code. 
 
 ```{r figex, fig.width=3, fig.height=3, cache=TRUE, echo=TRUE, fig.cap="Narrow ggplot2 figure"}
 library(ggplot2)
@@ -130,12 +131,13 @@ ggplot(mtcars, aes(wt, mpg)) +
 Here we use a standard knitr bloc with explicit options for
 
 - figure width and height (`fig.width`, `fig.height`), both set to three inches;
-- whether the code is shown (`echo=TRUE`)
-- the caption (`fig.cap`) as shown below.
+- whether the code is shown (`echo=TRUE`); and
+- the caption (`fig.cap`) as shown above.
+
 
 ## Digital Figures {#sec:figures .unnumbered}
 
-Markdown, Pandoc and LaTeX support eps and pdf files.
+Markdown, Pandoc and LaTeX support `.eps` and `.pdf` files.
 
 Figures and Tables should be labelled and referenced in the standard way
 using the `\label{}` and `\ref{}` commands.
@@ -144,9 +146,8 @@ The R examples above show how to insert a column-wide
 figure. To insert a figure wider than one column, please use the
 `\begin{figure*}...\end{figure*}` environment. 
 
-
-One (roundabout) way of doing this is to _not_ actually plot a figure, but to save it in a file as the following segment shows:
-
+One (roundabout) way of doing this is to _not_ actually plot a figure, but to
+save it in a file as the following segment shows:
 
 ```{r densityPlot, echo=TRUE}
 library(ggplot2)
@@ -159,7 +160,7 @@ p <- ggplot(data = midwest,
 suppressMessages(ggsave("densities.pdf", p))
 ```
 
-This file is then included via standard LaTeX commands .
+This file is then included via standard LaTeX commands.
 
 \begin{figure*}
   \begin{center}
@@ -182,7 +183,6 @@ plot(fit)
 This simply used a pandoc bloc started and ended by tree backticks,
 with `r` as the language choice.  Similarly, _many_ other languages
 can be typset directly simply by relying on pandoc.
-
 
 
 ## Single column equations {#single-column-equations .unnumbered}
