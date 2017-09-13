@@ -162,7 +162,7 @@ This file is then included via standard LaTeX commands .
 
 \begin{figure*}
   \begin{center}
-    \includegraphics[width=0.8\textwidth, height=3in]{densities} 
+    \includegraphics[width=0.8\textwidth, height=4in]{densities} 
   \end{center}
   \caption{Wide ggplot2 figure}\label{fig}
 \end{figure*}
