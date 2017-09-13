@@ -1,5 +1,5 @@
 ---
-title: A Simple Template for Preparing An Attractive Two-Column Vignette
+title: A Simple Template for Two-Column Vignettes
 
 # Use letters for affiliations
 author:
@@ -16,8 +16,8 @@ address:
 # For footer text  TODO(fold into template, allow free form two-authors)
 lead_author_surname: Author and Author
 
-# DOI URL or CRAN Package URL
-doi: "https://cran.r-project.org/package=pinp"
+# Place DOI URL or CRAN Package URL here
+doi: "https://cran.r-project.org/package=YourPackage"
 
 # Abstract
 abstract: |
@@ -46,10 +46,10 @@ keywords:
 bibliography: pinp.bib
 
 # Enable a watermark on the document
-watermark: false
+watermark: true
 
-# Customize footer
-footer_contents: "Pinp Vignette"
+# Customize footer, eg by referencing the vignette
+footer_contents: "YourPackage Vignette"
 
 # Our style
 output: pinp::pinp
@@ -69,68 +69,68 @@ package. The underlying LaTeX macros are from
 
 The remainder of the document carries over from the corresponding
 [pnas_article](https://github.com/rstudio/rticles/tree/master/inst/rmarkdown/templates/pnas_article)
-template document.
+template document. but has been edited and updated to our use case.  A
+few specific tips follow.  In general, for fine-tuning some knowledge
+of LaTeX is helpful.
 
-Some specific tips follow.  In general, for fine-tuning some knowledge of LaTeX is helpful.
+Please note that LaTeX typesetting in two-column mode with several
+floating objects can be fragile.  You may need to iterate.
 
 
 ## Author Affiliations {#author-affiliations .unnumbered}
 
-Include department, institution, and complete address, with the
-ZIP/postal code, for each author. Use lower case letters to match
-authors with institutions, as shown in the example. Authors with an
-ORCID ID may supply this information at submission.
+Per common academic best practice, you can include your department,
+institution, and complete address, with the ZIP/postal code, for each
+author. Use lower case letters to match authors with institutions, as
+shown in the example. Authors with an ORCID ID may supply this
+information at submission.
 
+## Document Options
 
-## Format {#format .unnumbered}
+We support several options via the YAML header
+
+- Setting a DOI or URL footer, for example for the CRAN package URL,
+  which is placed in the bottom-left footer of the title page and even pages;
+- Setting a footer label, for example _YourPackage Vignette_ stating
+  your package, which is placed in the bottom-right footer on odd
+  pages;
+- Setting a free-form author field used on the inside footer;
+- Optional _Draft_ watermarking;
+
+<!-- ## Format {#format .unnumbered}
 
 Many authors find it useful to organize their manuscripts with the
 following order of sections; Title, Author Affiliation, Keywords,
 Abstract, Significance Statement, Results, Discussion, Materials and
 methods, Acknowledgments, and References. Other orders and headings are
-permitted.
+permitted. -->
+
+
 
 ## References {#references .unnumbered}
 
-Here we differ from PNAS and suggest natbib.
+Here we differ from PNAS and suggest natbib. References will appear in
+author-year form. Use `\citet{}`, `\citep{}`, etc as usual.
 
-References should be cited in author-year form; this will be done automatically
-via bibtex. Use `\citet{}`, `\citep{}`, etc as usual,
-e.g. \citet{belkin2002using} and \citet{berard1994embedding} and
-\cite{coifman2005geometric}. All referencesshould be included in the main
-manuscript file.
-
-Prior to submission, authors who believe their manuscripts would benefit
-from professional editing are encouraged to use a language-editing
-service (see list at www.pnas.org/site/authors/language-editing.xhtml).
-PNAS does not take responsibility for or endorse these services, and
-their use has no bearing on acceptance of a manuscript for publication.
+We default to the `Chicago.bst` style.
 
 ## Inline R Code {#inliner .unnumbered}
 
-The PNAS sample code included a fixed PNG image here, but this document prefers
-to show what R code do.
+The PNAS sample included a fixed PNG image here, but this document prefers
+to show what R code do. 
 
-```{r figex, fig.width=3, fig.height=3, cache=TRUE, echo=FALSE}
+```{r figex, fig.width=3, fig.height=3, cache=TRUE, echo=TRUE, fig.cap="Narrow ggplot2 figure"}
 library(ggplot2)
-ggplot(mtcars, aes(wt, mpg)) + geom_point(size=3, aes(colour=factor(cyl))) + theme(legend.position="none")
+ggplot(mtcars, aes(wt, mpg)) +
+    geom_point(size=3, aes(colour=factor(cyl))) +
+    theme(legend.position="none")
 ```
 
-## Pretty Print Source Code {#sourcecode .unnumbered}
+Here we use a standard knitr bloc with explicit options for
 
-Because every R document needs some clustering.
-
-```{r kmeans, fig.width=3, fig.height=3, cache=TRUE, echo=TRUE}
-# a 2-dimensional example (cf ?kmeans)
-x <- rbind(matrix(rnorm(100, sd = 0.3), ncol = 2),
-           matrix(rnorm(100, mean = 1, sd = 0.3), 
-                  ncol = 2))
-colnames(x) <- c("x", "y")
-cl <- kmeans(x, 2)
-par(mar=c(3,3,1,1))
-plot(x, col = cl$cluster)
-points(cl$centers, col = 1:2, pch = 8, cex = 1)
-```
+- figure width and height (`fig.width`, `fig.height`), both set to three inches;
+- whether the code is shown (`echo=TRUE`)
+- the caption (`fig.cap`) as shown below.
 
 ## Digital Figures {#sec:figures .unnumbered}
 
@@ -141,8 +141,48 @@ using the `\label{}` and `\ref{}` commands.
 
 The R examples above show how to insert a column-wide
 figure. To insert a figure wider than one column, please use the
-`\begin{figure*}...\end{figure*}` environment. Figures wider than one
-column should be sized to 11.4 cm or 17.8 cm wide.
+`\begin{figure*}...\end{figure*}` environment. 
+
+
+One (roundabout) way of doing this is to _not_ actually plot a figure, but to save it in a file as the following segment shows:
+
+
+```{r densityPlot, echo=TRUE}
+library(ggplot2)
+p <- ggplot(data = midwest,
+            mapping = aes(x = area,
+                          fill = state,
+                          color = state)) +
+    geom_density(alpha = 0.3)
+## save to file
+suppressMessages(ggsave("densities.pdf", p))
+```
+
+This file is then included via standard LaTeX commands .
+
+\begin{figure*}
+  \begin{center}
+    \includegraphics[width=0.8\textwidth, height=3in]{densities} 
+  \end{center}
+  \caption{Wide ggplot2 figure}\label{fig}
+\end{figure*}
+
+
+## Typeset Code (But Do Not Run It) {#typeset .unnumbered}
+
+We can also just show code.
+
+```r
+xx <- faithful[,"eruptions"]
+fit <- density(xx)
+plot(fit)
+```
+
+This simply used a pandoc bloc started and ended by tree backticks,
+with `r` as the language choice.  Similarly, _many_ other languages
+can be typset directly simply by relying on pandoc.
+
+
 
 ## Single column equations {#single-column-equations .unnumbered}
 
@@ -152,7 +192,7 @@ their preference.
 To allow an equation to span both columns, options are to use the
 `\begin{figure*}...\end{figure*}` environment mentioned above for
 figures, or to use the `\begin{widetext}...\end{widetext}` environment
-as shown in equation \[eqn:example\] below.
+as shown in equation \ref{eqn:example} below.
 
 Please note that this option may run into problems with floats and
 footnotes, as mentioned in the [cuted package
@@ -160,12 +200,14 @@ documentation](http://texdoc.net/pkg/cuted). In the case of problems
 with footnotes, it may be possible to correct the situation using
 commands `\footnotemark` and `\footnotetext`.
 
-$$\begin{aligned}
+\begin{equation}
+  \begin{aligned}
 (x+y)^3&=(x+y)(x+y)^2\\
-       &=(x+y)(x^2+2xy+y^2) \label{eqn:example} \\
+       &=(x+y)(x^2+2xy+y^2) \\
        &=x^3+3x^2y+3xy^3+x^3. 
-\end{aligned}$$
-
+       \label{eqn:example} 
+  \end{aligned}
+\end{equation}
 
 
 <!-- pandoc writes all tables using longtable, which fails in 2-column mode

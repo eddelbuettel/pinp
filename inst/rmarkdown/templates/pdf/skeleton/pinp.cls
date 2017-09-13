@@ -193,8 +193,7 @@
 
 %% Watermark 
 % See: http://mirrors.ctan.org/macros/latex/contrib/xwatermark/doc/xwatermark-guide.pdf#page=3
-\RequirePackage[printwatermark,disablegeometry]{xwatermark}
-\usepackage[printwatermark,disablegeometry]{xwatermark}
+\RequirePackage[printwatermark]{xwatermark}
 \newwatermark[allpages,color=gray!20,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
 
 %% Copyright statement (not used)
@@ -232,7 +231,7 @@
 \definecolor{black50}{gray}{0.5} % 50% black for hrules
 \definecolor{color0}{RGB}{0,0,0} % Base
 \definecolor{color1}{RGB}{59,90,198} % author email, doi
-\definecolor{color2}{RGB}{16,131,16} %
+%\definecolor{color2}{RGB}{16,131,16} %
 % For sig statement box
 \definecolor{pnasbluetext}{RGB}{0,101,165} %
 \definecolor{pnasblueback}{RGB}{205,217,235} %
@@ -494,7 +493,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 	{3.25ex plus 1ex minus .2ex}
 	{1.5ex plus .2ex}
 \newcommand{\showacknow}{% Display acknowledgments section
-\@ifundefined{@acknow}{}{\acknow@section{Acknowledgments}\small\@acknow}
+\@ifundefined{@acknow}{}{\acknow@section{\color{color2}Acknowledgments}\@acknow}
 }
 
 %% Set up the materials&methods field
@@ -617,7 +616,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 % false = spans page width
 
 %% Set colors
-\definecolor{color2}{RGB}{130,0,0} % color
+%\definecolor{color2}{RGB}{130,0,0} % color
 
 %% Set up the first page footnote/fact box here
 \RequirePackage{float}
