@@ -8,9 +8,10 @@ The template provided by the PNAS Article template in the
 [rticles](https://cran.r-project.org/package=rticles) package makes it very easy and convenient to
 create attractive looking two-column papers.
 
-There were however a few changes we wanted to make such as the use of standard natbib citations and
-the removal of a number of PNAS-specific title page items as well as general code and use
-simplification via a single LaTeX class file.  So pinp started.
+There were however a few changes we wanted to make such as the use of standard natbib citations,
+more extended use of color, a different font as well as the removal of a number of PNAS-specific
+title page items as well as general code and use simplification via a single LaTeX class file.  So
+this _pinp_ package started.
 
 ### Example
 
@@ -22,16 +23,24 @@ A screenshot of the first two pages:
 
 ![](https://eddelbuettel.github.io/pinp/Rcpp-introduction-p1+2.png)
 
-and the next two pages, showing a two-column figure.
+and the next two pages, showing a two-column figure
 
 ![](https://eddelbuettel.github.io/pinp/Rcpp-introduction-p3+4.png)
 
-We are cheating slighly here as we started the vignette based on the LaTeX sources from the PeerJ Prepint.
-The goal is, however, to produce vignettes and papers just likes this straight from Markdown.
+followed by pages five and six
+
+![](https://eddelbuettel.github.io/pinp/Rcpp-introduction-p5+6.png)
+
+and the final two pages:
+
+![](https://eddelbuettel.github.io/pinp/Rcpp-introduction-p7+8.png)
 
 ### Status
 
-The package is in alpha mode and working, but not yet on [CRAN](https://cran.r-project.org/).
+The package is working, but not yet on [CRAN](https://cran.r-project.org/).
+
+Some float placements are a little fragile in LaTeX two-column mode.  If in doubt, add more text
+around it to aid the heuristic.
 
 ### Usage 
 
@@ -69,16 +78,17 @@ texlive-science
 
 ### Authors
 
-Dirk Eddelbuettel and James Balamuta, leaning heavily on JJ et al in the 
+Dirk Eddelbuettel and James Balamuta, leaning on the earlier work by JJ et al in the 
 [rticles](https://cran.r-project.org/package=rticles) package.
 
-The authors of the underlying [PNAS LaTeX Style](http://www.pnas.org/site/authors/latex.xhtml) are not 
-explicitedly listed, but [PNAS](http://www.pnas.org) refers to [Overleaf](https://www.overleaf.com/).
+The authors of the underlying [PNAS LaTeX Style](http://www.pnas.org/site/authors/latex.xhtml) are
+not explicitedly listed, but [PNAS](http://www.pnas.org) refers to
+[Overleaf](https://www.overleaf.com/).
 
 ### License
 
-GPL-3 for this package, as well as the short code taking with grateful acknowledgements
-from the [rticles](https://cran.r-project.org/package=rticles) package.
+GPL-3 for this package, as well as the short code taken with grateful acknowledgements from the
+[rticles](https://cran.r-project.org/package=rticles) package.
 
 The main [PNAS LaTeX](http://www.pnas.org/site/authors/latex.xhtml) style
 file (and supporting files) are under the
