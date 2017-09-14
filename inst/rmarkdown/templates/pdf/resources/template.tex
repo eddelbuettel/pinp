@@ -8,7 +8,6 @@
 % Note that the use of elements such as single-column equations
 % may affect the guide line number alignment.
 
-
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 $if(tables)$
@@ -87,13 +86,26 @@ $endif$
 
 $body$
 
+$if(natbib)$
+$if(bibliography)$
+$if(biblio-title)$
+$if(book-class)$
+\renewcommand\bibname{$biblio-title$}
+$else$
+\renewcommand\refname{$biblio-title$}
+$endif$
+$endif$
+\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+$endif$
+$endif$
+
+$if(biblatex)$
+\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+$endif$
+
 $for(include-after)$
 $include-after$
 $endfor$
-
-
-% Bibliography
-% \bibliography{pnas-sample}
 
 \end{document}
 

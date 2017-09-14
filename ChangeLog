@@ -1,3 +1,26 @@
+2017-09-13  James Joseph Balamuta  <balamut2@illinois.edu>
+
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Quick pass over
+	content.
+	
+	* R/pinp.R: Added references and see also section.
+	* man/pinp.Rd: idem
+	
+	* inst/rmarkdown/templates/pdf/resources/pinp.bib: Added citations
+	for rticles, rmarkdown, and knitr. Changed PeerJ key away from DOI.
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Updated and 
+	added citations in skeleton
+	
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Moved in 
+	bibliography creation from the line at end of file.
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Removed 
+	single line bibliography entry
+
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Bumped default
+	height of figure based on Dirk's suggestion.
+	
+	* man/pinp.Rd: Re-ran roxygen2 to pick up citation_package parameter added.
+	
 2017-09-13  Dirk Eddelbuettel  <edd@debian.org>
 
 	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Further
@@ -11,21 +34,21 @@
 
 	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls:  Added footer content
 	hook with a default value of Package Vignette.
-	* inst/rmarkdown/templates/pdf/resoueces/template.tex: Setup pandoc
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Setup pandoc
 	hook for footer_content variable
 	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: idem
 
-	* inst/rmarkdown/templates/pdf/resoueces/template.tex: Allowed doi
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Allowed doi
 	field to receive URLs.
 	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: idem
 
-	* inst/rmarkdown/templates/pdf/resoueces/template.tex: Added watermark
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Added watermark
 	pandoc variable with default value of false.
 	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: idem
 	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Changed watermark
 	usage to rely on built-in print feature of xwatermark
 
-	* inst/rmarkdown/templates/pdf/resoueces/template.tex: Fix lineno
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Fix lineno
 	pandoc variable usage
 
 2017-09-12  Dirk Eddelbuettel  <edd@debian.org>
@@ -44,7 +67,7 @@
 
 2017-09-09  Dirk Eddelbuettel  <edd@debian.org>
 
-	* inst/rmarkdown/templates/pdf/resoueces/template.tex: Updated
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Updated
 	footer showing project URL
 	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Idem
 	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Idem
