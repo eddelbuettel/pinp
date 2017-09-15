@@ -58,14 +58,16 @@ output: pinp::pinp
 ## Introduction {#intro .unnumbered}
 
 This *pinp is not PNAS* template started when the introduction to
-[Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html) by
-\cite{PeerJ:Rcpp} was converted into this updated
+[Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html) by \cite{PeerJ:Rcpp} 
+was converted into this updated
 [Rcpp Introduction](https://eddelbuettel.github.io/pinp/Rcpp-introduction.pdf)
 vignette.  It is based on the
 [pnas_article](https://github.com/rstudio/rticles/tree/master/inst/rmarkdown/templates/pnas_article)
-template of the wonderful [rticles](https://github.com/rstudio/rticles)
-package by \cite{CRAN:rticles}. The conversion from markdown to latex
-is facilitated by \cite[rmarkdown]{CRAN:rmarkdown} and \cite[knitr]{CRAN:knitr}. The underlying LaTeX macros are from
+template of the wonderful [rticles](https://cran.r-project.org/package=rticles) package by
+\cite{CRAN:rticles}. The conversion from markdown to latex is facilitated by
+[rmarkdown](https://cran.r-project.org/package=rmarkdown)
+\citep{CRAN:rmarkdown} and [knitr](https://cran.r-project.org/package=knitr)
+\citep{CRAN:knitr}. The underlying LaTeX macros are from
 [pnas.org](http://www.pnas.org/site/authors/latex.xhtml).
 
 The remainder of the document carries over from the corresponding

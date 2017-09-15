@@ -1,10 +1,11 @@
 %%%
-%% rcpp-docs.cls
-%% based on pnas-new.cls and supporting material from
-%% http://www.pnas.org/site/authors/latex.xhtml
-%% as well as local changes 
+%% ping.cls
+%%   based on pnas-new.cls and supporting material from
+%%   http://www.pnas.org/site/authors/latex.xhtml
+%%   as well as local changes 
 %%
-%% Dirk Eddelbuettel and James Balamuts, August 2017
+%% Dirk Eddelbuettel and James Balamuta
+%% August - September 2017
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % pnas-new.cls, v1.2, 2016/02/28 
@@ -170,7 +171,6 @@
 \newcommand{\copyrightfont}{\normalfont\rmfamily\fontsize{6}{8}\selectfont}
 
 %% Set URL link color & font
-%\renewcommand\UrlFont{\color{black}\sffamily}
 \renewcommand\UrlFont{\color{pnasbluetext}\sffamily}
 
 %% Author and affiliation
@@ -197,10 +197,10 @@
 \newwatermark[allpages,color=gray!20,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
 
 %% Copyright statement (not used)
-\newboolean{displaycopyright}
-\setboolean{displaycopyright}{false} % Confirmed as not required
+%\newboolean{displaycopyright}
+%\setboolean{displaycopyright}{false} % Confirmed as not required
 \RequirePackage{textcomp} % For copyright symbol styling
-\newcommand{\copyrightstatement}{\, \textcopyright\, 2015 by The National Academy of Sciences of the USA}
+%\newcommand{\copyrightstatement}{\, \textcopyright\, 2015 by The National Academy of Sciences of the USA}
 
 %% Graphics, tables and other formatting
 \RequirePackage{graphicx,xcolor}
@@ -235,16 +235,11 @@
 % For sig statement box
 \definecolor{pnasbluetext}{RGB}{0,101,165} %
 \definecolor{pnasblueback}{RGB}{205,217,235} %
-%\definecolor{pnasbluetext}{RGB}{0,115,209} % Not used
-%\definecolor{pnasblueback}{RGB}{210,230,247} % Not used
 
 %% Bibliography    
 \RequirePackage{natbib}
 \setlength{\bibsep}{0.0pt}
-%\bibliographystyle{pnas2011}
 \bibliographystyle{chicago}
-%\renewcommand{\bibsection}{} % Remove header
-%\renewcommand\bibfont{\normalfont\sffamily\fontsize{6}{8}\selectfont} % set font to be sans serif
 \renewcommand\bibfont{\normalfont\sffamily\fontsize{8}{10}\selectfont} % set font to be sans serif
 
 %\makeatletter 
@@ -301,7 +296,6 @@
 
 \makeatletter
 \fancypagestyle{firststyle}{
-   %\fancyfoot[R]{\footerfont PNAS\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}vol. XXX\hspace{7pt}|\hspace{7pt}no. XX\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
    \fancyfoot[R]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
    \fancyfoot[L]{\footerfont\@ifundefined{@doi}{}{\@doi}}
 }
@@ -316,9 +310,7 @@
 \rfoot{}%
 \makeatletter
 \fancyfoot[LE]{\footerfont\textbf{\thepage}\hspace{7pt}|\hspace{7pt}\@ifundefined{@doi}{}{\@doi}}
-%\fancyfoot[RO]{\footerfont PNAS\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}vol. XXX\hspace{7pt}|\hspace{7pt}no. XX\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
 \fancyfoot[RO]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
-%\fancyfoot[RE,LO]{\footerfont\@ifundefined{@leadauthor}{}{\@leadauthor}\ifnum \value{authors} > 1\hspace{5pt}\textit{et al.}\fi}
 \fancyfoot[RE,LO]{\footerfont\@ifundefined{@leadauthor}{}{\@leadauthor}}
 
 % Use footer routine for line numbers
@@ -395,7 +387,7 @@
 \newcommand{\acknow}[1]{\def\@acknow{#1}}
 
 %% Dropped capital for first letter of main text
-\newcommand{\dropcap}[1]{\lettrine[lines=2,lraise=0.05,findent=0.1em, nindent=0em]{{\dropcapfont{#1}}}{}}
+%\newcommand{\dropcap}[1]{\lettrine[lines=2,lraise=0.05,findent=0.1em, nindent=0em]{{\dropcapfont{#1}}}{}}
 
 %% Abstract formatting
 \def\xabstract{abstract}
@@ -483,7 +475,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \providecommand*{\toclevel@acknow@section}{0}
 % Format is set for research articles by default
 \titleformat{\acknow@section}[runin]
-   {\sffamily\normalsize\bfseries}
+   {\sffamily\normalsize\bfseries\color{pinpblue}}
    {}
    {0em}
    {#1.}
@@ -493,7 +485,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 	{3.25ex plus 1ex minus .2ex}
 	{1.5ex plus .2ex}
 \newcommand{\showacknow}{% Display acknowledgments section
-\@ifundefined{@acknow}{}{\acknow@section{\color{color2}Acknowledgments}\@acknow}
+\@ifundefined{@acknow}{}{\acknow@section{Acknowledgments}\@acknow}
 }
 
 %% Set up the materials&methods field
@@ -518,22 +510,6 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 %% Other packages
 \RequirePackage{enumitem} % For reducing bullet list item separation
 
-% Custom definitions
-\newcommand{\TODO}{\marginnote{TODO}}
-\newcommand{\rlang}{\textit{R }}
-\newcommand{\rlangns}{\textit{R}}
-\newcommand{\slang}{\textit{S }}
-\newcommand{\rcpp}{\textit{Rcpp }}
-\newcommand{\rcppns}{\textit{Rcpp}}
-\newcommand{\clang}{\textit{C }}
-\newcommand{\clangns}{\textit{C}} 
-\newcommand{\cpp}{\textit{C++ }}
-\newcommand{\cppns}{\textit{C++}}
-\newcommand{\fortran}{\textit{Fortran }}
-\newcommand{\fortranns}{\textit{Fortran}}
-\newcommand{\python}{\textit{Python}}
-\newcommand{\julia}{\textit{Julia}}
-\newcommand{\pkg}[1]{\textbf{#1}}
 % Taken from RJournal styling
 \makeatletter 
 \DeclareRobustCommand\code{\bgroup\@noligs\@codex}
@@ -542,15 +518,11 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 {#1}\egroup}
 \makeatother
 
-
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
 \newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
 
-%\usepackage{framed}
-%\definecolor{shadecolor}{RGB}{248,248,248}
-%\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
 %% using mdframed (loaded above) for shaded box around code
 \global\mdfdefinestyle{codebox}{%
   linecolor=gray!70,
@@ -591,13 +563,8 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
 \newcommand{\NormalTok}[1]{#1}
 
-
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
-
-
-
 
 
 %% Choose template type
@@ -614,9 +581,6 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \setboolean{shortarticle}{true} 
 % true = set into first column
 % false = spans page width
-
-%% Set colors
-%\definecolor{color2}{RGB}{130,0,0} % color
 
 %% Set up the first page footnote/fact box here
 \RequirePackage{float}
@@ -663,36 +627,27 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
 \newenvironment{CodeChunk}{}{}
 
-
-%% Set sans as default font (as in pnasinvited)
-%\renewcommand{\familydefault}{\sfdefault}
-%\renewcommand{\keywordsfont}{\sffamily}
-
 %% Set colors
-%\definecolor{color2}{RGB}{200,89,45} % color
-\definecolor{color2}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
-
-% Add line after abstract
-%\appto{\abscontent}{\par\textcolor{color2}{\hrulefill}}
+\definecolor{pinpblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
 
 % Add colour to the title
-\appto{\titlefont}{\color{color2}}
+\appto{\titlefont}{\color{pinpblue}}
 
 % ...and section headings
 \titleformat{\section}
-  {\large\sffamily\bfseries\color{color2}}
+  {\large\sffamily\bfseries\color{pinpblue}}
   {\thesection.}
   {0.5em}
   {#1}
   []
 \titleformat{name=\section,numberless}
-  {\large\sffamily\bfseries\color{color2}}
+  {\large\sffamily\bfseries\color{pinpblue}}
   {}
   {0em}
   {#1}
   []  
 \titleformat{\subsection}[runin]
-  {\sffamily\bfseries\color{color2}} %\itshape}%
+  {\sffamily\bfseries\color{pinpblue}} %\itshape}%
   {\thesubsection.}
   {0.5em}
   {#1. }
@@ -700,8 +655,6 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 % Other section headings left unchanged.
 
 %% microtype with mathdesign, microtype already loaded
-%\usepackage{microtype}                    %% cf http://www.khirevich.com/latex/microtype/
-%\usepackage[T1]{fontenc}		   %% cf http://www.khirevich.com/latex/font/
 \usepackage[bitstream-charter]{mathdesign} %% cf http://www.khirevich.com/latex/font/
 
   
