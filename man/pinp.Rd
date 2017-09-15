@@ -24,8 +24,8 @@ Format suitable for attractive two-column pdf vignettes
 }
 \examples{
 \dontrun{
-library(rmarkdown)
-draft("MyArticle.Rmd", template = "pinp", package = "pinp")
+rmarkdown::draft("MyArticle.Rmd", template = "pdf", package = "pinp")
+rmarkdown::render("MyAricle.Rmd")
 }
 
 }
