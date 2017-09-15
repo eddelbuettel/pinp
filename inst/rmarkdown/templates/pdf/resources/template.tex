@@ -1,4 +1,4 @@
-\documentclass[9pt,twocolumn,twoside,printwatermark=$if(watermark)$$watermark$$else$false$endif$]{pinp}
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(two_column)$twocolumn,$else$$if(lineno)$lineno,$endif$$endif$$if(two_sides)$twoside,$endif$,printwatermark=$if(watermark)$$watermark$$else$false$endif$]{pinp}
 
 %% Some pieces required from the pandoc template
 \providecommand{\tightlist}{%
