@@ -52,13 +52,21 @@ $ installGithub.r eddelbuettel/pinp          # using a script from littler
 
 and then use as a Markdown template via RStudio, or call `rmarkdown::render()` directly.
 
+and then use as a Markdown template via RStudio, or use code such as
+
+```r
+library(rmarkdown)
+draft("mypaper.Rmd", template="pdf", package="pinp", edit=FALSE)
+render("mypaper.Rmd")
+```     
+
 ### Requirements
 
 Beyond the R package dependencies, a working `pandoc` binary is needed. RStudio installs
 its own copy, otherwise do what is needed on your OS (_i.e._, something like `sudo apt-get
 install pandoc pandoc-citeproc`).
 
-The pdf mode requires a fairly complete LaTeX installation, and has been used on Ubuntu and macOS.  
+The pdf mode requires a fairly complete LaTeX installation, and has been used on Ubuntu and macOS.
 On Debian/Ubuntu, the following packages should provide a working set:
 
 ```

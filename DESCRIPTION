@@ -1,11 +1,14 @@
 Package: pinp
 Type: Package
-Title: Pinp is not PNAS Two-Column PDF Vignette Template
+Title: 'pinp' is not 'PNAS'
 Version: 0.0.1
-Date: 2017-09-14
+Date: 2017-09-15
 Author: Dirk Eddelbuettel and James Balamuta
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
-Description: A 'PNAS'-alike style for 'rmarkdown'.
+Description: A 'PNAS'-alike style for 'rmarkdown', derived from the
+ 'Proceedings of the National Academy of Sciences of the United States
+ of America' (PNAS, see <https://www.pnas.org>) LaTeX style, and
+ adapted for use with 'markdown' and 'pandoc'.
 URL: http://dirk.eddelbuettel.com/code/pinp.html
 BugReports: https://github.com/eddelbuettel/pinp/issues
 Imports: rmarkdown, knitr

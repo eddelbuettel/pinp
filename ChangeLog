@@ -1,26 +1,42 @@
+2017-09-15  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Release 0.0.1
+
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Misc edits
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Idem
+
+	* R/pinp.R: Correct example in manual page
+	* man/pinp.Rd: Idem
+
+2017-09-14  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/NEWS.Rd: Added
+	* README.md: Updated text and screenshots
+
 2017-09-13  James Joseph Balamuta  <balamut2@illinois.edu>
 
 	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Quick pass over
 	content.
-	
+
 	* R/pinp.R: Added references and see also section.
 	* man/pinp.Rd: idem
-	
+
 	* inst/rmarkdown/templates/pdf/resources/pinp.bib: Added citations
 	for rticles, rmarkdown, and knitr. Changed PeerJ key away from DOI.
-	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Updated and 
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Updated and
 	added citations in skeleton
-	
-	* inst/rmarkdown/templates/pdf/resources/template.tex: Moved in 
+
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Moved in
 	bibliography creation from the line at end of file.
-	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Removed 
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Removed
 	single line bibliography entry
 
-	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Bumped default
-	height of figure based on Dirk's suggestion.
-	
-	* man/pinp.Rd: Re-ran roxygen2 to pick up citation_package parameter added.
-	
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Bumped
+	default height of figure based on Dirk's suggestion.
+
+	* man/pinp.Rd: Re-ran roxygen2 to pick up citation_package
+	parameter added.
+
 2017-09-13  Dirk Eddelbuettel  <edd@debian.org>
 
 	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Further
