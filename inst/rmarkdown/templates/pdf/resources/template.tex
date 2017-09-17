@@ -18,12 +18,6 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
-%$if(pnas_type)$
-%\templatetype{$pnas_type$}  % Choose template
-%$else$
-%\templatetype{pnasresearcharticle}
-%$endif$
-
 \title{$title$}
 
 $for(author)$
@@ -37,22 +31,6 @@ $endfor$
 
 % Please give the surname of the lead author for the running footer
 \leadauthor{$lead_author_surname$}
-
-% Please add here a significance statement to explain the relevance of your work
-\significancestatement{$significance$}
-
-
-\authorcontributions{$author_contributions$}
-
-$if(conflict_of_interest)$
-\authordeclaration{$conflict_of_interest$}
-$endif$
-
-$if(equal_authors)$
-\equalauthors{\textsuperscript{$equal_authors.code$} $equal_authors.text$}
-$endif$
-
-\correspondingauthor{\textsuperscript{$corresponding_author.code$} $corresponding_author.text$}
 
 % Keywords are not mandatory, but authors are strongly encouraged to provide them. If provided, please include two to five keywords, separated by the pipe symbol, e.g:
 $if(keywords)$ \keywords{ $for(keywords)$ $keywords$ $sep$| $endfor$ $endif$ }
