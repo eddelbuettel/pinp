@@ -42,6 +42,18 @@ keywords:
   - keywords
   - here
 
+# Font size of the document
+fontsize: "9pt"
+
+# Enable two-column layout
+two_column: true
+
+# Enables lineo only if two_column is false!
+lineno: true
+
+# Enable two-sided layout
+two_sides: true
+
 # Bibliography TODO(also still needed in body)
 bibliography: pinp
 
