@@ -19,6 +19,9 @@
 	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Removed cruft
 	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Idem
 
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Move some
+	endmatter material here from the \code{skeleton.Rmd} file
+
 2017-09-15  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION: Release 0.0.1
