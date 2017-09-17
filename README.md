@@ -37,28 +37,28 @@ and the final two pages:
 
 ### Status
 
-The package is working, but not yet on [CRAN](https://cran.r-project.org/).
+The package is working and on [CRAN](https://cran.r-project.org/).
 
 Some float placements are a little fragile in LaTeX two-column mode.  If in doubt, add more text
 around it to aid the heuristic.
 
 ### Usage 
 
-Use your favourite tool to install from GitHub, _e.g._,
+Use the standard 
 
-```shell
-$ installGithub.r eddelbuettel/pinp          # using a script from littler
+```r
+install.packages("pinp")
 ```
 
-and then use as a Markdown template via RStudio, or call `rmarkdown::render()` directly.
-
-and then use as a Markdown template via RStudio, or use code such as
+to install it from CRAN, and then use as a Markdown template via RStudio, or use code such as
 
 ```r
 library(rmarkdown)
 draft("mypaper.Rmd", template="pdf", package="pinp", edit=FALSE)
 render("mypaper.Rmd")
-```     
+```
+
+to create a first draft of a new `mypaper.Rmd`.
 
 ### Requirements
 
