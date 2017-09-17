@@ -5,7 +5,7 @@
 	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Reflect
 	various options
 
-	* R/pinp.R (pinp): Minor edits
+	* R/pinp.R (pinp): Minor edits, copy in pinp.cls if not present
 
 	* inst/rmarkdown/templates/pdf/resources/template.tex: Correct
 	keywords use ensuring processing both with and without keywords

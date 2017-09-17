@@ -48,6 +48,10 @@ pinp <- function(..., keep_tex = TRUE, citation_package = 'natbib') {
     base$knitr$opts_chunk$fig.height <- 3.675 # 4.9 * 3:4
     base$knitr$opts_chunk$fig.align <- "center"
 
+    if (!file.exists("pinp.cls"))
+        file.copy(system.file("rmarkdown", "templates", "pdf", "skeleton", "pinp.cls",
+                              package="pinp"), ".")
+
     base
 }
 
