@@ -48,6 +48,14 @@ pinp <- function(..., keep_tex = TRUE, citation_package = 'natbib') {
     base$knitr$opts_chunk$fig.height <- 3.675 # 4.9 * 3:4
     base$knitr$opts_chunk$fig.align <- "center"
 
+    hook_output <- function(x, options) {
+        paste('\\begin{ShadedResult}\n\\begin{verbatim}\n', x,
+              '\\end{verbatim}\n\\end{ShadedResult}\n', sep = '')
+    }
+    base$knitr$knit_hooks$output  <- hook_output
+    base$knitr$knit_hooks$message <- hook_output
+    base$knitr$knit_hooks$warning <- hook_output
+
     if (!file.exists("pinp.cls"))
         file.copy(system.file("rmarkdown", "templates", "pdf", "skeleton", "pinp.cls",
                               package="pinp"), ".")

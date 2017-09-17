@@ -1,16 +1,20 @@
 2017-09-17  Dirk Eddelbuettel  <edd@debian.org>
 
+	* R/pinp.R (pinp): Minor edits, copy in pinp.cls if not present,
+	provided output hook for shaded and framed output
+
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Shaded and
+	framed output box
+
 	* inst/rmarkdown/templates/pdf/resources/template.tex: Correct
 	defaults to 9pt, two-column, two-side, no lineno, no watermark
 	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Reflect
 	various options
 
-	* R/pinp.R (pinp): Minor edits, copy in pinp.cls if not present
-
 	* inst/rmarkdown/templates/pdf/resources/template.tex: Correct
 	keywords use ensuring processing both with and without keywords
 
-	* README.md: Update to reflect CRAN status
+	* README.md: Updated to reflect CRAN status
 
 	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Removed cruft
 	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Idem
