@@ -50,7 +50,7 @@ pinp <- function(..., keep_tex = TRUE, citation_package = 'natbib') {
 
     if (!file.exists("pinp.cls"))
         file.copy(system.file("rmarkdown", "templates", "pdf", "skeleton", "pinp.cls",
-                              package="pinp"))
+                              package="pinp"), ".")
 
     base
 }
