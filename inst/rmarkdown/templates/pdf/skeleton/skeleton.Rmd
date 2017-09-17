@@ -24,7 +24,7 @@ abstract: |
   Your abstract will be typset here, and used by default a visually distinctive font.
   An abstract should explain to the general reader the major contributions of the article. 
 
-# Acknowledgements
+# Optional: Acknowledgements
 acknowledgements: |
   This template package builds upon, and extends, the work of the excellent 
   [rticles](https://cran.r-project.org/package=rticles) package, and both rely on
@@ -34,7 +34,7 @@ acknowledgements: |
   ([GPL-3](https://www.gnu.org/licenses/gpl-3.0.en.html) and
   [LPPL (>= 1.3)](https://www.latex-project.org/lppl/)).
 
-# One or more keywords
+# Optional: One or more keywords
 keywords:
   - one
   - two
@@ -42,22 +42,22 @@ keywords:
   - keywords
   - here
 
-# Font size of the document
-fontsize: "9pt"
+# Font size of the document, values of 9pt (default), 10pt, 11pt and 12pt
+fontsize: 9pt
 
-# Enable two-column layout
-two_column: true
+# Optional: Force one-column layout, default is two-column
+#one_column: true
 
-# Enables lineo only if two_column is false!
-lineno: true
+# Optional: Enables lineo mode, but only if one_column mode is also true
+#lineno: true
 
-# Enable two-sided layout
-two_sides: true
+# Optional: Enable one-sided layout, default is two-sided
+#one_sided: true
 
-# Bibliography TODO(also still needed in body)
+# Optional: Bibliography 
 bibliography: pinp
 
-# Enable a watermark on the document
+# Optional: Enable a 'Draft' watermark on the document
 watermark: true
 
 # Customize footer, eg by referencing the vignette
