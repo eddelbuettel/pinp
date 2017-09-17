@@ -196,11 +196,7 @@
 \RequirePackage[printwatermark]{xwatermark}
 \newwatermark[allpages,color=gray!20,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
 
-%% Copyright statement (not used)
-%\newboolean{displaycopyright}
-%\setboolean{displaycopyright}{false} % Confirmed as not required
 \RequirePackage{textcomp} % For copyright symbol styling
-%\newcommand{\copyrightstatement}{\, \textcopyright\, 2015 by The National Academy of Sciences of the USA}
 
 %% Graphics, tables and other formatting
 \RequirePackage{graphicx,xcolor}
@@ -242,12 +238,6 @@
 \bibliographystyle{chicago}
 \renewcommand\bibfont{\normalfont\sffamily\fontsize{8}{10}\selectfont} % set font to be sans serif
 
-%\makeatletter 
-%\renewcommand\@biblabel[1]{ #1.} % Remove brackets from label
-%\def\tagform@#1{\maketag@@@{\bfseries(\ignorespaces#1\unskip\@@italiccorr)}}
-%\renewcommand{\eqref}[1]{\textup{{\normalfont Eq.~(\ref{#1}}\normalfont)}}
-%\makeatother
-
 %% Figure caption style
 \DeclareCaptionFormat{pnasformat}{\normalfont\sffamily\fontsize{7}{9}\selectfont#1#2#3}
 \captionsetup{format=pnasformat}
@@ -265,11 +255,6 @@
 \sffamily\fontsize{7.5}{10}\selectfont
 }
 \newcommand{\addtabletext}[1]{{\setlength{\leftskip}{9pt}\fontsize{7}{9}\selectfont#1}}
-
-%% Equation numbering - use square brackets [commented-out]
-%\makeatletter
-%\renewcommand\tagform@[1]{\maketag@@@ {[\ignorespaces #1\unskip \@@italiccorr ]}}
-%\makeatother
 
 %% Headers and footers
 \RequirePackage{fancyhdr}  % custom headers/footers
@@ -385,9 +370,6 @@
 \newcommand{\significancestatement}[1]{\def\@significancestatement{#1}}
 \newcommand{\matmethods}[1]{\def\@matmethods{#1}}
 \newcommand{\acknow}[1]{\def\@acknow{#1}}
-
-%% Dropped capital for first letter of main text
-%\newcommand{\dropcap}[1]{\lettrine[lines=2,lraise=0.05,findent=0.1em, nindent=0em]{{\dropcapfont{#1}}}{}}
 
 %% Abstract formatting
 \def\xabstract{abstract}
@@ -567,9 +549,6 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 
-%% Choose template type
-%\newcommand*{\templatetype}[1]{%
-%  \RequirePackage{#1}}
 %\RequirePackage{pnasresearcharticle}
 %%% BEGIN pnasresearcharticle
 %%% PNAS two column research article  style file
@@ -656,8 +635,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 
 %% microtype with mathdesign, microtype already loaded
 \usepackage[bitstream-charter]{mathdesign} %% cf http://www.khirevich.com/latex/font/
-
-  
+ 
 \endinput
 
 %%% END pnasresearcharticle
