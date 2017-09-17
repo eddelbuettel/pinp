@@ -1,4 +1,4 @@
-\documentclass[$if(fontsize)$$fontsize$,$endif$$if(two_column)$twocolumn,$else$$if(lineno)$lineno,$endif$$endif$$if(two_sides)$twoside,$endif$,printwatermark=$if(watermark)$$watermark$$else$false$endif$]{pinp}
+\documentclass[$if(fontsize)$$fontsize$,$else$9pt,$endif$$if(one_column)$$if(lineno)$lineno,$endif$$else$twocolumn,$endif$$if(one_sided)$$else$twoside,$endif$printwatermark=$if(watermark)$$watermark$$else$false$endif$]{pinp}
 
 %% Some pieces required from the pandoc template
 \providecommand{\tightlist}{%
@@ -33,7 +33,7 @@ $endfor$
 \leadauthor{$lead_author_surname$}
 
 % Keywords are not mandatory, but authors are strongly encouraged to provide them. If provided, please include two to five keywords, separated by the pipe symbol, e.g:
-$if(keywords)$ \keywords{ $for(keywords)$ $keywords$ $sep$| $endfor$ } $endif$
+$if(keywords)$ \keywords{ $for(keywords)$ $keywords$ $sep$| $endfor$ } $endif$ 
 
 \begin{abstract}
 $abstract$

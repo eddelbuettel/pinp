@@ -1,6 +1,11 @@
 2017-09-17  Dirk Eddelbuettel  <edd@debian.org>
 
 	* inst/rmarkdown/templates/pdf/resources/template.tex: Correct
+	defaults to 9pt, two-column, two-side, no lineno, no watermark
+
+	* R/pinp.R (pinp): Minor edits
+
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Correct
 	keywords use ensuring processing both with and without keywords
 
 	* README.md: Update to reflect CRAN status
