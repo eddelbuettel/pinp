@@ -1,0 +1,196 @@
+---
+title: pinp is not PNAS
+
+# Use letters for affiliations
+author:
+  - name: Dirk Eddelbuettel
+    affiliation: a
+  - name: James Joseph Balamuta
+    affiliation: b
+address:
+  - code: a
+    address: Debian and R Projects; Chicago, IL, USA; \url{edd@debian.org}
+  - code: b
+    address: Depts of Informatics and Statistics, Univ. of Illinois at Urbana-Champaign; Champaign, IL, USA; \url{balamut2@illinois.edu}
+
+# For footer text  TODO(fold into template, allow free form two-authors)
+lead_author_surname: Eddelbuettel and Balamuta
+
+# Place DOI URL or CRAN Package URL here
+doi: "https://cran.r-project.org/package=pinp"
+
+# Abstract
+abstract: |
+  This short vignette details several of the available options for the `pinp` pdf vignette template. 
+
+# Optional: Acknowledgements
+acknowledgements: |
+  We gratefully acknowledge all the help from the
+   [rticles](https://cran.r-project.org/package=rticles) package
+  <!--\citep{CRAN:rticles}-->  which not only introduced us to the powerful
+  [PNAS LaTeX](http://www.pnas.org/site/authors/latex.xhtml) style
+  class, but also provided useful code templates to study in the other
+  mode as the fine macros.
+
+# Optional: One or more keywords
+keywords:
+  - pdf
+  - vignette
+
+# Font size of the document, values of 9pt (default), 10pt, 11pt and 12pt
+fontsize: 9pt
+
+# Optional: Force one-column layout, default is two-column
+#one_column: true
+
+# Optional: Enables lineo mode, but only if one_column mode is also true
+#lineno: true
+
+# Optional: Enable one-sided layout, default is two-sided
+#one_sided: true
+
+# Optional: Bibliography 
+#bibliography: pinp
+
+# Optional: Enable a 'Draft' watermark on the document
+#watermark: true
+
+# Customize footer, eg by referencing the vignette
+footer_contents: "pinp Vignette"
+
+# Our style
+output: pinp::pinp
+---
+
+# Introduction {#intro .unnumbered}
+
+The *pinp is not PNAS* template extends and reworks the
+[pnas_article](https://github.com/rstudio/rticles/tree/master/inst/rmarkdown/templates/pnas_article)
+template from the wonderful
+[rticles](https://cran.r-project.org/package=rticles) package. This
+vignette lists the available options.
+
+# YAML Content {#options .unnumbered}
+
+## author
+
+Fields `name` and `affiliation` must be given. The latter can be a
+single-letter index referring to the address field.
+
+## address
+
+Fields `code` (referring to the index from `affiliation`) and
+`address`. The latter is free-form and may include `\url{}` and other
+LaTeX macros.
+
+## lead_author_surnames
+
+A free-form field usable for a free-form _et al_ use, or a simple text
+field listing authors.
+
+## doi
+
+A free-form URL for a paper doi reference, or a canonical URL for a
+software package or repository. These are typeset at actual URL and
+resolve their links from the pdf document.
+
+## abstract:
+
+A short free-form abstract can be used to inform the reader of the
+essence of the subsequent document.
+
+## acknowledgements
+
+An _optional_ free-form text which will be typset at the very end
+right before the references, if any.
+
+## keywords
+
+An optional list (entered as a YAML list following `-` marks) which will be typeset as a list of alternatives separated by vertical _pipe_ symbols.
+
+
+# Options {#options .unnumbered}
+
+## `fontsize` 
+
+Default it 9pt, also supported are 10pt, 11pt and 12pt which may make
+sense in one-column mode. 
+
+## `one_column` 
+
+An _optional_ override (using value `true`) for the default two-column
+layout. Useful for initial stages of a document, as well as for
+documents with wide-format tables and figures.
+
+## lineno 
+
+An _optional_ selection (via value `true`) of line numbers,
+selectable only of `one_column: true` is set.  Currently typesets
+number on both the left and right-ahdn side which seems in error.
+
+## one_sided 
+
+An _optionaal_ selection (via value `true`) of one-sided rather than
+two-sided output. This should probably alter the footnote but does not
+currently do so.
+  
+\phantom{xxx}
+  
+## bibliography
+
+A field for an _optional_ selection of a Bibtex input file, extension
+can be omitted.  Alternative, bibliographic information may also be
+included directly as a `thebibliography` environment by including the
+content of the generated `bbl` file.
+
+
+## watermark
+
+An _optional_ selection of a 'Draft' watermark drawn across the center
+of the page (using value `true`). Note that figures may be plotted
+above the watermark.
+
+## footer_contents
+
+An character value delimited by quotes for something like _"mypackage
+Vignette"_ which will be shown in the footer.
+
+# Environments {#options .unnumbered}
+
+## Standard LaTeX
+
+All standard LaTeX environment are directly usable if needed.
+
+## figure*
+
+By using a (LaTeX) `\begin{figure*} ... \end{figure*}` environment,
+figures can span two columns (when the default two-column mode is
+used).  Figures will then be _floats_ in the LaTeX sense and place at
+the top or bottom of the page.  An example is given by the skeleton
+document of the package. Similarly, `\begin{figure*}
+... \end{figure*}` could be used around a wide table structure.
+
+## widetext
+
+The `\begin{widetext*} ... \end{widetext*}` environment can be used to
+break text from two-column mode to one-column mode and back.
+
+# Other Help {#help .unnumbered}
+
+## RMarkdown 
+
+The [rmarkdown site](http://rmarkdown.rstudio.com/) by RStudio is very
+comprehensive and can answer many questions pertaining to Markdown
+processing in R using the
+[rmarkdown package](https://cran.r-project.org/package=rmarkdown).
+
+
+## LaTeX 
+
+Ultimately this style uses LaTeX to produce the pdf output. The
+[tex StackExchange](http://tex.stackexchange.com) can be helpful for
+specific LaTeX questions.
+
+\verticaladjustment{-6pt}
+
+
