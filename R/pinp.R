@@ -43,9 +43,9 @@ pinp <- function(..., keep_tex = TRUE, citation_package = 'natbib') {
     base$knitr$opts_chunk$comment <- '# '	# default to one hashmark
     base$knitr$opts_chunk$highlight <- TRUE  	# changed as well
 
-    base$knitr$opts_chunk$dev.args <- list(pointsize = 11)
-    base$knitr$opts_chunk$fig.width <- 4.9 # 6.125" * 0.8, as in template
-    base$knitr$opts_chunk$fig.height <- 3.675 # 4.9 * 3:4
+    base$knitr$opts_chunk$dev.args <- list(pointsize = 9)  # from 11
+    base$knitr$opts_chunk$fig.width <- 3.5 	# from 4.9 # 6.125" * 0.8, as in template
+    base$knitr$opts_chunk$fig.height <- 3.5	# from 3.675 # 4.9 * 3:4
     base$knitr$opts_chunk$fig.align <- "center"
 
     hook_output <- function(x, options) {

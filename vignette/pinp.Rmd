@@ -25,17 +25,19 @@ abstract: |
 
 # Optional: Acknowledgements
 acknowledgements: |
-  We gratefully acknowledge all the help from the
+   We gratefully acknowledge all the help from the
    [rticles](https://cran.r-project.org/package=rticles) package
-  <!--\citep{CRAN:rticles}-->  which not only introduced us to the powerful
-  [PNAS LaTeX](http://www.pnas.org/site/authors/latex.xhtml) style
-  class, but also provided useful code templates to study in the other
-  mode as the fine macros.
+   \citep{CRAN:rticles} which not only introduced us to the powerful
+   [PNAS LaTeX](http://www.pnas.org/site/authors/latex.xhtml) style
+   class, but also provided useful code templates to study in the
+   other mode as the fine macros. The [pandoc](http://pandoc.org)
+   document converter \citep{Pandoc} is the much-admired driving force
+   behind the document manipulation.
 
 # Optional: One or more keywords
-keywords:
-  - pdf
-  - vignette
+#keywords:
+#  - pdf
+#  - vignette
 
 # Font size of the document, values of 9pt (default), 10pt, 11pt and 12pt
 fontsize: 9pt
@@ -62,6 +64,7 @@ footer_contents: "pinp Vignette"
 output: pinp::pinp
 ---
 
+
 # Introduction {#intro .unnumbered}
 
 The *pinp is not PNAS* template extends and reworks the
@@ -70,7 +73,8 @@ template from the wonderful
 [rticles](https://cran.r-project.org/package=rticles) package. This
 vignette lists the available options.
 
-# YAML Content {#options .unnumbered}
+
+# YAML Content {#yaml .unnumbered}
 
 ## author
 
@@ -109,6 +113,7 @@ right before the references, if any.
 An optional list (entered as a YAML list following `-` marks) which will be typeset as a list of alternatives separated by vertical _pipe_ symbols.
 
 
+
 # Options {#options .unnumbered}
 
 ## `fontsize` 
@@ -134,7 +139,7 @@ An _optionaal_ selection (via value `true`) of one-sided rather than
 two-sided output. This should probably alter the footnote but does not
 currently do so.
   
-\phantom{xxx}
+\phantom{xxx} <!-- if this isn't here the next para runs in-->
   
 ## bibliography
 
@@ -142,7 +147,6 @@ A field for an _optional_ selection of a Bibtex input file, extension
 can be omitted.  Alternative, bibliographic information may also be
 included directly as a `thebibliography` environment by including the
 content of the generated `bbl` file.
-
 
 ## watermark
 
@@ -155,25 +159,79 @@ above the watermark.
 An character value delimited by quotes for something like _"mypackage
 Vignette"_ which will be shown in the footer.
 
+
+# Code {#code .unnumbered}
+
+## Knitr
+
+The [knitr](https://cran.r-project.org/package=pinp) package is of course also
+available to both typeset code, typically in R or one of the other
+supported engines.  Knitr segments used three backticks (just like
+Pandoc described below) followed by curly brace sgement listing first
+the desired engine, and then the selected display options. Output from
+the code can also be shown, and a myriad of options permit many variants.
+
+```{r}
+a <- 2 + 2
+a
+```
+
+Output from such code blocks is also shown in a framed and shaded box.
+Figures resulting from these code blocks are automatically inlined:
+ 
+
+```{r}
+set.seed(42)
+par(mar=c(3,3,3,0))
+plot(cumsum(rnorm(100)), type='l',
+     main="Up and and away")
+```
+
+## Pandoc
+
+The easiest way to typeset code is to simply open three backticks
+followed by the name of one of the _numerous_ built-in pandoc parsers, 
+_i.e._, \verb|```c| to typeset in the C languags.  Pandoc segments will
+be highlighted as usual, and per a convention in this template also shown in
+framed and slightly shaded box as seen here and above.
+
+```c
+int doubleMe(int x) {
+    return x + x;          
+}
+```
+
+
 # Environments {#options .unnumbered}
 
 ## Standard LaTeX
 
-All standard LaTeX environment are directly usable if needed.
+All standard LaTeX environment are directly usable if needed,
+including of course all mathematical environments and symbols such as,
+say, the greek lettering: $\alpha$, $\beta$, $\gamma$, and so on.
+
+The following is set as usual via the `displaymath` environment:
+
+\begin{displaymath}
+    a^2 = b^2 + c^2
+\end{displaymath}
 
 ## figure*
 
-By using a (LaTeX) `\begin{figure*} ... \end{figure*}` environment,
-figures can span two columns (when the default two-column mode is
-used).  Figures will then be _floats_ in the LaTeX sense and place at
-the top or bottom of the page.  An example is given by the skeleton
-document of the package. Similarly, `\begin{figure*}
-... \end{figure*}` could be used around a wide table structure.
+Figure can span two columns (when the default two-column mode is used)
+by using a (LaTeX) `\begin{figure*} ... \end{figure*}` environment, .
+Figures will then be _floats_ in the LaTeX sense and place at the top
+or bottom of the page.  An example is given by the skeleton document
+of the package. Similarly, `\begin{figure*} ... \end{figure*}` could
+be used around a wide table structure.
 
 ## widetext
 
 The `\begin{widetext*} ... \end{widetext*}` environment can be used to
 break text from two-column mode to one-column mode and back.
+
+
+
 
 # Other Help {#help .unnumbered}
 
@@ -191,6 +249,24 @@ Ultimately this style uses LaTeX to produce the pdf output. The
 [tex StackExchange](http://tex.stackexchange.com) can be helpful for
 specific LaTeX questions.
 
-\verticaladjustment{-6pt}
 
 
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Allaire, {R Foundation}, Wickham, {Journal of
+  Statistical Software}, Xie, Vaidyanathan, {Association for Computing
+  Machinery}, Boettiger, {Elsevier}, Broman, Mueller, Quast, Pruim, Marwick,
+  Wickham, Keyes, and Yu}{Allaire et~al.}{2017}]{CRAN:rticles}
+Allaire, J., {R Foundation}, H.~Wickham, {Journal of Statistical Software},
+  Y.~Xie, R.~Vaidyanathan, {Association for Computing Machinery}, C.~Boettiger,
+  {Elsevier}, K.~Broman, K.~Mueller, B.~Quast, R.~Pruim, B.~Marwick,
+  C.~Wickham, O.~Keyes, and M.~Yu (2017).
+\newblock {\em rticles: Article Formats for R Markdown}.
+\newblock R package version 0.4.1.
+
+\bibitem[\protect\citeauthoryear{MacFarlane}{MacFarlane}{2017}]{Pandoc}
+MacFarlane, J. (2017).
+\newblock {\em Pandoc: A Universal Document Converter}.
+\newblock Version 1.19.2.1.
+
+\end{thebibliography}

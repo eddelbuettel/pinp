@@ -7,6 +7,8 @@
 	* inst/rmarkdown/templates/pdf/skeleton/pinp.bib: Filled entries
 	and sorted buffer via Emacs mode
 
+	* R/pinp.R (pinp): Adjust figure size and font defaults
+
 2017-09-17  Dirk Eddelbuettel  <edd@debian.org>
 
 	* R/pinp.R (pinp): Minor edits, copy in pinp.cls if not present,
