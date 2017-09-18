@@ -6,7 +6,7 @@ Pinp is not PNAS
 
 The template provided by the PNAS Article template in the
 [rticles](https://cran.r-project.org/package=rticles) package makes it very easy and convenient to
-create attractive looking two-column papers.
+create attractive looking one or two-column papers.
 
 There were however a few changes we wanted to make such as the use of standard natbib citations,
 more extended use of color, a different font as well as the removal of a number of PNAS-specific
