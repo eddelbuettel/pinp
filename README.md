@@ -5,8 +5,9 @@ Pinp is not PNAS
 ### Motivation
 
 The template provided by the PNAS Article template in the
-[rticles](https://cran.r-project.org/package=rticles) package makes it very easy and convenient to
-create attractive looking one or two-column papers.
+[rticles](https://cran.r-project.org/package=rticles) package makes it very easy
+and convenient to create attractive looking two-column papers with an option
+to switch to a one-column paper.
 
 There were however a few changes we wanted to make such as the use of standard natbib citations,
 more extended use of color, a different font as well as the removal of a number of PNAS-specific
@@ -15,7 +16,8 @@ this _pinp_ package started.
 
 ### Example
 
-A complete pdf example is provided [here](https://eddelbuettel.github.io/pinp/Rcpp-introduction.pdf)
+A complete pdf example of the two-column default template is
+provided [here](https://eddelbuettel.github.io/pinp/Rcpp-introduction.pdf)
 by the new introductory [Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html) vignette, which is
 itself based on our [PeerJ Prepint](https://peerj.com/preprints/3188/).
 

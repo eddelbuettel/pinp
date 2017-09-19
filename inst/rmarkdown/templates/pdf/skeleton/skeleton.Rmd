@@ -1,5 +1,5 @@
 ---
-title: A Simple Template for One or Two-Column Vignettes
+title: A Simple Template for Either Two or One-Column Vignettes
 
 # Use letters for affiliations
 author:
