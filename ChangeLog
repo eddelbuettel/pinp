@@ -1,7 +1,6 @@
 2017-09-18  James Joseph Balamuta  <balamut2@illinois.edu>
 
 	* README.md: Modified to indicate one-column availability
-	
 	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Added vignette
 	meta data and changed title to reflect one-column availability
 
