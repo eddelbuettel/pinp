@@ -133,7 +133,7 @@ permitted. -->
 Here we differ from PNAS and suggest natbib. References will appear in
 author-year form. Use `\citet{}`, `\citep{}`, etc as usual.
 
-We default to the `Chicago.bst` style. To switch to a different bibliography
+We default to the `jss.bst` style. To switch to a different bibliography
 style, please use `biblio-style: style` in the YAML header.
 
 

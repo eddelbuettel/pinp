@@ -31,7 +31,7 @@ acknowledgements: |
    [PNAS LaTeX](http://www.pnas.org/site/authors/latex.xhtml) style
    class, but also provided useful code templates to study in the
    other mode as the fine macros. The [pandoc](http://pandoc.org)
-   document converter \citep{Pandoc} is the much-admired driving force
+   document converter \citep{pandoc} is the much-admired driving force
    behind the document manipulation.
 
 # Optional: One or more keywords
@@ -54,14 +54,60 @@ fontsize: 9pt
 # Optional: Bibliography 
 #bibliography: pinp
 
+# Optional: include-after, used here to include rendered bibliography
+include-after: |
+  \begin{thebibliography}{3}
+  \newcommand{\enquote}[1]{``#1''}
+  \providecommand{\natexlab}[1]{#1}
+  \providecommand{\url}[1]{\texttt{#1}}
+  \providecommand{\urlprefix}{URL }
+  \expandafter\ifx\csname urlstyle\endcsname\relax
+    \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+    \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+    \urlstyle{rm}\Url}\fi
+  \providecommand{\eprint}[2][]{\url{#2}}
+  
+  \bibitem[{Allaire \emph{et~al.}(2017)Allaire, {R Foundation}, Wickham, {Journal
+    of Statistical Software}, Xie, Vaidyanathan, {Association for Computing
+    Machinery}, Boettiger, {Elsevier}, Broman, Mueller, Quast, Pruim, Marwick,
+    Wickham, Keyes, and Yu}]{CRAN:rticles}
+  Allaire J, {R Foundation}, Wickham H, {Journal of Statistical Software}, Xie Y,
+    Vaidyanathan R, {Association for Computing Machinery}, Boettiger C,
+    {Elsevier}, Broman K, Mueller K, Quast B, Pruim R, Marwick B, Wickham C,
+    Keyes O, Yu M (2017).
+  \newblock \emph{rticles: Article Formats for R Markdown}.
+  \newblock R package version 0.4.1,
+    \urlprefix\url{https://CRAN.R-project.org/package=rticles}.
+  
+  \bibitem[{MacFarlane(2017)}]{pandoc}
+  MacFarlane J (2017).
+  \newblock \emph{Pandoc: A Universal Document Converter}.
+  \newblock Version 1.19.2.1, \urlprefix\url{http://pandoc.org}.
+  
+  \bibitem[{Xie(2017)}]{CRAN:knitr}
+  Xie Y (2017).
+  \newblock \emph{knitr: A General-Purpose Package for Dynamic Report Generation
+    in R}.
+  \newblock R package version 1.17, \urlprefix\url{https://yihui.name/knitr/}.
+
+  \end{thebibliography}
+
 # Optional: Enable a 'Draft' watermark on the document
 #watermark: true
 
 # Customize footer, eg by referencing the vignette
 footer_contents: "pinp Vignette"
 
-# Our style
+# Produce a pinp document
 output: pinp::pinp
+
+# Required: Vignette metadata for inclusion in a package.
+vignette: >
+  %\VignetteIndexEntry{pinp}
+  %\VignetteKeywords{pinp,vignette}
+  %\VignettePackage{pinp}
+  %\VignetteEngine{knitr::rmarkdown}
+
 ---
 
 
@@ -164,12 +210,13 @@ Vignette"_ which will be shown in the footer.
 
 ## Knitr
 
-The [knitr](https://cran.r-project.org/package=pinp) package is of course also
-available to both typeset code, typically in R or one of the other
-supported engines.  Knitr segments used three backticks (just like
-Pandoc described below) followed by curly brace sgement listing first
-the desired engine, and then the selected display options. Output from
-the code can also be shown, and a myriad of options permit many variants.
+The [knitr](https://cran.r-project.org/package=pinp) package
+\citep{CRAN:knitr} is also available to both typeset code, typically
+in R or one of the other supported engines.  Knitr segments used three
+backticks (just like Pandoc described below) followed by curly brace
+sgement listing first the desired engine, and then the selected
+display options. Output from the code can also be shown, and a myriad
+of options permit many variants.
 
 ```{r}
 a <- 2 + 2
@@ -249,24 +296,6 @@ Ultimately this style uses LaTeX to produce the pdf output. The
 [tex StackExchange](http://tex.stackexchange.com) can be helpful for
 specific LaTeX questions.
 
+<!-- local tweak to the pnasbreak command -->
+\renewcommand{\pnasbreak}{\begin{strip}\vskip0pt\end{strip}}
 
-
-\begin{thebibliography}{}
-
-\bibitem[\protect\citeauthoryear{Allaire, {R Foundation}, Wickham, {Journal of
-  Statistical Software}, Xie, Vaidyanathan, {Association for Computing
-  Machinery}, Boettiger, {Elsevier}, Broman, Mueller, Quast, Pruim, Marwick,
-  Wickham, Keyes, and Yu}{Allaire et~al.}{2017}]{CRAN:rticles}
-Allaire, J., {R Foundation}, H.~Wickham, {Journal of Statistical Software},
-  Y.~Xie, R.~Vaidyanathan, {Association for Computing Machinery}, C.~Boettiger,
-  {Elsevier}, K.~Broman, K.~Mueller, B.~Quast, R.~Pruim, B.~Marwick,
-  C.~Wickham, O.~Keyes, and M.~Yu (2017).
-\newblock {\em rticles: Article Formats for R Markdown}.
-\newblock R package version 0.4.1.
-
-\bibitem[\protect\citeauthoryear{MacFarlane}{MacFarlane}{2017}]{Pandoc}
-MacFarlane, J. (2017).
-\newblock {\em Pandoc: A Universal Document Converter}.
-\newblock Version 1.19.2.1.
-
-\end{thebibliography}

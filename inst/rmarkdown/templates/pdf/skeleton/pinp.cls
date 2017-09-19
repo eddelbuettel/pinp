@@ -235,7 +235,6 @@
 %% Bibliography    
 \RequirePackage{natbib}
 \setlength{\bibsep}{0.0pt}
-\bibliographystyle{chicago}
 \renewcommand\bibfont{\normalfont\sffamily\fontsize{8}{10}\selectfont} % set font to be sans serif
 
 %% Figure caption style

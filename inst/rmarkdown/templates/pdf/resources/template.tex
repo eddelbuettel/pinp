@@ -60,7 +60,9 @@ $endif$
 
 % If your first paragraph (i.e. with the \dropcap) contains a list environment (quote, quotation, theorem, definition, enumerate, itemize...), the line after the list may have some extra indentation. If this is the case, add \parshape=0 to the end of the list environment.
 
+$if(acknowledgements)$
 \acknow{$acknowledgements$}
+$endif$
 
 $body$
 
@@ -78,6 +80,7 @@ $else$
 $endif$
 $endif$
 \bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+\bibliographystyle{$if(biblio-style)$$biblio-style$$else$jss$endif$}
 $endif$
 $endif$
 
