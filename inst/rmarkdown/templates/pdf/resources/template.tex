@@ -28,6 +28,11 @@ $for(address)$
   \affil[$address.code$]{$address.address$}
 $endfor$
 
+$if(numbersections)$
+\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
+$else$
+\setcounter{secnumdepth}{0}
+$endif$
 
 % Please give the surname of the lead author for the running footer
 \leadauthor{$lead_author_surname$}

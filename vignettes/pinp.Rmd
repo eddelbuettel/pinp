@@ -51,6 +51,12 @@ fontsize: 9pt
 # Optional: Enable one-sided layout, default is two-sided
 #one_sided: true
 
+# Optional: Enable section numbering, default is unnumbered
+#numbersections: true
+
+# Optional: Specify the depth of section number, default is 5
+#secnumdepth: 5
+
 # Optional: Bibliography 
 #bibliography: pinp
 
@@ -144,7 +150,7 @@ A free-form URL for a paper doi reference, or a canonical URL for a
 software package or repository. These are typeset at actual URL and
 resolve their links from the pdf document.
 
-## abstract:
+## abstract
 
 A short free-form abstract can be used to inform the reader of the
 essence of the subsequent document.
@@ -176,16 +182,26 @@ documents with wide-format tables and figures.
 ## lineno 
 
 An _optional_ selection (via value `true`) of line numbers,
-selectable only of `one_column: true` is set.  Currently typesets
+selectable only if `one_column: true` is set.  Currently typesets
 number on both the left and right-ahdn side which seems in error.
 
-## one_sided 
+## `one_sided`
 
-An _optionaal_ selection (via value `true`) of one-sided rather than
+An _optional_ selection (via value `true`) of one-sided rather than
 two-sided output. This should probably alter the footnote but does not
 currently do so.
-  
-\phantom{xxx} <!-- if this isn't here the next para runs in-->
+
+## `numbersections`
+
+An _optional_ selection (via value `true`) for overriding the default
+unnumbered section headers. Useful if you need to refer to sections by number.
+
+## `secnumdepth`
+
+An _optional_ selection (via values 1, 2, 3, ...) of section numbering depth,
+selectable only if `numbersections: true` is set.  Useful if you only want
+to number sections and subsections but not subsubsections and so on.
+
   
 ## bibliography
 
@@ -299,3 +315,4 @@ specific LaTeX questions.
 <!-- local tweak to the pnasbreak command -->
 \renewcommand{\pnasbreak}{\begin{strip}\vskip0pt\end{strip}}
 
+\phantom{xxx} <!-- if this isn't here the next para runs in-->
