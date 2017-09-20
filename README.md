@@ -16,6 +16,14 @@ this _pinp_ package started.
 
 ### Example
 
+#### Pinp Vignette
+
+As of release 0.0.2, the package now has a vignette:
+
+![](https://eddelbuettel.github.io/pinp/pinp-vignette.png)
+
+#### Rcpp Vignette
+
 A complete pdf example of the two-column default template is
 provided [here](https://eddelbuettel.github.io/pinp/Rcpp-introduction.pdf)
 by the new introductory [Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html) vignette, which is
@@ -36,6 +44,8 @@ followed by pages five and six
 and the final two pages:
 
 ![](https://eddelbuettel.github.io/pinp/Rcpp-introduction-p7+8.png)
+
+Other Rcpp vignettes have been converted as well.
 
 ### Status
 
