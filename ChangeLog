@@ -1,17 +1,21 @@
+2017-09-20  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.2
+
+	* vignette/pinp.Rmd: More edits and small extensions
+
 2017-09-19  James Joseph Balamuta  <balamut2@illinois.edu>
 
+	* vignette/pinp.Rmd: Add code style to section headers.
 
-    * vignette/pinp.Rmd: Add code style to section headers.
-    
-    * vignette/pinp.Rmd: Removed unnumbered and ids for section due to
-    bad toc.
-    
-	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Removed alphabetic
-	number from subsections
-	* inst/rmarkdown/templates/pdf/resources/template.tex: Added new numbered
-	section keys
+	* vignette/pinp.Rmd: Removed unnumbered and ids for sections
+
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Removed
+	alphabetic number from subsections
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Added new
+	numbered section keys
 	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Idem
-    * vignette/pinp.Rmd: Idem
+	* vignette/pinp.Rmd: Idem
 
 2017-09-19  Dirk Eddelbuettel  <edd@debian.org>
 

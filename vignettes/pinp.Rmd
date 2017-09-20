@@ -122,8 +122,12 @@ vignette: >
 The *pinp is not PNAS* template extends and reworks the
 [pnas_article](https://github.com/rstudio/rticles/tree/master/inst/rmarkdown/templates/pnas_article)
 template from the wonderful
-[rticles](https://cran.r-project.org/package=rticles) package. This
-vignette lists the available options.
+[rticles](https://cran.r-project.org/package=rticles) package. 
+
+This vignette aims to list all the available option in order to
+provide both a reference documentation, and a simple introduction.
+The source of this vignette is of course included in the package
+itself.
 
 
 # YAML Content 
@@ -131,24 +135,27 @@ vignette lists the available options.
 ## `author`
 
 Fields `name` and `affiliation` must be given. The latter can be a
-single-letter index referring to the address field.
+single-letter index referring to the address field described in the
+next paragraph.
 
 ## `address`
 
 Fields `code` (referring to the index from `affiliation`) and
-`address`. The latter is free-form and may include `\url{}` and other
-LaTeX macros.
+`address` must be given. The latter is free-form, and may include
+`\url{}` and other LaTeX macros.
 
 ## `lead_author_surnames`
 
-A free-form field usable for a free-form _et al_ use, or a simple text
-field listing authors.
+A free-form field usable for either a simple "Author _et al_", or a
+simple text field listing two or more authors. This field is not
+post-processed.
 
 ## `doi`
 
-A free-form URL for a paper doi reference, or a canonical URL for a
-software package or repository. These are typeset at actual URL and
-resolve their links from the pdf document.
+A free-form URL for a doi reference for a publication, or a canonical
+URL for a software package or repository. These are typeset as actual
+URLs and resolve their links from the pdf document following standard
+LaTeX practice.
 
 ## `abstract`
 
@@ -158,7 +165,7 @@ essence of the subsequent document.
 ## `acknowledgements`
 
 An _optional_ free-form text which will be typset at the very end
-right before the references, if any.
+of the document right before the (optional also) references.
 
 ## `keywords`
 
@@ -208,7 +215,8 @@ to number sections and subsections but not subsubsections and so on.
 A field for an _optional_ selection of a Bibtex input file, extension
 can be omitted.  Alternative, bibliographic information may also be
 included directly as a `thebibliography` environment by including the
-content of the generated `bbl` file.
+content of the generated `bbl` file. The `include-after` field of the
+YAML header is very suitable for a segment.
 
 ## `watermark`
 
@@ -240,7 +248,9 @@ a
 ```
 
 Output from such code blocks is also shown in a framed and shaded box.
-Figures resulting from these code blocks are automatically inlined:
+
+Code segments containing plots producing figures results in these
+figures being automatically inlined:
  
 
 ```{r}
@@ -254,14 +264,27 @@ plot(cumsum(rnorm(100)), type='l',
 
 The easiest way to typeset code is to simply open three backticks
 followed by the name of one of the _numerous_ built-in pandoc parsers, 
-_i.e._, \verb|```c| to typeset in the C languags.  Pandoc segments will
-be highlighted as usual, and per a convention in this template also shown in
-framed and slightly shaded box as seen here and above.
+_i.e._, \verb|```c| to typeset in the C languags.
 
 ```c
+/* this is a C function example */
 int doubleMe(int x) {
     return x + x;          
 }
+```
+
+Pandoc segments are highlighted as usual, and per a convention in this
+template also shown in a framed and slightly shaded box as seen here and
+above.
+
+Another example from Python:
+
+```py
+# A Python example
+def printSomething(str):
+   "This prints the string passed in"
+   print str
+   
 ```
 
 
