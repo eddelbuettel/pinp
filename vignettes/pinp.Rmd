@@ -51,6 +51,12 @@ fontsize: 9pt
 # Optional: Enable one-sided layout, default is two-sided
 #one_sided: true
 
+# Optional: Enable section numbering, default is unnumbered
+#numbersections: true
+
+# Optional: Specify the depth of section number, default is 5
+#secnumdepth: 5
+
 # Optional: Bibliography 
 #bibliography: pinp
 
@@ -111,7 +117,7 @@ vignette: >
 ---
 
 
-# Introduction {#intro .unnumbered}
+# Introduction 
 
 The *pinp is not PNAS* template extends and reworks the
 [pnas_article](https://github.com/rstudio/rticles/tree/master/inst/rmarkdown/templates/pnas_article)
@@ -120,47 +126,47 @@ template from the wonderful
 vignette lists the available options.
 
 
-# YAML Content {#yaml .unnumbered}
+# YAML Content 
 
-## author
+## `author`
 
 Fields `name` and `affiliation` must be given. The latter can be a
 single-letter index referring to the address field.
 
-## address
+## `address`
 
 Fields `code` (referring to the index from `affiliation`) and
 `address`. The latter is free-form and may include `\url{}` and other
 LaTeX macros.
 
-## lead_author_surnames
+## `lead_author_surnames`
 
 A free-form field usable for a free-form _et al_ use, or a simple text
 field listing authors.
 
-## doi
+## `doi`
 
 A free-form URL for a paper doi reference, or a canonical URL for a
 software package or repository. These are typeset at actual URL and
 resolve their links from the pdf document.
 
-## abstract:
+## `abstract`
 
 A short free-form abstract can be used to inform the reader of the
 essence of the subsequent document.
 
-## acknowledgements
+## `acknowledgements`
 
 An _optional_ free-form text which will be typset at the very end
 right before the references, if any.
 
-## keywords
+## `keywords`
 
 An optional list (entered as a YAML list following `-` marks) which will be typeset as a list of alternatives separated by vertical _pipe_ symbols.
 
 
 
-# Options {#options .unnumbered}
+# Options 
 
 ## `fontsize` 
 
@@ -173,40 +179,50 @@ An _optional_ override (using value `true`) for the default two-column
 layout. Useful for initial stages of a document, as well as for
 documents with wide-format tables and figures.
 
-## lineno 
+## `lineno` 
 
 An _optional_ selection (via value `true`) of line numbers,
-selectable only of `one_column: true` is set.  Currently typesets
+selectable only if `one_column: true` is set.  Currently typesets
 number on both the left and right-ahdn side which seems in error.
 
-## one_sided 
+## `one_sided`
 
-An _optionaal_ selection (via value `true`) of one-sided rather than
+An _optional_ selection (via value `true`) of one-sided rather than
 two-sided output. This should probably alter the footnote but does not
 currently do so.
+
+## `numbersections`
+
+An _optional_ selection (via value `true`) for overriding the default
+unnumbered section headers. Useful if you need to refer to sections by number.
+
+## `secnumdepth`
+
+An _optional_ selection (via values 1, 2, 3, ...) of section numbering depth,
+selectable only if `numbersections: true` is set.  Useful if you only want
+to number sections and subsections but not subsubsections and so on.
+
   
-\phantom{xxx} <!-- if this isn't here the next para runs in-->
-  
-## bibliography
+## `bibliography`
 
 A field for an _optional_ selection of a Bibtex input file, extension
 can be omitted.  Alternative, bibliographic information may also be
 included directly as a `thebibliography` environment by including the
 content of the generated `bbl` file.
 
-## watermark
+## `watermark`
 
 An _optional_ selection of a 'Draft' watermark drawn across the center
 of the page (using value `true`). Note that figures may be plotted
 above the watermark.
 
-## footer_contents
+## `footer_contents`
 
 An character value delimited by quotes for something like _"mypackage
 Vignette"_ which will be shown in the footer.
 
 
-# Code {#code .unnumbered}
+# Code 
 
 ## Knitr
 
@@ -249,7 +265,7 @@ int doubleMe(int x) {
 ```
 
 
-# Environments {#options .unnumbered}
+# Environments 
 
 ## Standard LaTeX
 
@@ -280,7 +296,7 @@ break text from two-column mode to one-column mode and back.
 
 
 
-# Other Help {#help .unnumbered}
+# Other Help 
 
 ## RMarkdown 
 
@@ -299,3 +315,4 @@ specific LaTeX questions.
 <!-- local tweak to the pnasbreak command -->
 \renewcommand{\pnasbreak}{\begin{strip}\vskip0pt\end{strip}}
 
+\phantom{xxx} <!-- if this isn't here the next para runs in-->

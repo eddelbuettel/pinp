@@ -319,7 +319,7 @@
 
 %% Section/subsection/paragraph set-up
 \RequirePackage[explicit]{titlesec}
-\renewcommand{\thesubsection}{\Alph{subsection}}
+%% \renewcommand{\thesubsection}{\Alph{subsection}}
 
 \titleformat{\section}
   {\large\sffamily\bfseries}

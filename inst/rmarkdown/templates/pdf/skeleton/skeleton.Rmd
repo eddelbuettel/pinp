@@ -54,6 +54,12 @@ fontsize: 9pt
 # Optional: Enable one-sided layout, default is two-sided
 #one_sided: true
 
+# Optional: Enable section numbering, default is unnumbered
+#numbersections: true
+
+# Optional: Specify the depth of section number, default is 5
+#secnumdepth: 5
+
 # Optional: Bibliography 
 bibliography: pinp
 
