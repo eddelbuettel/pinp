@@ -117,7 +117,7 @@ vignette: >
 ---
 
 
-# Introduction {#intro .unnumbered}
+# Introduction 
 
 The *pinp is not PNAS* template extends and reworks the
 [pnas_article](https://github.com/rstudio/rticles/tree/master/inst/rmarkdown/templates/pnas_article)
@@ -126,7 +126,7 @@ template from the wonderful
 vignette lists the available options.
 
 
-# YAML Content {#yaml .unnumbered}
+# YAML Content 
 
 ## author
 
@@ -166,7 +166,7 @@ An optional list (entered as a YAML list following `-` marks) which will be type
 
 
 
-# Options {#options .unnumbered}
+# Options 
 
 ## `fontsize` 
 
@@ -222,7 +222,7 @@ An character value delimited by quotes for something like _"mypackage
 Vignette"_ which will be shown in the footer.
 
 
-# Code {#code .unnumbered}
+# Code 
 
 ## Knitr
 
@@ -265,7 +265,7 @@ int doubleMe(int x) {
 ```
 
 
-# Environments {#options .unnumbered}
+# Environments 
 
 ## Standard LaTeX
 
@@ -296,7 +296,7 @@ break text from two-column mode to one-column mode and back.
 
 
 
-# Other Help {#help .unnumbered}
+# Other Help 
 
 ## RMarkdown 
 
