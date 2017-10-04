@@ -1,3 +1,11 @@
+2017-10-04  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Condition
+	acknowledgements, remove matmethods and pnasbreak
+
+	* vignettes/pinp.Rmd (numbersections): Turn on numbered sections
+	(up to one level) which makes less of a hash of the outline
+
 2017-09-20  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.0.2
