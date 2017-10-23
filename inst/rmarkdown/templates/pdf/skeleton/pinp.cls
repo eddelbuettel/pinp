@@ -156,8 +156,8 @@
 
 %% Hyperlinking
 % from below
-\definecolor{pnasbluetext}{RGB}{0,101,165} %
-\definecolor{pnasblueback}{RGB}{205,217,235} %
+%\definecolor{pnasbluetext}{RGB}{0,101,165} %
+%\definecolor{pnasblueback}{RGB}{205,217,235} %
 \RequirePackage[colorlinks=true, allcolors=pnasbluetext]{hyperref}
 
 %% Set up main title page fonts 
@@ -229,8 +229,9 @@
 \definecolor{color1}{RGB}{59,90,198} % author email, doi
 %\definecolor{color2}{RGB}{16,131,16} %
 % For sig statement box
-\definecolor{pnasbluetext}{RGB}{0,101,165} %
-\definecolor{pnasblueback}{RGB}{205,217,235} %
+% already define above
+%\definecolor{pnasbluetext}{RGB}{0,101,165} %
+%\definecolor{pnasblueback}{RGB}{205,217,235} %
 
 %% Bibliography    
 \RequirePackage{natbib}
@@ -612,8 +613,8 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
 \newenvironment{CodeChunk}{}{}
 
-%% Set colors
-\definecolor{pinpblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
+%% Set colors -- now via test and fallback default in template
+%\definecolor{pinpblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
 
 % Add colour to the title
 \appto{\titlefont}{\color{pinpblue}}
