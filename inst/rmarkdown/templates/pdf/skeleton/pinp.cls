@@ -156,9 +156,9 @@
 
 %% Hyperlinking
 % from below
-%\definecolor{pnasbluetext}{RGB}{0,101,165} %
+%\definecolor{linkcolor}{RGB}{0,101,165} %
 %\definecolor{pnasblueback}{RGB}{205,217,235} %
-\RequirePackage[colorlinks=true, allcolors=pnasbluetext]{hyperref}
+\RequirePackage[colorlinks=true, allcolors=linkcolor]{hyperref}
 
 %% Set up main title page fonts 
 \newcommand{\headerfont}{\normalfont\sffamily\fontsize{7}{9} \selectfont}
@@ -171,7 +171,7 @@
 \newcommand{\copyrightfont}{\normalfont\rmfamily\fontsize{6}{8}\selectfont}
 
 %% Set URL link color & font
-\renewcommand\UrlFont{\color{pnasbluetext}\sffamily}
+\renewcommand\UrlFont{\color{linkcolor}\sffamily}
 
 %% Author and affiliation
 \RequirePackage{authblk}
@@ -230,7 +230,7 @@
 %\definecolor{color2}{RGB}{16,131,16} %
 % For sig statement box
 % already define above
-%\definecolor{pnasbluetext}{RGB}{0,101,165} %
+%\definecolor{linkcolor}{RGB}{0,101,165} %
 %\definecolor{pnasblueback}{RGB}{205,217,235} %
 
 %% Bibliography    
@@ -576,7 +576,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \additionalelement{%
 \afterpage{\begin{sigstatement}
 \sffamily
-\mdfdefinestyle{pnassigstyle}{linewidth=0.7pt,backgroundcolor=pnasblueback,linecolor=pnasbluetext,fontcolor=pnasbluetext,innertopmargin=6pt,innerrightmargin=6pt,innerbottommargin=6pt,innerleftmargin=6pt}
+\mdfdefinestyle{pnassigstyle}{linewidth=0.7pt,backgroundcolor=pnasblueback,linecolor=linkcolor,fontcolor=linkcolor,innertopmargin=6pt,innerrightmargin=6pt,innerbottommargin=6pt,innerleftmargin=6pt}
 \@ifundefined{@significancestatement}{}{%	
 	\begin{mdframed}[style=pnassigstyle]%
 	\section*{Significance Statement}%
