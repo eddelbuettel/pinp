@@ -457,7 +457,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \providecommand*{\toclevel@acknow@section}{0}
 % Format is set for research articles by default
 \titleformat{\acknow@section}[runin]
-   {\sffamily\normalsize\bfseries\color{pinpblue}}
+   {\sffamily\normalsize\bfseries\color{headercolor}}
    {}
    {0em}
    {#1.}
@@ -614,26 +614,26 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \newenvironment{CodeChunk}{}{}
 
 %% Set colors -- now via test and fallback default in template
-%\definecolor{pinpblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
+%\definecolor{headercolor}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
 
 % Add colour to the title
-\appto{\titlefont}{\color{pinpblue}}
+\appto{\titlefont}{\color{headercolor}}
 
 % ...and section headings
 \titleformat{\section}
-  {\large\sffamily\bfseries\color{pinpblue}}
+  {\large\sffamily\bfseries\color{headercolor}}
   {\thesection.}
   {0.5em}
   {#1}
   []
 \titleformat{name=\section,numberless}
-  {\large\sffamily\bfseries\color{pinpblue}}
+  {\large\sffamily\bfseries\color{headercolor}}
   {}
   {0em}
   {#1}
   []  
 \titleformat{\subsection}[runin]
-  {\sffamily\bfseries\color{pinpblue}} %\itshape}%
+  {\sffamily\bfseries\color{headercolor}} %\itshape}%
   {\thesubsection.}
   {0.5em}
   {#1. }

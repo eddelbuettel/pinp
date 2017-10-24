@@ -2,7 +2,7 @@
 
 	* inst/rmarkdown/templates/pdf/resources/template.tex: Support
 	YAML frontmatter arguments headercolor and linkcolor
-	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Minor cleanup
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Minor cleanups
 	related to the two colour variables
 
 2017-10-04  Dirk Eddelbuettel  <edd@debian.org>
