@@ -14,6 +14,18 @@ $if(tables)$
 \usepackage{longtable}
 $endif$
 
+$if(headercolor)$
+\definecolor{pinpblue}{HTML}{$headercolor$}
+$else$
+\definecolor{pinpblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
+$endif$
+$if(linkcolor)$
+\definecolor{pnasbluetext}{HTML}{$linkcolor$}
+$else$
+\definecolor{pnasbluetext}{RGB}{101,0,0} %
+$endif$
+
+
 $for(header-includes)$
 $header-includes$
 $endfor$
