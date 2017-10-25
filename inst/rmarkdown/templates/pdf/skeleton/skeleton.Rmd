@@ -80,7 +80,7 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
 ---
 
-## Introduction {#intro .unnumbered}
+## Introduction 
 
 This *pinp is not PNAS* template started when the introduction to
 [Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html) by \cite{PeerJ:Rcpp} 
@@ -105,7 +105,7 @@ Please note that LaTeX typesetting in two-column mode with several
 floating objects can be fragile.  You may need to iterate.
 
 
-## Author Affiliations {#author-affiliations .unnumbered}
+## Author Affiliations 
 
 Per common academic best practice, you can include your department,
 institution, and complete address, with the ZIP/postal code, for each
@@ -125,16 +125,9 @@ We support several options via the YAML header
 - Setting a free-form author field used on the inside footer;
 - Optional _Draft_ watermarking;
 
-<!-- ## Format {#format .unnumbered}
-
-Many authors find it useful to organize their manuscripts with the
-following order of sections; Title, Author Affiliation, Keywords,
-Abstract, Significance Statement, Results, Discussion, Materials and
-methods, Acknowledgments, and References. Other orders and headings are
-permitted. -->
 
 
-## References {#references .unnumbered}
+## References 
 
 Here we differ from PNAS and suggest natbib. References will appear in
 author-year form. Use `\citet{}`, `\citep{}`, etc as usual.
@@ -143,7 +136,7 @@ We default to the `jss.bst` style. To switch to a different bibliography
 style, please use `biblio-style: style` in the YAML header.
 
 
-## Inline R Code {#inliner .unnumbered}
+## Inline R Code 
 
 The PNAS sample included a fixed PNG image here, but this document prefers
 to show the results and embedding of _R_ code. 
@@ -162,7 +155,7 @@ Here we use a standard knitr bloc with explicit options for
 - the caption (`fig.cap`) as shown above.
 
 
-## Digital Figures {#sec:figures .unnumbered}
+## Digital Figures 
 
 Markdown, Pandoc and LaTeX support `.eps` and `.pdf` files.
 
@@ -197,7 +190,7 @@ This file is then included via standard LaTeX commands.
 \end{figure*}
 
 
-## Typeset Code (But Do Not Run It) {#typeset .unnumbered}
+## Typeset Code (But Do Not Run It) 
 
 We can also just show code.
 
@@ -212,7 +205,7 @@ with `r` as the language choice.  Similarly, _many_ other languages
 can be typset directly simply by relying on pandoc.
 
 
-## Single column equations {#single-column-equations .unnumbered}
+## Single column equations 
 
 Authors may use 1- or 2-column equations in their article, according to
 their preference.
