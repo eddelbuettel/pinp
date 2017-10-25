@@ -11,6 +11,51 @@
 #' @return R Markdown output format to pass to
 #' \code{\link[rmarkdown:render]{render}}
 #'
+#' @section Document options:
+#' Various aspects of pdf document can be customized by setting either standard \pkg{rmarkdown}
+#' options, or any of the following options (which are shown in alphabetical order) in the 
+#' document metadata:
+#'
+#' \describe{
+#'   \item{\code{abstract}}{(Optional but recommended) A free-format abstract summarizing the
+#'   document.}
+#'   \item{\code{acknowledgements}}{(Optional) A free-format entry which will be placed at the
+#'   end of the document.}
+#'   \item{\code{address}}{(Mandatory) YAML list with entries for \code{code} and \code{address}.  
+#'   The former matches the \code{affiliation} field of the \code{author} entry; the letter can be
+#'   a free-format text giving, say, department and university along with an email address.}
+#'   \item{\code{author}}{(Mandatory) YAML list with entries for \code{name} and \code{affiliation}.
+#'   The latter is matched to the \code{code} entry in \code{address} option.}
+#'   \item{\code{bibliography}}{(Optional) Name of a \code{.bib} file, suffix can be omitted;
+#'   defaut is no bibliography.}
+#'   \item{\code{doi}}{(Optional but recommended) A free-format entry suitable for a doi or url
+#'   referencing the document or its underlying code.}
+#'   \item{\code{fontsize}}{(Optional) Document fontsize, default is 9pt.}
+#'   \item{\code{footer_contents}}{(Optional) A free-format entry for text placed in the footer,
+#'   useful to associate with a package or volume, default is \sQuote{Package Vignette}.}
+#'   \item{\code{headercolor}}{(Optional) Color code (in hexadecimal notation) for the title and 
+#'   section headers, default is blue tone matching the R logo: \code{185FAF}.}
+#'   \item{\code{keywords}}{(Optional) Keywords describing the document, supplied as a list.}
+#'   \item{\code{lead_author_surnames}}{(Optional but recommended) A free-format entry for a short
+#'   author description placed in the footer.}
+#'   \item{\code{lineno}}{(Optional) Logical value to select line number display, may only work
+#'   in one-column mode, default is false.}
+#'   \item{\code{linkcolor}}{(Optional) Color code (in hexadecimal notation) for the urls and reference
+#'   links, default is a light blue tone from the PNAS style: \code{000065}.}
+#'   \item{\code{numbersections}}{(Optional) Logical value to select numbered section headers,
+#'   default is false.}
+#'   \item{\code{one_column}}{(Optional) Logical value to select one-column mode, default is false.}
+#'   \item{\code{one_sided}}{(Optional) Logical value to select one-sided format, default is false.}
+#'   \item{\code{output}}{(Mandatory) Entry to tell \code{rmarkdown} to render via \code{pinp};
+#'   must be \code{pinp::pinp}.}
+#'   \item{\code{secnumdepth}}{(Optional) Level of (LaTeX) section levels to number, default is 5.}
+#'   \item{\code{title}}{(Mandatory) document title, no default.}
+#'   \item{\code{title}}{(Optional) Logical value to select a \sQuote{Draft} watermark to be
+#'   added (though figures tend to render above it, default is false.}
+#' }
+#'
+#' The vignette source shows several of these options in use, and also describes some of the options.
+#'
 #' @examples
 #' \dontrun{
 #' rmarkdown::draft("MyArticle.Rmd", template = "pdf", package = "pinp")
