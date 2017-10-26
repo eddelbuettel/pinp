@@ -21,7 +21,7 @@ doi: "https://cran.r-project.org/package=YourPackage"
 
 # Abstract
 abstract: |
-  Your abstract will be typset here, and used by default a visually distinctive font.
+  Your abstract will be typeset here, and used by default a visually distinctive font.
   An abstract should explain to the general reader the major contributions of the article. 
 
 # Optional: Acknowledgements
@@ -48,7 +48,7 @@ fontsize: 9pt
 # Optional: Force one-column layout, default is two-column
 #one_column: true
 
-# Optional: Enables lineo mode, but only if one_column mode is also true
+# Optional: Enables lineno mode, but only if one_column mode is also true
 #lineno: true
 
 # Optional: Enable one-sided layout, default is two-sided
@@ -200,9 +200,9 @@ fit <- density(xx)
 plot(fit)
 ```
 
-This simply used a pandoc bloc started and ended by tree backticks,
+This simply used a pandoc bloc started and ended by three backticks,
 with `r` as the language choice.  Similarly, _many_ other languages
-can be typset directly simply by relying on pandoc.
+can be typeset directly simply by relying on pandoc.
 
 
 ## Single column equations 
