@@ -59,7 +59,7 @@
 #' @examples
 #' \dontrun{
 #' rmarkdown::draft("MyArticle.Rmd", template = "pdf", package = "pinp")
-#' rmarkdown::render("MyAricle.Rmd")
+#' rmarkdown::render("MyArticle.Rmd")
 #' }
 #'
 #' @seealso
