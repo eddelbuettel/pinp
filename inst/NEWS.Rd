@@ -3,6 +3,22 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pinp/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pinp/issues/#1}{##1}}
 
+\section{Changes in tint version 0.0.3 (2017-10-xx)}{
+  \itemize{
+    \item Section 'Acknowledgements' now conditional on a frontmatter
+    setting, section 'Matmethods' has been removed, \code{pnasbreak} 
+    no longer used which stabilizes LaTeX float formatting. References
+    are now shown in the column just like other content (Dirk in \ghpr{36}). 
+    \item Vignette now uses new numbered sections frontmatter switch
+    which improves the pdf outline.
+    \item New front-matter options for title/section header colors, and
+    link colors (Dirk in \ghpr{39}).
+    \item YAML frontmater options are now documented in the help page
+    for \code{pinp} as well (Dirk in \ghpr{41}).
+    \item Some typos were fixed (Michael in \ghpr{42} and \ghpr{43}).
+  }
+}
+
 \section{Changes in tint version 0.0.2 (2017-09-20)}{
   \itemize{
     \item The YAML segment can be used to select font size, one-or-two
