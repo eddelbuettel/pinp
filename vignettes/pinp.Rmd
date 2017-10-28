@@ -109,7 +109,7 @@ output: pinp::pinp
 
 # Required: Vignette metadata for inclusion in a package.
 vignette: >
-  %\VignetteIndexEntry{pinp}
+  %\VignetteIndexEntry{Introduction to pinp}
   %\VignetteKeywords{pinp,vignette}
   %\VignettePackage{pinp}
   %\VignetteEngine{knitr::rmarkdown}
