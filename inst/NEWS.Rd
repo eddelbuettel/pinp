@@ -3,7 +3,7 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pinp/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pinp/issues/#1}{##1}}
 
-\section{Changes in tint version 0.0.3 (2017-10-xx)}{
+\section{Changes in tint version 0.0.3 (2017-10-28)}{
   \itemize{
     \item Section 'Acknowledgements' now conditional on a frontmatter
     setting, section 'Matmethods' has been removed, \code{pnasbreak} 
