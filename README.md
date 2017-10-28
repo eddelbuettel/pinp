@@ -49,10 +49,7 @@ Other Rcpp vignettes have been converted as well.
 
 ### Status
 
-The package is working and on [CRAN](https://cran.r-project.org/).
-
-Some float placements are a little fragile in LaTeX two-column mode.  If in doubt, add more text
-around it to aid the heuristic.
+The package is working as expected, and available via [CRAN](https://cran.r-project.org/).
 
 ### Usage 
 

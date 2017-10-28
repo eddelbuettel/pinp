@@ -1,5 +1,5 @@
 ---
-title: A Simple Template for Either Two or One-Column Vignettes
+title: A Template for Two or One-Column Vignettes
 
 # Use letters for affiliations
 author:
@@ -26,11 +26,11 @@ abstract: |
 
 # Optional: Acknowledgements
 acknowledgements: |
-  This template package builds upon, and extends, the work of the excellent 
-  [rticles](https://cran.r-project.org/package=rticles) package, and both rely on
-  the [PNAS LaTeX](http://www.pnas.org/site/authors/latex.xhtml) macros. Both sources
-  are gratefully acknowledged as this work would not have been possible without them.
-  Our extensions are under the same respective licensing term 
+  This template package builds upon, and extends, the work of the excellent
+  [rticles](https://cran.r-project.org/package=rticles) package, and both packages rely on the
+  [PNAS LaTeX](http://www.pnas.org/site/authors/latex.xhtml) macros. Both these sources are
+  gratefully acknowledged as this work would not have been possible without them.  Our extensions
+  are under the same respective licensing term
   ([GPL-3](https://www.gnu.org/licenses/gpl-3.0.en.html) and
   [LPPL (>= 1.3)](https://www.latex-project.org/lppl/)).
 
@@ -101,8 +101,6 @@ template document. but has been edited and updated to our use case.  A
 few specific tips follow.  In general, for fine-tuning some knowledge
 of LaTeX is helpful.
 
-Please note that LaTeX typesetting in two-column mode with several
-floating objects can be fragile.  You may need to iterate.
 
 
 ## Author Affiliations 
@@ -184,7 +182,7 @@ This file is then included via standard LaTeX commands.
 
 \begin{figure*}
   \begin{center}
-    \includegraphics[width=0.8\textwidth, height=4in]{densities} 
+    \includegraphics[width=0.66\textwidth, height=3.5in]{densities} 
   \end{center}
   \caption{Wide ggplot2 figure}\label{fig}
 \end{figure*}
