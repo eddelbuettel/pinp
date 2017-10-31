@@ -1,3 +1,7 @@
+2017-10-31  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/NEWS.Rd: Refer to pinp, not tint
+
 2017-10-28  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.0.3

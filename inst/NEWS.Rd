@@ -3,6 +3,12 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pinp/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pinp/issues/#1}{##1}}
 
+\section{Changes in pinp version 0.0.4 (2017-xx-yy)}{
+  \itemize{
+    \item Correct previous headers here from 'tint' to 'pinp' (\ghit{45}).
+  }
+}
+
 \section{Changes in pinp version 0.0.3 (2017-10-28)}{
   \itemize{
     \item Section 'Acknowledgements' now conditional on a frontmatter
