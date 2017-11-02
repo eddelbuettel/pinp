@@ -189,7 +189,7 @@ documents with wide-format tables and figures.
 
 An _optional_ selection (via value `true`) of line numbers,
 selectable only if `one_column: true` is set.  Currently typesets
-number on both the left and right-ahdn side which seems in error.
+number on both the left and right-hand side which seems in error.
 
 ## `one_sided`
 
