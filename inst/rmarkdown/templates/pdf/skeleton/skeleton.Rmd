@@ -60,6 +60,9 @@ fontsize: 9pt
 # Optional: Specify the depth of section number, default is 5
 #secnumdepth: 5
 
+# Optional: Skip inserting final break between acknowledgements, default is false
+skip_final_break: true
+
 # Optional: Bibliography 
 bibliography: pinp
 

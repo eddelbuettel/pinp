@@ -2,4 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+.log
 local
+.DS_Store
