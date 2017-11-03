@@ -101,6 +101,9 @@ include-after: |
 # Optional: Enable a 'Draft' watermark on the document
 #watermark: true
 
+# Optional: Skip inserting final break between acknowledgements, default is false
+skip_final_break: true
+
 # Customize footer, eg by referencing the vignette
 footer_contents: "pinp Vignette"
 
@@ -208,7 +211,12 @@ An _optional_ selection (via values 1, 2, 3, ...) of section numbering depth,
 selectable only if `numbersections: true` is set.  Useful if you only want
 to number sections and subsections but not subsubsections and so on.
 
-  
+## `skip_final_break`
+
+An _optional_ selection (via value `true`) that avoids inserting a `\pnasbreak`
+at the end of the document. This is useful when dealing with float issues that
+may appear at the end of documents with acknowledgements and bibliographies.
+
 ## `bibliography`
 
 A field for an _optional_ selection of a Bibtex input file, extension

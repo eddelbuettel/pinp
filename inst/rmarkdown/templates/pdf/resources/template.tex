@@ -87,7 +87,11 @@ $body$
 $if(acknowledgements)$
 \showacknow
 $endif$
-%\pnasbreak 
+
+$if(skip_final_break)$
+$else$
+\pnasbreak 
+$endif$
 
 $if(natbib)$
 $if(bibliography)$
