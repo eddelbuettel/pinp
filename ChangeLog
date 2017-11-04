@@ -1,15 +1,20 @@
-2017-11-03  James Joseph Balamuta <balamut2@illinois.edu>
+2017-11-03  Dirk Eddelbuettel  <edd@debian.org>
 
-    * inst/rmarkdown/templates/pdf/resources/template.tex: Added skip_final_break
-      toggle to allow users to opt out of \pnasbreak, which is on by default.
-    * inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Added example using
-      skip_final_break toggle.
-    * vignettes/pinp.Rmd: Idem
-	
-2017-11-02  Enrico Spinielli <enrico.spinielli@gmail.com>
+	* R/pinp.R: Document 'skip_final_break'
+	* man/pinp.Rd: Idem
 
-    * vignettes/pinp.Rmd: Typo
-	
+2017-11-03  James Joseph Balamuta  <balamut2@illinois.edu>
+
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Added skip_final_break
+	toggle to allow users to opt out of \pnasbreak, which is on by default.
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Added example using
+	skip_final_break toggle.
+	* vignettes/pinp.Rmd: Idem
+
+2017-11-02  Enrico Spinielli  <enrico.spinielli@gmail.com>
+
+	* vignettes/pinp.Rmd: Typo
+
 2017-10-31  Dirk Eddelbuettel  <edd@debian.org>
 
 	* inst/NEWS.Rd: Refer to pinp, not tint

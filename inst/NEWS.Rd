@@ -3,9 +3,11 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pinp/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pinp/issues/#1}{##1}}
 
-\section{Changes in pinp version 0.0.4 (2017-xx-yy)}{
+\section{Changes in pinp version 0.0.4 (2017-11-xx)}{
   \itemize{
-    \item Correct previous headers here from 'tint' to 'pinp' (\ghit{45}).
+    \item Correct NEWS headers from 'tint' to 'pinp' (\ghit{45}).
+    \item New front-matter variables \sQuote{skip_final_break} skips the
+    \code{pnasbreak} on final page which back as default (\ghpr{47}).
   }
 }
 

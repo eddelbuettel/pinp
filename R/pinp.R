@@ -13,7 +13,7 @@
 #'
 #' @section Document options:
 #' Various aspects of pdf document can be customized by setting either standard \pkg{rmarkdown}
-#' options, or any of the following options (which are shown in alphabetical order) in the 
+#' options, or any of the following options (which are shown in alphabetical order) in the
 #' document metadata:
 #'
 #' \describe{
@@ -21,7 +21,7 @@
 #'   document.}
 #'   \item{\code{acknowledgements}}{(Optional) A free-format entry which will be placed at the
 #'   end of the document.}
-#'   \item{\code{address}}{(Mandatory) YAML list with entries for \code{code} and \code{address}.  
+#'   \item{\code{address}}{(Mandatory) YAML list with entries for \code{code} and \code{address}.
 #'   The former matches the \code{affiliation} field of the \code{author} entry; the letter can be
 #'   a free-format text giving, say, department and university along with an email address.}
 #'   \item{\code{author}}{(Mandatory) YAML list with entries for \code{name} and \code{affiliation}.
@@ -33,7 +33,7 @@
 #'   \item{\code{fontsize}}{(Optional) Document fontsize, default is 9pt.}
 #'   \item{\code{footer_contents}}{(Optional) A free-format entry for text placed in the footer,
 #'   useful to associate with a package or volume, default is \sQuote{Package Vignette}.}
-#'   \item{\code{headercolor}}{(Optional) Color code (in hexadecimal notation) for the title and 
+#'   \item{\code{headercolor}}{(Optional) Color code (in hexadecimal notation) for the title and
 #'   section headers, default is blue tone matching the R logo: \code{185FAF}.}
 #'   \item{\code{keywords}}{(Optional) Keywords describing the document, supplied as a list.}
 #'   \item{\code{lead_author_surnames}}{(Optional but recommended) A free-format entry for a short
@@ -49,8 +49,10 @@
 #'   \item{\code{output}}{(Mandatory) Entry to tell \code{rmarkdown} to render via \code{pinp};
 #'   must be \code{pinp::pinp}.}
 #'   \item{\code{secnumdepth}}{(Optional) Level of (LaTeX) section levels to number, default is 5.}
+#'   \item{\code{skip_final_break}}{(Optional) Logical value to skip a final (force) page that
+#'   is part of the PNAS style, default is false i.e. break is inserted as with PNAS.}
 #'   \item{\code{title}}{(Mandatory) document title, no default.}
-#'   \item{\code{title}}{(Optional) Logical value to select a \sQuote{Draft} watermark to be
+#'   \item{\code{watermark}}{(Optional) Logical value to select a \sQuote{Draft} watermark to be
 #'   added (though figures tend to render above it, default is false.}
 #' }
 #'
