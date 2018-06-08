@@ -3,6 +3,14 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pinp/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pinp/issues/#1}{##1}}
 
+\section{Changes in pinp version 0.0.5 (2018-06-xx)}{
+  \itemize{
+    \item \code{pandoc} version 2 or later, in its wisdom, no longer
+    lets us embed a bibliography in the header, so the vignette was
+    altered by a CRAN request
+  }
+}
+
 \section{Changes in pinp version 0.0.4 (2017-11-04)}{
   \itemize{
     \item Correct NEWS headers from 'tint' to 'pinp' (\ghit{45}).

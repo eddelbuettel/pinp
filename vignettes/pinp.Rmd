@@ -60,43 +60,8 @@ secnumdepth: 3
 # Optional: Bibliography 
 #bibliography: pinp
 
-# Optional: include-after, used here to include rendered bibliography
-include-after: |
-  \begin{thebibliography}{3}
-  \newcommand{\enquote}[1]{``#1''}
-  \providecommand{\natexlab}[1]{#1}
-  \providecommand{\url}[1]{\texttt{#1}}
-  \providecommand{\urlprefix}{URL }
-  \expandafter\ifx\csname urlstyle\endcsname\relax
-    \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
-    \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
-    \urlstyle{rm}\Url}\fi
-  \providecommand{\eprint}[2][]{\url{#2}}
-  
-  \bibitem[{Allaire \emph{et~al.}(2017)Allaire, {R Foundation}, Wickham, {Journal
-    of Statistical Software}, Xie, Vaidyanathan, {Association for Computing
-    Machinery}, Boettiger, {Elsevier}, Broman, Mueller, Quast, Pruim, Marwick,
-    Wickham, Keyes, and Yu}]{CRAN:rticles}
-  Allaire J, {R Foundation}, Wickham H, {Journal of Statistical Software}, Xie Y,
-    Vaidyanathan R, {Association for Computing Machinery}, Boettiger C,
-    {Elsevier}, Broman K, Mueller K, Quast B, Pruim R, Marwick B, Wickham C,
-    Keyes O, Yu M (2017).
-  \newblock \emph{rticles: Article Formats for R Markdown}.
-  \newblock R package version 0.4.1,
-    \urlprefix\url{https://CRAN.R-project.org/package=rticles}.
-  
-  \bibitem[{MacFarlane(2017)}]{pandoc}
-  MacFarlane J (2017).
-  \newblock \emph{Pandoc: A Universal Document Converter}.
-  \newblock Version 1.19.2.1, \urlprefix\url{http://pandoc.org}.
-  
-  \bibitem[{Xie(2017)}]{CRAN:knitr}
-  Xie Y (2017).
-  \newblock \emph{knitr: A General-Purpose Package for Dynamic Report Generation
-    in R}.
-  \newblock R package version 1.17, \urlprefix\url{https://yihui.name/knitr/}.
-
-  \end{thebibliography}
+# Optional: include-after
+#include-after: somefile.tex
 
 # Optional: Enable a 'Draft' watermark on the document
 #watermark: true
@@ -108,7 +73,11 @@ skip_final_break: true
 footer_contents: "pinp Vignette"
 
 # Produce a pinp document
-output: pinp::pinp
+output:
+  pinp::pinp:
+    includes:
+      after_body: bib.tex
+
 
 # Required: Vignette metadata for inclusion in a package.
 vignette: >
@@ -125,7 +94,6 @@ The *pinp is not PNAS* template extends and reworks the
 [pnas_article](https://github.com/rstudio/rticles/tree/master/inst/rmarkdown/templates/pnas_article)
 template from the wonderful
 [rticles](https://cran.r-project.org/package=rticles) package. 
-
 This vignette aims to list all the available option in order to
 provide both a reference documentation, and a simple introduction.
 The source of this vignette is of course included in the package
@@ -222,8 +190,8 @@ may appear at the end of documents with acknowledgements and bibliographies.
 A field for an _optional_ selection of a Bibtex input file, extension
 can be omitted.  Alternative, bibliographic information may also be
 included directly as a `thebibliography` environment by including the
-content of the generated `bbl` file. The `include-after` field of the
-YAML header is very suitable for a segment.
+content of the generated `bbl` file. The `after_body` include of the
+YAML header can also be used.
 
 ## `watermark`
 
@@ -255,7 +223,6 @@ a
 ```
 
 Output from such code blocks is also shown in a framed and shaded box.
-
 Code segments containing plots producing figures results in these
 figures being automatically inlined:
  
@@ -338,11 +305,8 @@ processing in R using the
 
 ## LaTeX 
 
-Ultimately this style uses LaTeX to produce the pdf output. The
-[tex StackExchange](http://tex.stackexchange.com) can be helpful for
+Ultimately, this style uses LaTeX to produce the pdf output. The
+[tex StackExchange](http://tex.stackexchange.com) can be very helpful for
 specific LaTeX questions.
 
-<!-- local tweak to the pnasbreak command -->
-\renewcommand{\pnasbreak}{\begin{strip}\vskip0pt\end{strip}}
-
-\phantom{xxx} <!-- if this isn't here the next para runs in-->
+<!-- Acknowledgements, and References, are automatically typeset after this -->
