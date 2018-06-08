@@ -3,7 +3,7 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pinp/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pinp/issues/#1}{##1}}
 
-\section{Changes in pinp version 0.0.5 (2018-06-xx)}{
+\section{Changes in pinp version 0.0.5 (2018-06-08)}{
   \itemize{
     \item \code{pandoc} version 2 or later, in its wisdom, no longer
     lets us embed a bibliography in the header, so the vignette was
