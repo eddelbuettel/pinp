@@ -43,7 +43,7 @@ keywords:
   - here
 
 # Paper size for the document, values of letterpaper and a4paper
-papersize: letterpaper
+papersize: letter
 
 # Font size of the document, values of 9pt (default), 10pt, 11pt and 12pt
 fontsize: 9pt
