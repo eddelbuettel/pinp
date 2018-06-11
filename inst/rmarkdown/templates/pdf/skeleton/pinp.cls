@@ -207,9 +207,9 @@
 \RequirePackage{changepage}
 \RequirePackage[twoside,%
 				includeheadfoot,%
-%				layoutsize={8.125in,10.875in},%
-                layouthoffset=0.1875in,%
-                layoutvoffset=0.0625in,%
+				layoutsize={0.95588\paperwidth,0.98864\paperheight},%
+				layouthoffset=0.02206\paperwidth,%
+				layoutvoffset=0.00568\paperheight,%
                 left=38.5pt,%
                 right=43pt,%
                 top=43pt,% 10pt provided by headsep
