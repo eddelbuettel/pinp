@@ -206,14 +206,7 @@
 \RequirePackage[noend]{algpseudocode}
 \RequirePackage{changepage}
 \RequirePackage[twoside,%
-				includeheadfoot,
-                left=38.5pt,%
-                right=43pt,%
-                top=43pt,% 10pt provided by headsep
-                bottom=32pt,%
-                headheight=0pt,% No Header
-                headsep=10pt,%
-                footskip=25pt]{geometry}
+				includeheadfoot]{geometry}
 \RequirePackage[labelfont={bf,sf},%
                 labelsep=period,%
                 figurename=Fig.]{caption}
