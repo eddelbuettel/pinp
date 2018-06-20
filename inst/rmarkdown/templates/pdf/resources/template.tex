@@ -14,10 +14,18 @@ $if(tables)$
 \usepackage{longtable}
 $endif$
 
-% The geometry package layout settings need to be set here...
+% The geometry package layout settings need to be set here.
+% The adjustments are based on letter paper size (612x792pts)
 \geometry{layoutsize={0.95588\paperwidth,0.98864\paperheight},%
           layouthoffset=0.02206\paperwidth,%
-		  layoutvoffset=0.00568\paperheight}
+		  layoutvoffset=0.00568\paperheight,
+		  left=0.0629\paperwidth,%
+		  right=0.07026\paperwidth,%
+		  top=0.05429\paperheight,% 10pt provided by headsep
+		  bottom=0.0404\paperheight,%
+		  headheight=0pt,% No Header
+		  headsep=0.0126\paperheight,%
+		  footskip=0.0316\paperheight}
 
 $if(headercolor)$
 \definecolor{pinpblue}{HTML}{$headercolor$}
