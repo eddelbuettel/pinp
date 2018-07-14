@@ -79,16 +79,19 @@
 #'
 #' Yihui Xie (2017). knitr: A General-Purpose Package for Dynamic Report Generation in R. R
 #' package version 1.17.
-pinp <- function(..., keep_tex = TRUE, citation_package = 'natbib') {
+pinp <- function(..., keep_tex = TRUE, citation_package = 'natbib', collapse = FALSE) {
 
     template <- system.file("rmarkdown", "templates", "pdf", "resources", "template.tex",
                             package="pinp")
     base <- inherit_pdf_document(..., template = template,
-                                 keep_tex = keep_tex, citation_package = citation_package)
+                                 keep_tex = keep_tex,
+                                 citation_package = citation_package)
 
     base$knitr$opts_chunk$prompt <- FALSE 	# changed from TRUE
     base$knitr$opts_chunk$comment <- '# '	# default to one hashmark
     base$knitr$opts_chunk$highlight <- TRUE  	# changed as well
+
+    base$knitr$opts_chunk$collapse <- collapse 	# allow override
 
     base$knitr$opts_chunk$dev.args <- list(pointsize = 9)  # from 11
     base$knitr$opts_chunk$fig.width <- 3.5 	# from 4.9 # 6.125" * 0.8, as in template
@@ -99,7 +102,7 @@ pinp <- function(..., keep_tex = TRUE, citation_package = 'natbib') {
         paste('\\begin{ShadedResult}\n\\begin{verbatim}\n', x,
               '\\end{verbatim}\n\\end{ShadedResult}\n', sep = '')
     }
-    base$knitr$knit_hooks$output  <- hook_output
+    if (!collapse) base$knitr$knit_hooks$output  <- hook_output
     base$knitr$knit_hooks$message <- hook_output
     base$knitr$knit_hooks$warning <- hook_output
 
