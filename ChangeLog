@@ -1,3 +1,12 @@
+2018-07-14  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/pinp.R (pinp): Added support for 'collapse' option via yaml header
+	support collapse mode
+
+2018-06-08  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.5
+
 2018-06-07  Dirk Eddelbuettel  <edd@debian.org>
 
 	* vignettes/bib.tex: Split out of vignette as pandoc 2.* no longer
@@ -6,7 +15,7 @@
 
 2017-11-04  Dirk Eddelbuettel  <edd@debian.org>
 
-	* DESCRIPTION (Version, Date): New release
+	* DESCRIPTION (Version, Date): Release 0.0.4
 
 2017-11-03  Dirk Eddelbuettel  <edd@debian.org>
 

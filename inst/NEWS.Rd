@@ -16,6 +16,7 @@
     \item Correct NEWS headers from 'tint' to 'pinp' (\ghit{45}).
     \item New front-matter variables \sQuote{skip_final_break} skips the
     \code{pnasbreak} on final page which back as default (\ghpr{47}).
+    \item Support option to collapse code and result blocks.
   }
 }
 
