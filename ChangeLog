@@ -1,3 +1,8 @@
+2018-07-16  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/pinp.R: Document new option 'collapse'
+	* man/pinp.Rd: Idem
+
 2018-07-14  Dirk Eddelbuettel  <edd@debian.org>
 
 	* R/pinp.R (pinp): Added support for 'collapse' option via YAML header
