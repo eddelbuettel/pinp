@@ -3,6 +3,15 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pinp/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pinp/issues/#1}{##1}}
 
+\section{Changes in pinp version 0.0.6 (2018-07-xx)}{
+  \itemize{
+    \item Added YAML header option 'papersize' (Saghir Bashir in \ghpr{54}
+    and \ghpr{58} fixing \ghit{24}).
+    \item Added YAML header option 'collapse' with default 'false'
+    (\ghpr{59}).
+  }
+}
+
 \section{Changes in pinp version 0.0.5 (2018-06-08)}{
   \itemize{
     \item \code{pandoc} version 2 or later, in its wisdom, no longer

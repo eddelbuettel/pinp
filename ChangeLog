@@ -1,7 +1,17 @@
 2018-07-14  Dirk Eddelbuettel  <edd@debian.org>
 
-	* R/pinp.R (pinp): Added support for 'collapse' option via yaml header
+	* R/pinp.R (pinp): Added support for 'collapse' option via YAML header
 	support collapse mode
+
+2018-06-20  Saghir Bashir  <saghir@ilustat.com>
+
+	* vignettes/pinp.Rmd: Correction to widetext use
+
+2018-06-11  Saghir Bashir  <saghir@ilustat.com>
+
+	* vignettes/pinp.Rmd: Support 'papersize' as YAML header option
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Idem
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Idem
 
 2018-06-08  Dirk Eddelbuettel  <edd@debian.org>
 
