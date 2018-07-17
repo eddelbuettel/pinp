@@ -73,6 +73,15 @@ skip_final_break: true
 footer_contents: "pinp Vignette"
 
 # Produce a pinp document
+# 
+# Other options that can be set here, shown with their defaults
+#   keep_tex: TRUE
+#   collapse: FALSE
+#   citation_package: natbib
+#
+# Any other arguments to rmarkdown::pdf_document could be set 
+# here as well
+#
 output:
   pinp::pinp:
     includes:
