@@ -3,6 +3,12 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pinp/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pinp/issues/#1}{##1}}
 
+\section{Changes in pinp version 0.0.7 (201x-yy-zz)}{
+  \itemize{
+    \item Added some more documentation for different YAML header fields.
+  }
+}
+
 \section{Changes in pinp version 0.0.6 (2018-07-16)}{
   \itemize{
     \item Added YAML header option 'papersize' (Saghir Bashir in \ghpr{54}

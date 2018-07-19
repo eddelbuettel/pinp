@@ -1,7 +1,8 @@
 ---
 title: pinp is not PNAS
 
-# Use letters for affiliations
+# Use letters 'a', 'b', ... for different affiliations and their addresses. 
+# Use '~' as code to suppress the display of the affiliation and address.
 author:
   - name: Dirk Eddelbuettel
     affiliation: a

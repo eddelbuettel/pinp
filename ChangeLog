@@ -1,3 +1,8 @@
+2018-07-19  Dirk Eddelbuettel  <edd@debian.org>
+
+	* vignettes/pinp.Rmd: Document '~' as address and affiliation code
+	to suppress the display of affiliation
+
 2018-07-17  Dirk Eddelbuettel  <edd@debian.org>
 
 	* vignettes/pinp.Rmd: Document YAML header options
