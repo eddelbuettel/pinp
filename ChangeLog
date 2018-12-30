@@ -1,3 +1,7 @@
+2018-12-30  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .travis.yml: Use rocker/r-rmd container for Travis CI
+
 2018-07-19  Dirk Eddelbuettel  <edd@debian.org>
 
 	* vignettes/pinp.Rmd: Document '~' as address and affiliation code
