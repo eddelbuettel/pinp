@@ -15,6 +15,11 @@ address:
   - code: b
     address: Depts of Informatics and Statistics, Univ. of Illinois at Urbana-Champaign; Champaign, IL, USA; \url{balamut2@illinois.edu}
 
+# Optional: line of arbitrary text with additional information.
+# Could be used, for example, to mention the bibliographic info in a post-print.
+# If not specified, defaults to "This version was compiled on \today"
+#date_subtitle: Published in *Journal of Statistical Software*, 2018
+
 # For footer text  TODO(fold into template, allow free form two-authors)
 lead_author_surname: Eddelbuettel and Balamuta
 
@@ -214,6 +219,9 @@ above the watermark.
 
 An character value delimited by quotes for something like _"mypackage
 Vignette"_ which will be shown in the footer.
+
+## `date_subtitle`
+An _optional_ free-form text string. Could be used, for example, to mention the bibliographic info in a post-print. If not specified, defaults to "This version was compiled on {current date}"
 
 
 # Code 

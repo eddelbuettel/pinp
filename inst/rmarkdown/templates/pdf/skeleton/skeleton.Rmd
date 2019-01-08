@@ -12,6 +12,11 @@ address:
     address: Institute of Smoke and Magic, University of Sometown, Sometown, XY, 12345
   - code: b
     address: Department of Neat Tricks, Whereever State University, Someplace, MC, 67890
+    
+# Optional: line of arbitrary text with additional information.
+# Could be used, for example, to mention the bibliographic info in a post-print.
+# If not specified, defaults to "This version was compiled on \today"
+#date_subtitle: Published in *Journal of Statistical Software*, 2018
 
 # For footer text  TODO(fold into template, allow free form two-authors)
 lead_author_surname: Author and Author
@@ -128,6 +133,7 @@ We support several options via the YAML header
   pages;
 - Setting a free-form author field used on the inside footer;
 - Optional _Draft_ watermarking;
+- Line of custom text in subtitle (`date_subtitle`) suitable to give publication info of the draft, e.g. journal name in a post-print.
 
 
 
