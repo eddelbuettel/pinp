@@ -223,7 +223,7 @@
 %% Set document color scheme
 \definecolor{black50}{gray}{0.5} % 50% black for hrules
 \definecolor{color0}{RGB}{0,0,0} % Base
-\definecolor{color1}{RGB}{59,90,198} % author email, doi
+\definecolor{color1}{RGB}{59,90,198} % author email, doi_footer
 %\definecolor{color2}{RGB}{16,131,16} %
 % For sig statement box
 % already define above
@@ -279,7 +279,7 @@
 \makeatletter
 \fancypagestyle{firststyle}{
    \fancyfoot[R]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
-   \fancyfoot[L]{\footerfont\@ifundefined{@doi}{}{\@doi}}
+   \fancyfoot[L]{\footerfont\@ifundefined{@doifooter}{}{\@doifooter}}
 }
 \makeatother
 
@@ -291,7 +291,7 @@
 \cfoot{}%
 \rfoot{}%
 \makeatletter
-\fancyfoot[LE]{\footerfont\textbf{\thepage}\hspace{7pt}|\hspace{7pt}\@ifundefined{@doi}{}{\@doi}}
+\fancyfoot[LE]{\footerfont\textbf{\thepage}\hspace{7pt}|\hspace{7pt}\@ifundefined{@doifooter}{}{\@doifooter}}
 \fancyfoot[RO]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
 \fancyfoot[RE,LO]{\footerfont\@ifundefined{@leadauthor}{}{\@leadauthor}}
 
@@ -356,7 +356,7 @@
 %% Article meta data additional fields
 \newcommand{\additionalelement}[1]{\def\@additionalelement{#1}}
 \newcommand{\dates}[1]{\def\@dates{#1}}
-\newcommand{\doi}[1]{\def\@doi{#1}}
+\newcommand{\doifooter}[1]{\def\@doifooter{#1}}
 \newcommand{\leadauthor}[1]{\def\@leadauthor{#1}}
 \newcommand{\etal}[1]{\def\@etal{#1}}
 \newcommand{\keywords}[1]{\def\@keywords{#1}}
