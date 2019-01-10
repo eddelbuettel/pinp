@@ -1,3 +1,16 @@
+2019-01-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Also support
+	previouse use of 'doi_footer' as 'doi'
+	* vignettes/pinp.Rmd: Document 'doi_footer'
+
+2019-01-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Rename 'doi'
+	YAML option to 'doi_footer' to permit doi display in bibiography
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Idem
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Idem
+
 2019-01-08  Ilya Kashnitsky <ilya.kashnitsky@gmail.com>
 
 	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: New
