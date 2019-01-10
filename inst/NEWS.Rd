@@ -6,6 +6,8 @@
 \section{Changes in pinp version 0.0.7 (201x-yy-zz)}{
   \itemize{
     \item Added some more documentation for different YAML header fields.
+    \item A new option has been added for a 'date_subtitle' (Ilya
+    Kashnitsky in \ghpt{64} fixing \ghit{63}).
   }
 }
 
