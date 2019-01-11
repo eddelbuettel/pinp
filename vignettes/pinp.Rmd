@@ -24,7 +24,7 @@ address:
 lead_author_surname: Eddelbuettel and Balamuta
 
 # Place DOI URL or CRAN Package URL here
-doi: "https://cran.r-project.org/package=pinp"
+doi_footer: "https://cran.r-project.org/package=pinp"
 
 # Abstract
 abstract: |
@@ -136,7 +136,7 @@ A free-form field usable for either a simple "Author _et al_", or a
 simple text field listing two or more authors. This field is not
 post-processed.
 
-## `doi`
+## `doi_footer`
 
 A free-form URL for a doi reference for a publication, or a canonical
 URL for a software package or repository. These are typeset as actual

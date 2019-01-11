@@ -21,8 +21,8 @@ address:
 # For footer text  TODO(fold into template, allow free form two-authors)
 lead_author_surname: Author and Author
 
-# Place DOI URL or CRAN Package URL here
-doi: "https://cran.r-project.org/package=YourPackage"
+# Place eg a DOI URL or CRAN Package URL here
+doi_footer: "https://cran.r-project.org/package=YourPackage"
 
 # Abstract
 abstract: |

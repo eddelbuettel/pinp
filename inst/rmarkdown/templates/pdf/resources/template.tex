@@ -67,8 +67,13 @@ $else$
 \dates{This version was compiled on \today} 
 $endif$
 
+% initially we use doi so keep for backwards compatibility
 $if(doi)$
-\doi{$doi$}
+\doifooter{$doi$}
+$endif$
+% new name is doi_footer
+$if(doi_footer)$
+\doifooter{$doi_footer$}
 $endif$
 
 $if(footer_contents)$
