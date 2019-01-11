@@ -639,7 +639,10 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 
 %% microtype with mathdesign, microtype already loaded
 \usepackage[bitstream-charter]{mathdesign} %% cf http://www.khirevich.com/latex/font/
- 
+
+%% doi command or bibliography with thanks to Achim Zeileis for the hint
+\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{\normalfont\texttt{doi:\discretionary{}{}{}#1}}}
+
 \endinput
 
 %%% END pnasresearcharticle

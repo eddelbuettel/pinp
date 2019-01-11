@@ -1,4 +1,11 @@
+2019-01-11  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.7
+
 2019-01-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Add new definition
+	for \doi{} rendering as hyperlink, with thanks to Achim Zeileis!
 
 	* inst/rmarkdown/templates/pdf/resources/template.tex: Also support
 	previouse use of 'doi_footer' as 'doi'
