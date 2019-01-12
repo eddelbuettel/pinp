@@ -1,4 +1,4 @@
-## pinp [![Build Status](https://travis-ci.org/eddelbuettel/pinp.svg)](https://travis-ci.org/eddelbuettel/pinp) [![Package-License](http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html) [![CRAN](http://www.r-pkg.org/badges/version/pinp)](https://cran.r-project.org/package=pinp) [![Downloads](http://cranlogs.r-pkg.org/badges/pinp?color=brightgreen)](http://www.r-pkg.org/pkg/pinp)
+## pinp [![Build Status](https://travis-ci.org/eddelbuettel/pinp.svg)](https://travis-ci.org/eddelbuettel/pinp) [![Package-License](http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html) [![CRAN](http://www.r-pkg.org/badges/version/pinp)](https://cran.r-project.org/package=pinp) [![Dependencies](https://tinyverse.netlify.com/badge/pinp)](https://cran.r-project.org/package=pinp) [![Downloads](http://cranlogs.r-pkg.org/badges/pinp?color=brightgreen)](http://www.r-pkg.org/pkg/pinp)
 
 Pinp is not PNAS
 
