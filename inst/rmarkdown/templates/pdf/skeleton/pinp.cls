@@ -67,7 +67,7 @@
 %\RequirePackage{widetext}
 %% BEGIN
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{widetext}
+\ProvidesPackage{pinp}%widetext}
 
 %% Mimics the widetext environment of revtex4 for any other class package
 %% Eg: article.cls
@@ -558,7 +558,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 %%% PNAS two column research article  style file
 %%% For use with pnas-new.cls
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{pnasresearcharticle}[2016/02/28 v1.2 PNAS two column research article style]
+\ProvidesPackage{pinp}%{pnasresearcharticle}[2016/02/28 v1.2 PNAS two column research article style]
 
 %% Set whether the abstract is set into the first column
 \setboolean{shortarticle}{true} 
