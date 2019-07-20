@@ -643,6 +643,9 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 %% doi command or bibliography with thanks to Achim Zeileis for the hint
 \newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{\normalfont\texttt{doi:\discretionary{}{}{}#1}}}
 
+%% upquote for improved quotes in verbatim -- cf github issue #75
+\RequirePackage{upquote} % For keeping actual quotes in verbatim
+
 \endinput
 
 %%% END pnasresearcharticle

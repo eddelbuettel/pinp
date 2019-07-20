@@ -1,3 +1,8 @@
+2019-07-20  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Added upquote
+	package to use actual quotes in verbatim mode
+
 2019-06-16  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Roll minor version 

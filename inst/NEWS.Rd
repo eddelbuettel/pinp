@@ -3,6 +3,14 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pinp/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pinp/issues/#1}{##1}}
 
+\section{Changes in pinp version 0.0.8 (2019-xx-yy)}{
+  \itemize{
+    \item Two erroraneous 'Provides' were removed from the pinp class.
+    \item The \code{upquote} package is now use to use actual
+    (non-fancy) quotes in verbatim mode (Dirk fixing \ghit{75})
+  }
+}
+
 \section{Changes in pinp version 0.0.7 (2019-01-11)}{
   \itemize{
     \item Added some more documentation for different YAML header fields.
