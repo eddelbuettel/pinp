@@ -4,11 +4,11 @@
 %%   http://www.pnas.org/site/authors/latex.xhtml
 %%   as well as local changes 
 %%
-%% Dirk Eddelbuettel and James Balamuta
-%% August - September 2017
+%% Dirk Eddelbuettel and James Balamuta 
+%% August - September 2017, September 2019
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% pnas-new.cls, v1.2, 2016/02/28 
+% pnas-new.cls, v1.44, 2018/05/06
 %
 % This class file enables authors to prepare research 
 % articles for submission to PNAS.
@@ -32,7 +32,7 @@
 % to produce the PDF, not dvis -> ps -> pdf nor dvipdf
 % 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{pinp}[2017-Sep-12, based on pnas-new 28/02/2015, v1.2]
+\ProvidesClass{pinp}[2019-Sep-07, based on pnas-new 2018/05/06, v1.44]
 \AtEndOfClass{\RequirePackage{microtype}}
 % Option for line numbers
 \newif\if@pnaslineno
