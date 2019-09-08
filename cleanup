@@ -1,5 +1,5 @@
 #!/bin/sh
 
 (cd vignettes && \
-    rm -rf jss.bst pinp.bbl pinp.bib pinp.cls pinp.pdf pinp.tex pinp.xwm pinp_files/ && \
+    rm -rf jss.bst pinp.bbl pinp.bib pinp.cls pinp.log pinp.pdf pinp.tex pinp.xwm pinp_files/ && \
     cd ..)
