@@ -1,3 +1,22 @@
+2019-09-08  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Remove docs for
+	'watermark' as underlying PNAS style no longer has a toggle
+	* R/pinp.R: Remove documentation of watermark option no longer
+	supported as a toggle in the pinp.cls file
+	* man/pinp.Rd: Ditto
+	* vignettes/pinp.Rmd: Ditto
+
+2019-09-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Updated to current
+	pnas-new files dates 2018-05-06
+
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Removed hook
+	for watermark for now
+
 2019-07-20  Dirk Eddelbuettel  <edd@debian.org>
 
 	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Added upquote
