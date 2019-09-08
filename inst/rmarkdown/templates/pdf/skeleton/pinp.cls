@@ -156,8 +156,8 @@
 
 %% Hyperlinking
 % from below
-%\definecolor{pnasbluetext}{RGB}{0,101,165} %
-%\definecolor{pnasblueback}{RGB}{205,217,235} %
+\definecolor{pnasbluetext}{RGB}{0,101,165} %
+\definecolor{pnasblueback}{RGB}{205,217,235} %
 \RequirePackage[colorlinks=true, allcolors=pnasbluetext]{hyperref}
 
 %% Set up main title page fonts 
@@ -178,10 +178,14 @@
 \setlength{\affilsep}{8.5pt} % 16.5pts between base of author line and base of affil line
 \renewcommand\Authfont{\color{color0}\normalfont\sffamily\bfseries\fontsize{9}{11}\selectfont}
 \renewcommand\Affilfont{\color{color0}\normalfont\sffamily\fontsize{7}{8}\selectfont}
-\makeatletter
+
 \renewcommand\AB@affilsepx{; \protect\Affilfont}
-\makeatother
+
 \renewcommand\Authands{, and }
+
+%% Choose template type
+\newcommand*{\templatetype}[1]{%
+  \RequirePackage{#1}}
 
 %% Options for element switching
 \RequirePackage{xifthen}
@@ -192,11 +196,23 @@
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
 
 %% Watermark 
-% See: http://mirrors.ctan.org/macros/latex/contrib/xwatermark/doc/xwatermark-guide.pdf#page=3
-\RequirePackage[printwatermark]{xwatermark}
-\newwatermark[allpages,color=gray!20,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
+\newboolean{displaywatermark}
+\setboolean{displaywatermark}{false} % Set to true to show the watermark -- pinp change
+\AtBeginDocument{%
+  \ifthenelse{\boolean{displaywatermark}}{%
+  \RequirePackage{draftwatermark}
+  \SetWatermarkAngle{45}
+  \SetWatermarkColor{gray!20}
+  \SetWatermarkFontSize{3cm}
+  \SetWatermarkText{{\fontfamily{bch}\bfseries DRAFT}}
+}{}
+}
 
+%% Copyright statement (not used)
+\newboolean{displaycopyright}
+\setboolean{displaycopyright}{false} % Confirmed as not required
 \RequirePackage{textcomp} % For copyright symbol styling
+\newcommand{\copyrightstatement}{\, \textcopyright\, 2015 by The National Academy of Sciences of the USA}
 
 %% Graphics, tables and other formatting
 \RequirePackage{graphicx,xcolor}
@@ -206,14 +222,18 @@
 \RequirePackage[noend]{algpseudocode}
 \RequirePackage{changepage}
 \RequirePackage[twoside,%
-				includeheadfoot,
+				letterpaper,includeheadfoot,%
+				layoutsize={8.125in,10.875in},%
+                layouthoffset=0.1875in,%
+                layoutvoffset=0.0625in,%
                 left=38.5pt,%
                 right=43pt,%
                 top=43pt,% 10pt provided by headsep
                 bottom=32pt,%
                 headheight=0pt,% No Header
                 headsep=10pt,%
-                footskip=25pt]{geometry}
+                footskip=25pt,
+                marginparwidth=38pt]{geometry}
 \RequirePackage[labelfont={bf,sf},%
                 labelsep=period,%
                 figurename=Fig.]{caption}
@@ -226,18 +246,26 @@
 \definecolor{color1}{RGB}{59,90,198} % author email, doi_footer
 %\definecolor{color2}{RGB}{16,131,16} %
 % For sig statement box
-% already define above
+% already defined above
 %\definecolor{pnasbluetext}{RGB}{0,101,165} %
 %\definecolor{pnasblueback}{RGB}{205,217,235} %
+%\definecolor{pnasbluetext}{RGB}{0,115,209} % Not used
+%\definecolor{pnasblueback}{RGB}{210,230,247} % Not used
 
-%% Bibliography    
+%% Bibliography -- pinp override   
 \RequirePackage{natbib}
 \setlength{\bibsep}{0.0pt}
 \renewcommand\bibfont{\normalfont\sffamily\fontsize{8}{10}\selectfont} % set font to be sans serif
 
+
+\renewcommand\@biblabel[1]{ #1.} % Remove brackets from label
+\def\tagform@#1{\maketag@@@{\bfseries(\ignorespaces#1\unskip\@@italiccorr)}}
+\renewcommand{\eqref}[1]{\textup{{\normalfont Eq.~(\ref{#1}}\normalfont)}}
+
+
 %% Figure caption style
 \DeclareCaptionFormat{pnasformat}{\normalfont\sffamily\fontsize{7}{9}\selectfont#1#2#3}
-\captionsetup{format=pnasformat}
+\captionsetup*{format=pnasformat}
 
 %% Table style
 \RequirePackage{etoolbox}
@@ -252,6 +280,11 @@
 \sffamily\fontsize{7.5}{10}\selectfont
 }
 \newcommand{\addtabletext}[1]{{\setlength{\leftskip}{9pt}\fontsize{7}{9}\selectfont#1}}
+
+%% Equation numbering - use square brackets
+
+\renewcommand\tagform@[1]{\maketag@@@ {[\ignorespaces #1\unskip \@@italiccorr ]}}
+
 
 %% Headers and footers
 \RequirePackage{fancyhdr}  % custom headers/footers
@@ -317,6 +350,7 @@
 
 %% Section/subsection/paragraph set-up
 \RequirePackage[explicit]{titlesec}
+\setcounter{secnumdepth}{5}
 %% \renewcommand{\thesubsection}{\Alph{subsection}}
 
 \titleformat{\section}
@@ -368,6 +402,9 @@
 \newcommand{\matmethods}[1]{\def\@matmethods{#1}}
 \newcommand{\acknow}[1]{\def\@acknow{#1}}
 
+%% Dropped capital for first letter of main text
+\newcommand{\dropcap}[1]{\lettrine[lines=2,lraise=0.05,findent=0.1em, nindent=0em]{{\dropcapfont{#1}}}{}}
+
 %% Abstract formatting
 \def\xabstract{abstract}
 \long\def\abstract#1\end#2{\def\two{#2}\ifx\two\xabstract 
@@ -383,18 +420,16 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 % Define an environment with abstract content and styling
 \newcommand{\abscontent}{
 \noindent
-{%
 \parbox{\dimexpr\linewidth}{%
     \vskip3pt%
 	\absfont \theabstract
 }%
-}%
 \vskip10pt%
 \noindent
-{\parbox{\dimexpr\linewidth}{%
+\parbox{\dimexpr\linewidth}{%
 {
  \keywordsfont \@ifundefined{@keywords}{}{\@keywords}}%
-}}%
+}
 \vskip12pt%
 }
 
@@ -411,33 +446,53 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \renewcommand{\@maketitle}{%
 {%
 \ifthenelse{\boolean{shortarticle}}
-{\ifthenelse{\boolean{singlecolumn}}{}{
-{\raggedright\baselineskip= 24pt\titlefont \@title\par}%
-\vskip10pt% 21pts between base of title and base of author line
-{\raggedright \@author\par}
-\vskip8pt% 16pts between base of affiliations and base of dates line 
-{\raggedright \datesfont \@ifundefined{@dates}{}{\@dates}\par}
-\vskip12pt%
-}}
-{% else
-%
-\vskip10pt%
-{\raggedright\baselineskip= 24pt\titlefont \@title\par}%
-\vskip10pt% 21pts between base of title and base of author line
-{\raggedright \@author\par}
-\vskip8pt% 16pts between base of affiliations and base of dates line 
-{\raggedright \datesfont \@ifundefined{@dates}{}{\@dates}\par}
-\vskip12pt
-{%
-\abscontent
-}%
-\vskip25pt%
-}%
+  {\ifthenelse{\boolean{singlecolumn}}{}{
+    {\raggedright\baselineskip= 24pt\titlefont \@title\par}%
+    \vskip10pt% 21pts between base of title and base of author line
+    {\raggedright \@author\par}
+    \vskip8pt% 16pts between base of affiliations and base of dates line 
+    {\raggedright \datesfont \@ifundefined{@dates}{}{\@dates}\par}
+    \vskip12pt%
+    }}
+  {% else
+    %
+    \vskip10pt%
+    {\raggedright\baselineskip= 24pt\titlefont \@title\par}%
+    \vskip10pt% 21pts between base of title and base of author line
+    {\raggedright \@author\par}
+    \vskip8pt% 16pts between base of affiliations and base of dates line 
+    {\raggedright \datesfont \@ifundefined{@dates}{}{\@dates}\par}
+    \vskip12pt
+    {%
+    \abscontent
+    }%
+    \vskip25pt%
+  }%
 %%%
-%\@additionalelement
+%pinp change \@additionalelement
 }%
 \vskip\pnas@vertadjust
-}%
+}
+
+%%%% Adding line numbers
+\if@twocolumn
+  \RequirePackage[switch,mathlines]{lineno}
+\else
+  \RequirePackage[mathlines]{lineno}
+\fi
+
+\if@pnaslineno
+  \linenumbers
+
+  \patchcmd{\abscontent}{\noindent}{\noindent\nolinenumbers}{}{}
+  \patchcmd{\abscontent}{\theabstract}{\internallinenumbers\theabstract}{}{}
+  \appto{\abscontent}{\linenumbers*}
+    
+  \if@twocolumn
+  \else
+    \preto{\@maketitle}{\nolinenumbers}
+  \fi
+\fi
 
 %% Footnotes set up
 \RequirePackage[flushmargin,ragged]{footmisc}
@@ -463,9 +518,15 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 	{0pt}
 	{3.25ex plus 1ex minus .2ex}
 	{1.5ex plus .2ex}
+
+
 \newcommand{\showacknow}{% Display acknowledgments section
-\@ifundefined{@acknow}{}{\acknow@section{Acknowledgments}\@acknow}
+\@ifundefined{@acknow}{}{
+\vskip 3.25ex plus 1ex minus .2ex
+\noindent{\sffamily\normalsize\bfseries ACKNOWLEDGMENTS.\hspace{1.5ex plus .2ex}}
+\small\@acknow}
 }
+
 
 %% Set up the materials&methods field
 \titleclass{\matmethods@section}{straight}[\part]
@@ -488,6 +549,29 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 
 %% Other packages
 \RequirePackage{enumitem} % For reducing bullet list item separation
+
+%% For sidecaptions
+%%pinp change  \RequirePackage[rightcaption]{sidecap}
+
+%% Define widetext as a double-column float, with a warning
+% \RequirePackage{float}
+% \RequirePackage{stfloats}
+% \RequirePackage{marginnote}
+% \floatstyle{plain}
+% \newfloat{@widetext}{hbt!}{wtt}
+% \newenvironment{widetext}{%
+%   \PackageWarning{pnas-new}{Use of `widetext` is not recommended. We will now place it at the top or bottom of a page.}
+%   \begin{@widetext*}[bt!]
+%   \marginnote{\itshape\footnotesize\color{red}Use of \texttt{widetext} is not recommended.}
+%   \hrule
+% }{
+%   \hrule
+%   \end{@widetext*}
+% }
+
+%% For backward compatibility; does nothing
+\def\pnasbreak{}
+
 
 % Taken from RJournal styling
 \makeatletter 
@@ -558,12 +642,15 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 %%% PNAS two column research article  style file
 %%% For use with pnas-new.cls
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{pinp}%{pnasresearcharticle}[2016/02/28 v1.2 PNAS two column research article style]
+\ProvidesPackage{pinp}%{pnasresearcharticle}[2018/05/06 v1.3 PNAS two column research article style]
 
 %% Set whether the abstract is set into the first column
 \setboolean{shortarticle}{true} 
 % true = set into first column
 % false = spans page width
+
+%% Set colors
+\definecolor{color2}{RGB}{130,0,0} % color
 
 %% Set up the first page footnote/fact box here
 \RequirePackage{float}
@@ -591,15 +678,17 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \end{sigstatement}}
 }
 
+%%% END pnasresearcharticle
+
 
 %% Break at end of article (before references)
 % The blank line before the strip command ensures there is nothing placed
 % directly before the break (which can cause formatting issues).
-\newcommand{\pnasbreak}{
-\begin{strip}
-\vskip-11pt
-\end{strip}
-}
+%\newcommand{\pnasbreak}{
+%\begin{strip}
+%\vskip-11pt
+%\end{strip}
+%}
 
 \DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
 \DefineVerbatimEnvironment{Soutput}{Verbatim}{}
