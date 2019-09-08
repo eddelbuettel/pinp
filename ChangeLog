@@ -1,5 +1,7 @@
 2019-09-07  Dirk Eddelbuettel  <edd@debian.org>
 
+	* DESCRIPTION (Version, Date): Roll minor version
+
 	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Updated to current
 	pnas-new files dates 2018-05-06
 
