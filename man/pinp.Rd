@@ -79,9 +79,7 @@ alphabetical order) in the document metadata:
   final (force) page that is part of the PNAS style, default is
   false i.e. break is inserted as with PNAS.}
   \item{\code{title}}{(Mandatory) document title, no default.}
-  \item{\code{watermark}}{(Optional) Logical value to select a
-  \sQuote{Draft} watermark to be added (though figures tend to
-  render above it, default is false.}  }
+}
 
 The vignette source shows several of these options in use, and also
 describes some of the options.

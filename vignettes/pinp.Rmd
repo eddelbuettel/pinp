@@ -70,9 +70,6 @@ secnumdepth: 3
 # Optional: include-after
 #include-after: somefile.tex
 
-# Optional: Enable a 'Draft' watermark on the document
-#watermark: true
-
 # Optional: Skip inserting final break between acknowledgements, default is false
 skip_final_break: true
 
@@ -208,12 +205,6 @@ can be omitted.  Alternative, bibliographic information may also be
 included directly as a `thebibliography` environment by including the
 content of the generated `bbl` file. The `after_body` include of the
 YAML header can also be used.
-
-## `watermark`
-
-An _optional_ selection of a 'Draft' watermark drawn across the center
-of the page (using value `true`). Note that figures may be plotted
-above the watermark.
 
 ## `footer_contents`
 
