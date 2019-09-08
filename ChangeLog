@@ -1,3 +1,11 @@
+2019-09-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Updated to current
+	pnas-new files dates 2018-05-06
+
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Removed hook
+	for watermark for now
+
 2019-07-20  Dirk Eddelbuettel  <edd@debian.org>
 
 	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Added upquote
