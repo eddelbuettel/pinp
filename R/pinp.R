@@ -123,10 +123,9 @@ pinp <- function(..., keep_tex = TRUE, citation_package = 'natbib', collapse = F
     base$knitr$knit_hooks$message <- hook_output
     base$knitr$knit_hooks$warning <- hook_output
 
-    for (f in c("pinp.cls", "jss.bst"))
+    for (f in c("pinp.cls", "jss.bst", "titlesec.sty", "ttlkeys.def"))
         if (!file.exists(f))
-            file.copy(system.file("rmarkdown", "templates", "pdf", "skeleton", f, package="pinp"),
-                      ".")
+            file.copy(system.file("rmarkdown", "templates", "pdf", "skeleton", f, package="pinp"), ".")
 
     base
 }

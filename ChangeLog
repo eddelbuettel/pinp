@@ -7,6 +7,11 @@
 	* man/pinp.Rd: Ditto
 	* vignettes/pinp.Rmd: Ditto
 
+	* inst/rmarkdown/templates/pdf/skeleton/titlesec.sty: Adding older
+	working version as current version in texlive has an issue with pnas
+	* inst/rmarkdown/templates/pdf/skeleton/ttlkeys.def: Ditto
+	* R/pinp.R (pinp): Copy titlesec.sty and ttlkeys.def into work directory
+	
 2019-09-07  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Roll minor version
