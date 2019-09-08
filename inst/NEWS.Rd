@@ -3,15 +3,24 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pinp/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pinp/issues/#1}{##1}}
 
-\section{Changes in pinp version 0.0.8 (2019-xx-yy)}{
+\section{Changes in \pkg{pinp} version 0.0.8 (2019-09-08)}{
   \itemize{
     \item Two erroraneous 'Provides' were removed from the pinp class.
     \item The \code{upquote} package is now use to use actual
     (non-fancy) quotes in verbatim mode (Dirk fixing \ghit{75})
+    \item The underlying PNAS style was updated to the most recent v1.44
+    version of 2018-05-06 to avoid issues with newer TeXLive (Dirk in
+    \ghpr{79} fixing \ghit{77} and \ghit{78})
+    \item The new PNAS code brings some changes eg watermark is longer an
+    option but typesetting paragraphs seems greatly improved. We may
+    have stomped on an existing behavior, if see please file an issue.
+    \item However, it also conflicts with the current texlive version of
+    titlesec so for now we copy titlesec.sty (and a support file) in
+    using a prior version, just like we do for pinp.cls and jss.bst.
   }
 }
 
-\section{Changes in pinp version 0.0.7 (2019-01-11)}{
+\section{Changes in \pkg{pinp} version 0.0.7 (2019-01-11)}{
   \itemize{
     \item Added some more documentation for different YAML header fields.
     \item A new option has been added for a 'date_subtitle' (Ilya
@@ -22,7 +31,7 @@
   }
 }
 
-\section{Changes in pinp version 0.0.6 (2018-07-16)}{
+\section{Changes in \pkg{pinp} version 0.0.6 (2018-07-16)}{
   \itemize{
     \item Added YAML header option 'papersize' (Saghir Bashir in \ghpr{54}
     and \ghpr{58} fixing \ghit{24}).
@@ -31,7 +40,7 @@
   }
 }
 
-\section{Changes in pinp version 0.0.5 (2018-06-08)}{
+\section{Changes in \pkg{pinp} version 0.0.5 (2018-06-08)}{
   \itemize{
     \item \code{pandoc} version 2 or later, in its wisdom, no longer
     lets us embed a bibliography in the header, so the vignette was
@@ -39,7 +48,7 @@
   }
 }
 
-\section{Changes in pinp version 0.0.4 (2017-11-04)}{
+\section{Changes in \pkg{pinp} version 0.0.4 (2017-11-04)}{
   \itemize{
     \item Correct NEWS headers from 'tint' to 'pinp' (\ghit{45}).
     \item New front-matter variables \sQuote{skip_final_break} skips the
@@ -48,7 +57,7 @@
   }
 }
 
-\section{Changes in pinp version 0.0.3 (2017-10-28)}{
+\section{Changes in \pkg{pinp} version 0.0.3 (2017-10-28)}{
   \itemize{
     \item Section 'Acknowledgements' now conditional on a frontmatter
     setting, section 'Matmethods' has been removed, \code{pnasbreak} 
@@ -64,7 +73,7 @@
   }
 }
 
-\section{Changes in pinp version 0.0.2 (2017-09-20)}{
+\section{Changes in \pkg{pinp} version 0.0.2 (2017-09-20)}{
   \itemize{
     \item The YAML segment can be used to select font size, one-or-two
     column mode, one-or-two side mode, linenumbering and watermarks
@@ -83,7 +92,7 @@
   }
 }
 
-\section{Changes in pinp version 0.0.1 (2017-09-15)}{
+\section{Changes in \pkg{pinp} version 0.0.1 (2017-09-15)}{
   \itemize{
     \item Initial CRAN release
   }

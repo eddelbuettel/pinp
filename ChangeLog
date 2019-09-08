@@ -1,5 +1,7 @@
 2019-09-08  Dirk Eddelbuettel  <edd@debian.org>
 
+	* DESCRIPTION (Version, Date): Release 0.0.8
+
 	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Remove docs for
 	'watermark' as underlying PNAS style no longer has a toggle
 	* R/pinp.R: Remove documentation of watermark option no longer
