@@ -183,9 +183,9 @@
 
 \renewcommand\Authands{, and }
 
-%% Choose template type
-\newcommand*{\templatetype}[1]{%
-  \RequirePackage{#1}}
+%% Choose template type -- pinp change: not supported
+%\newcommand*{\templatetype}[1]{%
+%  \RequirePackage{#1}}
 
 %% Options for element switching
 \RequirePackage{xifthen}
@@ -222,8 +222,7 @@
 \RequirePackage[noend]{algpseudocode}
 \RequirePackage{changepage}
 \RequirePackage[twoside,%
-				letterpaper,includeheadfoot,%
-				layoutsize={8.125in,10.875in},%
+                                includeheadfoot,%
                 layouthoffset=0.1875in,%
                 layoutvoffset=0.0625in,%
                 left=38.5pt,%
@@ -234,6 +233,7 @@
                 headsep=10pt,%
                 footskip=25pt,
                 marginparwidth=38pt]{geometry}
+%% pinp change: do not use us paper   letterpaper,layoutsize={8.125in,10.875in},%
 \RequirePackage[labelfont={bf,sf},%
                 labelsep=period,%
                 figurename=Fig.]{caption}
@@ -520,10 +520,10 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 	{1.5ex plus .2ex}
 
 
-\newcommand{\showacknow}{% Display acknowledgments section
+\newcommand{\showacknow}{% Display acknowledgments section -- ping change: not allcaps
 \@ifundefined{@acknow}{}{
 \vskip 3.25ex plus 1ex minus .2ex
-\noindent{\sffamily\normalsize\bfseries ACKNOWLEDGMENTS.\hspace{1.5ex plus .2ex}}
+\noindent{\sffamily\normalsize\bfseries Acknowledgments.\hspace{1.5ex plus .2ex}}
 \small\@acknow}
 }
 
