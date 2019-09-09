@@ -1,3 +1,11 @@
+2019-09-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Remove stray
+	\code{\makeatother} causing all this trouble -- with huge thank you
+	to Javier Bezos and Norbert Preining for their help in isolating this
+
 2019-09-08  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.0.8
@@ -13,7 +21,7 @@
 	working version as current version in texlive has an issue with pnas
 	* inst/rmarkdown/templates/pdf/skeleton/ttlkeys.def: Ditto
 	* R/pinp.R (pinp): Copy titlesec.sty and ttlkeys.def into work directory
-	
+
 2019-09-07  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Roll minor version

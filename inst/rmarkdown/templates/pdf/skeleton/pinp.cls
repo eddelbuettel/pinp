@@ -343,7 +343,6 @@
     }
   \fi
 }
-\makeatother
 
 \renewcommand{\headrulewidth}{0pt}% % No header rule
 \renewcommand{\footrulewidth}{0pt}% % No footer rule
