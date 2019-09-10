@@ -1,3 +1,14 @@
+2019-09-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* vignettes/pinp.Rmd (footer_contents): 
+
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Support
+	document option 'watermark'
+	* inst/rmarkdown/templates/pdf/resources/template.tex: Ditto
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Illustrate use
+	* R/pinp.R: Document the 'watermark' options
+	* man/pinp.Rd: Document and illustrate option
+
 2019-09-09  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Roll minor version

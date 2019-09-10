@@ -74,6 +74,9 @@ skip_final_break: true
 # Optional: Bibliography 
 bibliography: pinp
 
+# Optional: Enable a 'Draft' watermark on the document
+#watermark: true
+
 # Customize footer, eg by referencing the vignette
 footer_contents: "YourPackage Vignette"
 
@@ -129,7 +132,9 @@ We support several options via the YAML header
   your package, which is placed in the bottom-right footer on odd
   pages;
 - Setting a free-form author field used on the inside footer;
-- Line of custom text in subtitle (`date_subtitle`) suitable to give publication info of the draft, e.g. journal name in a post-print.
+- Optional _Draft_ watermark to be added to each page;
+- Line of custom text in subtitle (`date_subtitle`) suitable to give publication info of 
+the draft, e.g. journal name in a post-print. 
 
 
 

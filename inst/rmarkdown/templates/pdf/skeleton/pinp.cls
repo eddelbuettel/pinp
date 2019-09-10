@@ -34,6 +34,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{pinp}[2019-Sep-07, based on pnas-new 2018/05/06, v1.44]
 \AtEndOfClass{\RequirePackage{microtype}}
+% Option for watermark -- pinp change
+\newif\if@watermark
+\DeclareOption{watermark}{\@watermarktrue}
 % Option for line numbers
 \newif\if@pnaslineno
 \DeclareOption{lineno}{\@pnaslinenotrue}
@@ -195,19 +198,22 @@
 %% For numbering just one line of an equation
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
 
-%% Watermark 
-\newboolean{displaywatermark}
-\setboolean{displaywatermark}{false} % Set to true to show the watermark -- pinp change
-\AtBeginDocument{%
-  \ifthenelse{\boolean{displaywatermark}}{%
-  \RequirePackage{draftwatermark}
-  \SetWatermarkAngle{45}
-  \SetWatermarkColor{gray!20}
-  \SetWatermarkFontSize{3cm}
-  \SetWatermarkText{{\fontfamily{bch}\bfseries DRAFT}}
-}{}
-}
-
+%% Watermark -- pinp change to condition of documentoption "watermark" and if wrappre
+%% cf https://tex.stackexchange.com/a/338874/980 for a nice 'how-to'
+\if@watermark
+  \newboolean{displaywatermark}
+  \setboolean{displaywatermark}{true} 
+  \AtBeginDocument{%
+    \ifthenelse{\boolean{displaywatermark}}{%
+    \RequirePackage{draftwatermark}
+    \SetWatermarkAngle{45}
+    \SetWatermarkColor{gray!20}
+    \SetWatermarkFontSize{3cm}
+    \SetWatermarkText{{\fontfamily{bch}\bfseries DRAFT}}
+    }{}
+  }
+\fi
+  
 %% Copyright statement (not used)
 \newboolean{displaycopyright}
 \setboolean{displaycopyright}{false} % Confirmed as not required
@@ -222,8 +228,9 @@
 \RequirePackage[noend]{algpseudocode}
 \RequirePackage{changepage}
 \RequirePackage[twoside,%
-                includeheadfoot,%
-                % pinp change  layouthoffset=0.1875in,layoutvoffset=0.0625in,%
+                                includeheadfoot,%
+                layouthoffset=0.1875in,%
+                layoutvoffset=0.0625in,%
                 left=38.5pt,%
                 right=43pt,%
                 top=43pt,% 10pt provided by headsep

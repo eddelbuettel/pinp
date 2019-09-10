@@ -79,6 +79,9 @@ skip_final_break: true
 # Customize footer, eg by referencing the vignette
 footer_contents: "pinp Vignette"
 
+# Optional: Enable a 'Draft' watermark on the document
+#watermark: true
+-
 # Produce a pinp document
 # 
 # Other options that can be set here, shown with their defaults
@@ -209,13 +212,22 @@ included directly as a `thebibliography` environment by including the
 content of the generated `bbl` file. The `after_body` include of the
 YAML header can also be used.
 
+## `watermark`
+
+An _optional_ selection of a 'Draft' watermark drawn across the center
+of the page (using value `true`). Note that figures may be plotted
+above the watermark.
+
 ## `footer_contents`
 
 An character value delimited by quotes for something like _"mypackage
 Vignette"_ which will be shown in the footer.
 
 ## `date_subtitle`
-An _optional_ free-form text string. Could be used, for example, to mention the bibliographic info in a post-print. If not specified, defaults to "This version was compiled on {current date}"
+
+An _optional_ free-form text string. Could be used, for example, to
+mention the bibliographic info in a post-print. If not specified,
+defaults to "This version was compiled on {current date}"
 
 
 # Code 
