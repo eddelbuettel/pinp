@@ -81,7 +81,7 @@ footer_contents: "pinp Vignette"
 
 # Optional: Enable a 'Draft' watermark on the document
 #watermark: true
--
+
 # Produce a pinp document
 # 
 # Other options that can be set here, shown with their defaults
