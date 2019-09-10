@@ -46,6 +46,9 @@ acknowledgements: |
 #  - pdf
 #  - vignette
 
+# Paper size for the document, values of letter and a4
+papersize: letter
+
 # Font size of the document, values of 9pt (default), 10pt, 11pt and 12pt
 fontsize: 9pt
 
@@ -298,7 +301,9 @@ be used around a wide table structure.
 ## widetext
 
 The `\begin{widetext} ... \end{widetext}` environment can be used to
-break text from two-column mode to one-column mode and back.
+break text from two-column mode to one-column mode and back. As of the
+2018 release of the underlying PNAS macros, this feature is deprecated
+upstream and has been removed.
 
 
 
