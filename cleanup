@@ -2,7 +2,7 @@
 
 (cd vignettes && \
      rm -rf jss.bst pinp.bbl pinp.bib pinp.cls pinp.log pinp.pdf pinp.tex pinp.xwm pinp_files/ \
-     	titlesec.sty ttlkeys.def && cd -)
+     	titlesec.sty ttlkeys.def && cd ..)
 
 ## emacs auctex leaves auto/ behind
-(cd inst/rmarkdown/templates/pdf && rm -rf resources/auto/ skeleton/auto/ && cd -)
+(cd inst/rmarkdown/templates/pdf && rm -rf resources/auto/ skeleton/auto/ && cd ..)

@@ -14,10 +14,9 @@ $if(tables)$
 \usepackage{longtable}
 $endif$
 
-% The geometry package layout settings need to be set here...
+% pinp change: the geometry package layout settings need to be set here, not in pinp.cls
 \geometry{layoutsize={0.95588\paperwidth,0.98864\paperheight},%
-          layouthoffset=0.02206\paperwidth,%
-		  layoutvoffset=0.00568\paperheight}
+  layouthoffset=0.02206\paperwidth, layoutvoffset=0.00568\paperheight}
 
 $if(headercolor)$
 \definecolor{pinpblue}{HTML}{$headercolor$}

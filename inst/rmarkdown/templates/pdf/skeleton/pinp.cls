@@ -222,9 +222,8 @@
 \RequirePackage[noend]{algpseudocode}
 \RequirePackage{changepage}
 \RequirePackage[twoside,%
-                                includeheadfoot,%
-                layouthoffset=0.1875in,%
-                layoutvoffset=0.0625in,%
+                includeheadfoot,%
+                % pinp change  layouthoffset=0.1875in,layoutvoffset=0.0625in,%
                 left=38.5pt,%
                 right=43pt,%
                 top=43pt,% 10pt provided by headsep
