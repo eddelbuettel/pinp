@@ -223,8 +223,9 @@ their preference.
 
 To allow an equation to span both columns, options are to use the
 `\begin{figure*}...\end{figure*}` environment mentioned above for
-figures, or to use the `\begin{widetext}...\end{widetext}` environment
-as shown in equation \ref{eqn:example} below.
+figures. The `\begin{widetext}...\end{widetext}` environment as shown
+in equation \ref{eqn:example} below is deprecated, but \LaTeX commands
+`\onecolumn` and `\twocolumn` work fine.
 
 Please note that this option may run into problems with floats and
 footnotes, as mentioned in the [cuted package

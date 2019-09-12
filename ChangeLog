@@ -4,6 +4,9 @@
 
 	* R/pinp.R: No longer copy titlesec.sty in as underlying issue fixed
 
+	* vignettes/pinp.Rmd: Mention widetext deprecation and altrenatives.
+	* inst/rmarkdown/templates/pdf/skeleton/skeleton.Rmd: Ditto
+
 2019-09-10  Dirk Eddelbuettel  <edd@debian.org>
 
 	* vignettes/pinp.Rmd (footer_contents): 

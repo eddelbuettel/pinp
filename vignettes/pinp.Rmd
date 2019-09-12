@@ -304,7 +304,7 @@ The following is set as usual via the `displaymath` environment:
 ## figure*
 
 Figure can span two columns (when the default two-column mode is used)
-by using a (LaTeX) `\begin{figure*} ... \end{figure*}` environment, .
+by using a (LaTeX) `\begin{figure*} ... \end{figure*\it}` environment, .
 Figures will then be _floats_ in the LaTeX sense and place at the top
 or bottom of the page.  An example is given by the skeleton document
 of the package. Similarly, `\begin{figure*} ... \end{figure*}` could
@@ -315,8 +315,8 @@ be used around a wide table structure.
 The `\begin{widetext} ... \end{widetext}` environment can be used to
 break text from two-column mode to one-column mode and back. As of the
 2018 release of the underlying PNAS macros, this feature is deprecated
-upstream and has been removed.
-
+upstream. But both the `figure*` and `table*` environments work, as 
+does relying on \LaTeX commands `\onecolumn` and `\twocolumn`.
 
 
 

@@ -3,6 +3,16 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pinp/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pinp/issues/#1}{##1}}
 
+\section{Changes in \pkg{pinp} version 0.0.9 (2019-09-15)}{
+  \itemize{
+    \item The processing error first addressed in release 0.0.8 is now
+    fixed by removing one stray command; many thanks to Javier Bezos.
+    \item The hotfix of also installing titlesec.sty has been reverted.
+    \item Processing of the 'papersize' and 'watermark' options was
+    updated.
+  }
+}
+
 \section{Changes in \pkg{pinp} version 0.0.8 (2019-09-08)}{
   \itemize{
     \item Two erroraneous 'Provides' were removed from the pinp class.
