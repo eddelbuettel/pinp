@@ -1,8 +1,8 @@
 Package: pinp
 Type: Package
 Title: 'pinp' is not 'PNAS'
-Version: 0.0.8.2
-Date: 2019-09-11
+Version: 0.0.9
+Date: 2019-09-15
 Author: Dirk Eddelbuettel and James Balamuta
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: A 'PNAS'-alike style for 'rmarkdown', derived from the
