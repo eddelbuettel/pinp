@@ -93,6 +93,14 @@ texlive-publishers
 texlive-science
 ```
 
+### See also
+
+- [binb](https://github.com/eddelbuettel/binb): Binb is not Beamer: Stylish pdf Presentations from RMarkdown
+- [linl](https://github.com/eddelbuettel/linl): Linl is not Letter: LaTeX letters from RMarkdown
+- [tint](https://github.com/eddelbuettel/tint): tint is not tufte: Beautiful pdf or html handout or writeups
+
+and the [minm](https://github.com/eddelbuettel/minm) package installing all of them.
+
 ### Authors
 
 Dirk Eddelbuettel and James Balamuta, leaning on the earlier work by JJ et al in the 
