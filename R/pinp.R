@@ -41,14 +41,14 @@
 #'   \item{\code{footer_contents}}{(Optional) A free-format entry for
 #'   text placed in the footer, useful to associate with a package or
 #'   volume, default is \sQuote{Package Vignette}.}
-#'   \item{\code{date_subtitle}}{(Optional) An _optional_ free-form text string.
-#'    Could be used, for example, to mention the bibliographic info in a 
-#'    post-print. If not specified, defaults to "This version was compiled on
-#'     {current date}"}
-#'   \item{\code{document_date}}{(Optional) An _optional_ free-form text string
-#'    designed to specify the date of the document. It can be useful for example
-#'     to specify the exact date of the publication in a post-print. If not
-#'      specified, defaults to the current date.}
+#'   \item{\code{date_subtitle}}{(Optional) A free-form text string
+#'   which be used to mention the bibliographic info in a post-print.
+#'   If not specified, defaults to "This version was compiled on
+#'   {current date}"}
+#'   \item{\code{document_date}}{(Optional) A free-form text string
+#'   designed to specify the date of the document. It can be useful for example
+#'   to specify the exact date of the publication in a post-print. If not
+#'   specified it defaults to the current date.}
 #'   \item{\code{headercolor}}{(Optional) Color code (in hexadecimal
 #'   notation) for the title and section headers, default is blue tone
 #'   matching the R logo: \code{185FAF}.}
