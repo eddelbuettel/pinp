@@ -229,6 +229,9 @@ An _optional_ free-form text string. Could be used, for example, to
 mention the bibliographic info in a post-print. If not specified,
 defaults to "This version was compiled on {current date}"
 
+## `document_date`
+An _optional_ free-form text string designed to specify the date of the document. It can be useful for example to specify the exact date of the publication in a post-print. If not specified, defaults to the current date.
+
 
 # Code 
 

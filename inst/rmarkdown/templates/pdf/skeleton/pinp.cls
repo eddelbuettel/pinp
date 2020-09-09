@@ -317,7 +317,7 @@
 
 \makeatletter
 \fancypagestyle{firststyle}{
-   \fancyfoot[R]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
+   \fancyfoot[R]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\@ifundefined{@documentdate}{\today}{\@documentdate}}\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
    \fancyfoot[L]{\footerfont\@ifundefined{@doifooter}{}{\@doifooter}}
 }
 \makeatother
@@ -331,7 +331,7 @@
 \rfoot{}%
 \makeatletter
 \fancyfoot[LE]{\footerfont\textbf{\thepage}\hspace{7pt}|\hspace{7pt}\@ifundefined{@doifooter}{}{\@doifooter}}
-\fancyfoot[RO]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
+\fancyfoot[RO]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\@ifundefined{@documentdate}{\today}{\@documentdate}}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
 \fancyfoot[RE,LO]{\footerfont\@ifundefined{@leadauthor}{}{\@leadauthor}}
 
 % Use footer routine for line numbers
@@ -396,6 +396,7 @@
 \newcommand{\additionalelement}[1]{\def\@additionalelement{#1}}
 \newcommand{\dates}[1]{\def\@dates{#1}}
 \newcommand{\doifooter}[1]{\def\@doifooter{#1}}
+\newcommand{\documentdate}[1]{\def\@documentdate{#1}}
 \newcommand{\leadauthor}[1]{\def\@leadauthor{#1}}
 \newcommand{\etal}[1]{\def\@etal{#1}}
 \newcommand{\keywords}[1]{\def\@keywords{#1}}
