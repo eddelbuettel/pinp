@@ -174,7 +174,7 @@
 \newcommand{\copyrightfont}{\normalfont\rmfamily\fontsize{6}{8}\selectfont}
 
 %% Set URL link color & font
-\renewcommand\UrlFont{\color{pnasbluetext}\sffamily}
+\renewcommand\UrlFont{\color{pnasbluetext}\normalfont\texttt}
 
 %% Author and affiliation
 \RequirePackage{authblk}
