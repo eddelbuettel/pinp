@@ -66,6 +66,10 @@ $else$
 \dates{This version was compiled on \today} 
 $endif$
 
+$if(document_date)$
+\documentdate{$document_date$}
+$endif$
+
 % initially we use doi so keep for backwards compatibility
 $if(doi)$
 \doifooter{$doi$}

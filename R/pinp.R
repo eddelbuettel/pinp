@@ -35,11 +35,20 @@
 #'   suffix can be omitted; defaut is no bibliography.}
 #'   \item{\code{doi}}{(Optional but recommended) A free-format entry
 #'   suitable for a doi or url referencing the document or its
-#'   underlying code.}  \item{\code{fontsize}}{(Optional) Document
+#'   underlying code.}  
+#'   \item{\code{fontsize}}{(Optional) Document
 #'   fontsize, default is 9pt.}
 #'   \item{\code{footer_contents}}{(Optional) A free-format entry for
 #'   text placed in the footer, useful to associate with a package or
 #'   volume, default is \sQuote{Package Vignette}.}
+#'   \item{\code{date_subtitle}}{(Optional) A free-form text string
+#'   which be used to mention the bibliographic info in a post-print.
+#'   If not specified, defaults to "This version was compiled on
+#'   {current date}"}
+#'   \item{\code{document_date}}{(Optional) A free-form text string
+#'   designed to specify the date of the document. It can be useful for example
+#'   to specify the exact date of the publication in a post-print. If not
+#'   specified it defaults to the current date.}
 #'   \item{\code{headercolor}}{(Optional) Color code (in hexadecimal
 #'   notation) for the title and section headers, default is blue tone
 #'   matching the R logo: \code{185FAF}.}
@@ -47,9 +56,11 @@
 #'   document, supplied as a list.}
 #'   \item{\code{lead_author_surnames}}{(Optional but recommended) A
 #'   free-format entry for a short author description placed in the
-#'   footer.}  \item{\code{lineno}}{(Optional) Logical value to select
+#'   footer.}  
+#'   \item{\code{lineno}}{(Optional) Logical value to select
 #'   line number display, may only work in one-column mode, default is
-#'   false.}  \item{\code{linkcolor}}{(Optional) Color code (in
+#'   false.}  
+#'   \item{\code{linkcolor}}{(Optional) Color code (in
 #'   hexadecimal notation) for the urls and reference links, default
 #'   is a light blue tone from the PNAS style: \code{000065}.}
 #'   \item{\code{numbersections}}{(Optional) Logical value to select

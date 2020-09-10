@@ -133,8 +133,10 @@ We support several options via the YAML header
   pages;
 - Setting a free-form author field used on the inside footer;
 - Optional _Draft_ watermark to be added to each page;
-- Line of custom text in subtitle (`date_subtitle`) suitable to give publication info of 
-the draft, e.g. journal name in a post-print. 
+- Line of custom text in subtitle (`date_subtitle`) suitable to give publication
+info of the draft, e.g. journal name in a post-print;
+- Document date that appears in the footer can be specified manually using
+`document_date`.
 
 
 
