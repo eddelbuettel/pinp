@@ -3,6 +3,14 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pinp/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pinp/issues/#1}{##1}}
 
+\section{Changes in \pkg{pinp} version 0.0.10 (2020-xx-yy)}{
+  \itemize{
+    \item New \code{document_date} YAML variable to optionally set a
+    'Published at' or alike date (Ilya Kashnitsky in \ghpr{85}).
+    \item Small tweaks to README.md (Dirk)
+  }
+}
+
 \section{Changes in \pkg{pinp} version 0.0.9 (2019-09-15)}{
   \itemize{
     \item The processing error first addressed in release 0.0.8 is now
@@ -15,7 +23,7 @@
 
 \section{Changes in \pkg{pinp} version 0.0.8 (2019-09-08)}{
   \itemize{
-    \item Two erroraneous 'Provides' were removed from the pinp class.
+    \item Two erroneous 'Provides' were removed from the pinp class.
     \item The \code{upquote} package is now use to use actual
     (non-fancy) quotes in verbatim mode (Dirk fixing \ghit{75})
     \item The underlying PNAS style was updated to the most recent v1.44
