@@ -5,7 +5,7 @@
 %%   as well as local changes 
 %%
 %% Dirk Eddelbuettel and James Balamuta 
-%% August - September 2017, September 2019
+%% August - September 2017, September 2019, September 2020
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % pnas-new.cls, v1.44, 2018/05/06
@@ -213,7 +213,25 @@
     }{}
   }
 \fi
-  
+
+%% Multi-column mode using pandoc's '::::::' blocks with ':::'
+%%
+%% The code snippet is borrowed with love from Grant McDermott's repo at
+%% https://github.com/grantmcdermott/two-col-test and slightly extended to
+%% fit 'flushed' without indentation, removing a makeatletter layer
+\newenvironment{columns}[1][]{}{}
+\newenvironment{column}[1]{\noindent\begin{minipage}[t]{#1}\ignorespaces}{%
+  \end{minipage}
+  \ifhmode\unskip\fi
+  \aftergroup\useignorespacesandallpars}
+\def\useignorespacesandallpars#1\ignorespaces\fi{%
+  #1\fi\ignorespacesandallpars}
+\def\ignorespacesandallpars{%
+  \@ifnextchar\par
+  {\expandafter\ignorespacesandallpars\@gobble}%
+  {}%
+}
+
 %% Copyright statement (not used)
 \newboolean{displaycopyright}
 \setboolean{displaycopyright}{false} % Confirmed as not required
