@@ -8,12 +8,10 @@ author:
   - name: Dirk Eddelbuettel
     affiliation: a
   - name: James Joseph Balamuta
-    affiliation: b
+    affiliation: a
 address:
   - code: a
-    address: Debian and R Projects; Chicago, IL, USA; \url{edd@debian.org}
-  - code: b
-    address: Depts of Informatics and Statistics, Univ. of Illinois at Urbana-Champaign; Champaign, IL, USA; \url{balamut2@illinois.edu}
+    address: University of Illinois at Urbana-Champaign; Champaign, IL, USA
 
 # Optional: line of arbitrary text with additional information.
 # Could be used, for example, to mention the bibliographic info in a post-print.
