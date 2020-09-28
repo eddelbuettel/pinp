@@ -1,3 +1,10 @@
+2020-09-27  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Add columns mode
+	with a special nod of appreciation to Grant McDermott
+
 2020-09-11  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Roll minor version
