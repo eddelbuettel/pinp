@@ -124,5 +124,5 @@ Yihui Xie (2017). knitr: A General-Purpose Package for Dynamic
 Report Generation in R. R package version 1.17.
 }
 \seealso{
-\code{\link[rticles]{pnas_article}}
+\code{pnas_article} in package \pkg{rticles}.
 }

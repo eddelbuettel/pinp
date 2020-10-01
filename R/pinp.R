@@ -92,7 +92,7 @@
 #' }
 #'
 #' @seealso
-#' \code{\link[rticles]{pnas_article}}
+#' \code{pnas_article} in package \pkg{rticles}.
 #'
 #' @references
 #' JJ Allaire, R Foundation, Hadley Wickham, Journal of Statistical

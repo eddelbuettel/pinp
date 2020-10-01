@@ -3,7 +3,7 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/pinp/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/pinp/issues/#1}{##1}}
 
-\section{Changes in \pkg{pinp} version 0.0.10 (2020-09-28)}{
+\section{Changes in \pkg{pinp} version 0.0.10 (2020-10-01)}{
   \itemize{
     \item New \code{document_date} YAML variable to optionally set a
     'Published at' or alike date (Ilya Kashnitsky in \ghpr{85}).
