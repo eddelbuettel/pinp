@@ -1,6 +1,7 @@
 ## pinp: Pinp is not PNAS
 
 [![Build Status](https://travis-ci.org/eddelbuettel/pinp.svg)](https://travis-ci.org/eddelbuettel/pinp) 
+[![CI](https://github.com/eddelbuettel/pinp/workflows/ci/badge.svg)](https://github.com/eddelbuettel/pinp/actions?query=workflow%3Aci)
 [![Package-License](https://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.html) 
 [![CRAN](https://www.r-pkg.org/badges/version/pinp)](https://cran.r-project.org/package=pinp) 
 [![Dependencies](https://tinyverse.netlify.com/badge/pinp)](https://cran.r-project.org/package=pinp) 
