@@ -9,7 +9,7 @@ Description: A 'PNAS'-alike style for 'rmarkdown', derived from the
  'Proceedings of the National Academy of Sciences of the United States
  of America' ('PNAS', see <https://www.pnas.org>) 'LaTeX' style, and
  adapted for use with 'markdown' and 'pandoc'.
-URL: http://dirk.eddelbuettel.com/code/pinp.html
+URL: https://github.com/eddelbuettel/pinp, http://dirk.eddelbuettel.com/code/pinp.html
 BugReports: https://github.com/eddelbuettel/pinp/issues
 Imports: rmarkdown, knitr
 VignetteBuilder: knitr
