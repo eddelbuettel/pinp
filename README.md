@@ -3,7 +3,7 @@
 [![CI](https://github.com/eddelbuettel/pinp/workflows/ci/badge.svg)](https://github.com/eddelbuettel/pinp/actions?query=workflow%3Aci)
 [![Package-License](https://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.html) 
 [![CRAN](https://www.r-pkg.org/badges/version/pinp)](https://cran.r-project.org/package=pinp) 
-[![Dependencies](https://tinyverse.netlify.com/badge/pinp)](https://cran.r-project.org/package=pinp) 
+[![Dependencies](https://tinyverse.netlify.app/badge/pinp)](https://cran.r-project.org/package=pinp) 
 [![Downloads](https://cranlogs.r-pkg.org/badges/pinp?color=brightgreen)](https://www.r-pkg.org/pkg/pinp)
 [![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/pinp)](https://github.com/eddelbuettel/pinp)
 
