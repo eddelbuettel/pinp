@@ -1,6 +1,11 @@
+2024-09-29  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/pinp.R: Correct one missing backslash
+	* man/pinp.Rd: Regenerated
+
 2024-09-04  Dirk Eddelbuettel  <edd@debian.org>
 
-	* DESCRIPTION (Authors@R): Added 
+	* DESCRIPTION (Authors@R): Added
 
 2024-05-18  Dirk Eddelbuettel  <edd@debian.org>
 
