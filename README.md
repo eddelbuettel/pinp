@@ -111,15 +111,13 @@ and the [minm](https://github.com/eddelbuettel/minm) package installing all of t
 Dirk Eddelbuettel and James Balamuta, leaning on the earlier work by JJ et al in the 
 [rticles](https://cran.r-project.org/package=rticles) package.
 
-The authors of the underlying [PNAS LaTeX Style](https://www.pnas.org/authors/submitting-your-manuscript) are
-not explicitedly listed, but [PNAS](https://www.pnas.org) refers to
-[Overleaf](https://www.overleaf.com/).
+The authors of the underlying PNAS LaTeX Style are not explicitedly listed,
+but PNAS refers to [Overleaf](https://www.overleaf.com/).
 
 ### License
 
 GPL-3 for this package, as well as the short code taken with grateful acknowledgements from the
 [rticles](https://cran.r-project.org/package=rticles) package.
 
-The main [PNAS LaTeX](https://www.pnas.org/authors/submitting-your-manuscript) style
-file (and supporting files) are under the
+The main PNAS LaTeX style file (and supporting files) are under the
 [LPPL (LaTeX Project Public License) version 1.3 or later](https://www.latex-project.org/lppl/).

@@ -108,7 +108,7 @@ vignette: >
 # Introduction 
 
 The *pinp is not PNAS* template extends and reworks the
-[pnas_article](https://github.com/rstudio/rticles/tree/master/inst/rmarkdown/templates/pnas_article)
+[pnas_article](https://github.com/rstudio/rticles/tree/master/inst/rmarkdown/templates/pnas)
 template from the wonderful
 [rticles](https://cran.r-project.org/package=rticles) package. 
 This vignette aims to list all the available option in order to
@@ -325,7 +325,7 @@ does relying on \LaTeX commands `\onecolumn` and `\twocolumn`.
 
 ## RMarkdown 
 
-The [rmarkdown site](http://rmarkdown.rstudio.com/) by RStudio is very
+The [rmarkdown site](https://rmarkdown.rstudio.com/) by RStudio is very
 comprehensive and can answer many questions pertaining to Markdown
 processing in R using the
 [rmarkdown package](https://cran.r-project.org/package=rmarkdown).
@@ -334,7 +334,7 @@ processing in R using the
 ## LaTeX 
 
 Ultimately, this style uses LaTeX to produce the pdf output. The
-[tex StackExchange](http://tex.stackexchange.com) can be very helpful for
+[tex StackExchange](https://tex.stackexchange.com) can be very helpful for
 specific LaTeX questions.
 
 <!-- Acknowledgements, and References, are automatically typeset after this -->
