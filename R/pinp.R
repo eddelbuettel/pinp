@@ -8,7 +8,7 @@
 #' LaTeX files are to be kept, defaults to \code{TRUE}
 #' @param citation_package A character variable selecting the LaTeX
 #' citation package; defaults to \code{natbib}.
-#' @param collapse A boolean toggle to enable the \code{\link{knitr}}
+#' @param collapse A boolean toggle to enable the \code{\link[knitr]{knitr}}
 #' option \code{collapse}, defaults to \code{FALSE}
 #' @return R Markdown output format to pass to
 #' \code{\link[rmarkdown:render]{render}}

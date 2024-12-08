@@ -15,7 +15,7 @@ LaTeX files are to be kept, defaults to \code{TRUE}}
 \item{citation_package}{A character variable selecting the LaTeX
 citation package; defaults to \code{natbib}.}
 
-\item{collapse}{A boolean toggle to enable the \code{\link{knitr}}
+\item{collapse}{A boolean toggle to enable the \code{\link[knitr]{knitr}}
 option \code{collapse}, defaults to \code{FALSE}}
 }
 \value{
