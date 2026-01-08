@@ -1,5 +1,7 @@
 2026-01-08  Dirk Eddelbuettel  <edd@debian.org>
 
+	* DESCRIPTION (Version, Date): Roll micro version and date
+
 	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Refresh the \doi
 	command to use https and drop leading dx
 
