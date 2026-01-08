@@ -1,3 +1,8 @@
+2026-01-08  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/pdf/skeleton/pinp.cls: Refresh the \doi
+	command to use https and drop leading dx
+
 2026-01-05  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .github/workflows/ci.yaml: Switch to actions/checkout@v6

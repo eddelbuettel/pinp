@@ -754,7 +754,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \usepackage[bitstream-charter]{mathdesign} %% cf http://www.khirevich.com/latex/font/
 
 %% doi command or bibliography with thanks to Achim Zeileis for the hint
-\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{\normalfont\texttt{doi:\discretionary{}{}{}#1}}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{\normalfont\texttt{doi:\discretionary{}{}{}#1}}}
 
 %% upquote for improved quotes in verbatim -- cf github issue #75
 \RequirePackage{upquote} % For keeping actual quotes in verbatim
